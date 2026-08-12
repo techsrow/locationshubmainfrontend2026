@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import "./pune.css";
 import Link from "next/link";
@@ -5,8 +7,12 @@ import Link from "next/link";
 import GetQuoteButton from "@/app/components/quote/GetQuoteButton";
 import YouTubeEmbed from "@/app/components/YouTubeEmbed";
 import YouTubeAutoPlay from "@/app/components/YouTubeAutoPlay";
+import { useModal } from "@/app/components/modal/ModalProvider";
+import ShootTypeModal from "@/app/components/modal/ShootTypeModal";
 
 export default function PunePhotographers() {
+
+  const { openModal } = useModal();
   return (
     <div className="page-wrapper">
       <div className="container">
@@ -209,7 +215,9 @@ export default function PunePhotographers() {
         <GetQuoteButton className="get-quote-btn text-center" /> */}
 
         <div className="center">
-          <button className="btn-book">Book Now</button>
+          <button onClick={() => openModal(<ShootTypeModal />)} className="bg-[#ff8c1a] text-white px-10 py-3 font-[600] hover:bg-[#e57c14] transition">
+                             Book Now
+                           </button>
         </div>
       </div>
     </div>

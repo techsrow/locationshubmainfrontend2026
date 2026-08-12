@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import "./pune.css";
 import Link from "next/link";
 import YouTubeAutoPlay from "@/app/components/YouTubeAutoPlay";
+
+import GetQuoteButton from "@/app/components/quote/GetQuoteButton";
 
 export default function PunePhotographers() {
   return (
@@ -21,13 +25,11 @@ export default function PunePhotographers() {
         </div>
 
         <div className="center mb-10">
-          <a
-            href="https://www.locationshub.in/sets-1/"
-            target="_blank"
-            className="main-btn"
-          >
-            Get Quote
-          </a>
+         
+
+           <GetQuoteButton className="main-btn mt-5">
+  Get Quote
+</GetQuoteButton>
         </div>
 
           <h3 className="b-h3 ">
@@ -66,13 +68,9 @@ export default function PunePhotographers() {
         />
 
          <div className="center mb-10 mt-4">
-          <a
-            href="https://www.locationshub.in/sets-1/"
-            target="_blank"
-            className="main-btn"
-          >
-            Get Quote
-          </a>
+           <GetQuoteButton className="main-btn mt-5">
+  Get Quote
+</GetQuoteButton>
         </div>
 
         {/* ================= 3 ================= */}
@@ -225,7 +223,11 @@ export default function PunePhotographers() {
         <GetQuoteButton className="get-quote-btn text-center" /> */}
 
         <div className="center">
-          <button className="btn-book mt-5">Get Quote</button>
+         
+
+          <GetQuoteButton className="btn-book mt-5">
+  Get Quote
+</GetQuoteButton>
         </div>
       </div>
     </div>

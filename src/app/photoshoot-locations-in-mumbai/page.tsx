@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import "./pune.css";
 import Link from "next/link";
@@ -5,8 +7,18 @@ import Link from "next/link";
 import GetQuoteButton from "@/app/components/quote/GetQuoteButton";
 import YouTubeEmbed from "@/app/components/YouTubeEmbed";
 import YouTubeAutoPlay from "@/app/components/YouTubeAutoPlay";
+import { useModal } from "@/app/components/modal/ModalProvider";
+import ShootTypeModal from "@/app/components/modal/ShootTypeModal";
+
+
 
 export default function PhotoStudio() {
+
+const { openModal } = useModal();
+   
+
+
+   
   return (
     <div className="page-wrapper">
       <div className="container">
@@ -16,13 +28,12 @@ export default function PhotoStudio() {
         </div>
 
         <div className="center mb-2 btnsets">
-          <a
-            href="https://www.locationshub.in/sets-1/"
-            target="_blank"
-            className="main-btn"
-          >
-          Find Perfect Sets for your Shoot
-          </a>
+         <Link
+  href="/sets-1"
+  className="main-btn"
+>
+  Find Perfect Sets for your Shoot
+</Link>
         </div>
 
         <h4 className="sub-heading ">Snap the City: Top Photoshoot locations in Mumbai </h4>        
@@ -65,13 +76,12 @@ Nature enthusiasts will appreciate green spaces like Aarey Colony. Whether youâ€
         />
 
          <div className="center mb-2 btnsets1">
-          <a
-            href="https://www.locationshub.in/sets-1/"
-            target="_blank"
-            className="main-btn"
-          >
-          Find Perfect Sets for your Shoot
-          </a>
+          <Link
+  href="/sets-1"
+  className="main-btn"
+>
+  Find Perfect Sets for your Shoot
+</Link>
         </div>
       
        
@@ -179,8 +189,8 @@ Nature enthusiasts will appreciate green spaces like Aarey Colony. Whether youâ€
 
 
 <div className="center">
- <button className="btn-book">
-         Book Now
+  <button onClick={() => openModal(<ShootTypeModal />)} className="bg-[#ff8c1a] text-white px-10 py-3 font-[600] hover:bg-[#e57c14] transition">
+           Book Now
          </button>
 </div>
         

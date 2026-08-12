@@ -42,6 +42,7 @@
   padding: 10px 50px;
   text-decoration: none;
   display: inline-block;
+  z-index: 9999;
 }
 
 /* H1 */
@@ -83,7 +84,7 @@ h4 {
 }
 
 .image-wrapper {
-  position: relative;
+  /* position: relative; */
   width: 100%;
   aspect-ratio: 1024 / 630; /* maintain original ratio */
   margin-bottom: -30px;
