@@ -57,7 +57,7 @@ export default function Footer() {
 
         {/* BLOG POSTS */}
         <div>
-          <h3 className="font-[700] mb-6">Blogs posts</h3>
+          <h3 className="font-[700] mb-6">Blog posts</h3>
 
           <ul className="space-y-6 text-sm">
             <li className="flex items-start gap-4">

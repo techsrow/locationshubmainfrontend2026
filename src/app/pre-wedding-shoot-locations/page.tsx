@@ -18,6 +18,9 @@ import TestimonialsSectionPage from "../components/sections/TestimonialsSectionp
 import AboutSectionMobile from "./AboutSectionMobile";
 import PhotoGallery from "../components/PhotoGallery";
 
+import { FaCheck } from "react-icons/fa";
+import Link from "next/link";
+
 const cinzel = Cinzel({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -32,68 +35,138 @@ export default function PreWeddingShootLocations() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
-   const faqData = [
-    {
-      q: "How far in advance should we book the studio?",
-      a: "We recommend booking 1 to 2 months in advance to secure your preferred date, as we don’t overcrowd and take limited bookings per day.",
-    },
-    {
-      q: "How long does a pre wedding shoot typically last?",
-      a: "An ideal pre wedding shoot typically lasts 6 to 12 hours.",
-    },
-    {
-      q: "Can we choose multiple sets for our pre wedding shoot?",
-      a: "Yes, you can choose multiple sets or locations.",
-    },
-    {
-      q: "Do you provide location recommendations for pre wedding shoots?",
-      a: "Yes, we recommend locations based on your style.",
-    },
-    {
-      q: "Do you offer hair and makeup artists for pre wedding shoot?",
-      a: "Yes, we provide in-house makeup artists.",
-    },
-    {
-      q: "What should we wear for the Pre-Wedding shoot?",
-      a: "We guide you to select outfits that match your theme.",
-    },
-    {
-      q: "How many outfits are allowed during the shoot?",
-      a: "Unlimited outfit changes are allowed.",
-    },
-    {
-      q: "Can we do theme-based shoots?",
-      a: "Yes, theme-based shoots are fully customizable.",
-    },
-    {
-      q: "Can we include pets in the shoot?",
-      a: "Yes, our locations are pet-friendly.",
-    },
-    {
-      q: "Do you offer consultation before the shoot?",
-      a: "Yes, we provide full consultation before the shoot.",
-    },
-    {
-      q: "What is the best time to shoot?",
-      a: "Early morning or sunset is best for lighting.",
-    },
-    {
-      q: "How do we book?",
-      a: "Book via our website and confirm with advance payment.",
-    },
-    {
-      q: "What payment methods do you accept?",
-      a: "We accept UPI, bank transfer, cards, and cash.",
-    },
-    {
-      q: "What is your cancellation policy?",
-      a: "Advance payment is non-refundable.",
-    },
-    {
-      q: "Can we bring friends or family?",
-      a: "Yes, extra charges may apply depending on package.",
-    },
-  ];
+  const faqData = [
+  {
+    q: "How far in advance should we book the studio?",
+    a: "We recommend booking 1 to 2 months in advance to secure your preferred date, as we don’t overcrowd and take limited bookings per day.",
+  },
+  {
+    q: "How long does a pre wedding shoot typically last?",
+    a: "An ideal pre wedding shoot typically lasts 6 to 12 hours, depending on your requirements, changes and other factors.",
+  },
+  {
+    q: "Can we choose multiple sets for our pre wedding shoot?",
+    a: "Yes, you can choose multiple sets or locations from our available sets.",
+  },
+  {
+    q: "Do you provide location recommendations for pre wedding shoots?",
+    a: "Absolutely! We can recommend sets and locations from our collection that match your style and requirements.",
+  },
+  {
+    q: "Do you offer hair and makeup artists for pre wedding shoot ?",
+    a: "Yes, we have our inhouse makeup artist. Please check our website for the charges.",
+  },
+  {
+    q: "What should we wear for the Pre-Wedding shoot?",
+    a: "Your outfit plays a crucial role. We recommend wearing outfits that complement the theme and song. We would definately advise and help you finalizing the same.",
+  },
+  {
+    q: "How many outfits are we allowed to change into during the shoot?",
+    a: "You can have unlimited outfit changes during the shoot.",
+  },
+  {
+    q: "How many outfits are we allowed to change into during the shoot?",
+    a: "Yes we have a wide range of costumes on rent. We also offer unlimited costumes for bride and groom for Rs 12,000",
+  },
+  {
+    q: "Can we do theme-based shoots?",
+    a: "Yes, theme-based shoots are possible, and our versatile sets can be customized to fit your vision.",
+  },
+  {
+    q: "Can we include our pets in the pre wedding shoot?",
+    a: "Yes, our locations are pet-friendly, and pets are welcome in your shoot.",
+  },
+  {
+    q: "Do you offer a consultation before the shoot to discuss ideas?",
+    a: "Yes, we offer consultations to ensure the shoot reflects your vision perfectly. Please call us on 9920060062 for any custom package or special requirements.",
+  },
+  {
+    q: "Do you recommend outdoor or indoor locations for the best shots?",
+    a: "It depends on your style and requirements. We offer a perfect blend of indoor and outdoor sets.",
+  },
+  {
+    q: "What is the best time of day to shoot?",
+    a: "Early morning or late afternoon provides the best natural lighting for outdoor shoots.",
+  },
+  {
+    q: "How do we book Locations Hub for our Pre wedding shoot ?",
+    a: "Please make the bookings via our website, and pay a booking amount to secure your booking.",
+  },
+  {
+    q: "What payment methods do you accept?",
+    a: "We accept bank transfers, credit cards, online payment and cash.",
+  },
+  {
+    q: "What is your cancellation policy?",
+    a: "Advance paid is non refundable.",
+  },
+  {
+    q: "Can we bring along family members or friends on our shoot and are there any additional charges for the same ?",
+    a: "Yes, you can. Please check extra person additional charges as per your desired package on our website.",
+  },
+];
+  //  const faqData = [
+  //   {
+  //     q: "How far in advance should we book the studio?",
+  //     a: "We recommend booking 1 to 2 months in advance to secure your preferred date, as we don’t overcrowd and take limited bookings per day.",
+  //   },
+  //   {
+  //     q: "How long does a pre wedding shoot typically last?",
+  //     a: "An ideal pre wedding shoot typically lasts 6 to 12 hours.",
+  //   },
+  //   {
+  //     q: "Can we choose multiple sets for our pre wedding shoot?",
+  //     a: "Yes, you can choose multiple sets or locations.",
+  //   },
+  //   {
+  //     q: "Do you provide location recommendations for pre wedding shoots?",
+  //     a: "Yes, we recommend locations based on your style.",
+  //   },
+  //   {
+  //     q: "Do you offer hair and makeup artists for pre wedding shoot?",
+  //     a: "Yes, we provide in-house makeup artists.",
+  //   },
+  //   {
+  //     q: "What should we wear for the Pre-Wedding shoot?",
+  //     a: "We guide you to select outfits that match your theme.",
+  //   },
+  //   {
+  //     q: "How many outfits are allowed during the shoot?",
+  //     a: "Unlimited outfit changes are allowed.",
+  //   },
+  //   {
+  //     q: "Can we do theme-based shoots?",
+  //     a: "Yes, theme-based shoots are fully customizable.",
+  //   },
+  //   {
+  //     q: "Can we include pets in the shoot?",
+  //     a: "Yes, our locations are pet-friendly.",
+  //   },
+  //   {
+  //     q: "Do you offer consultation before the shoot?",
+  //     a: "Yes, we provide full consultation before the shoot.",
+  //   },
+  //   {
+  //     q: "What is the best time to shoot?",
+  //     a: "Early morning or sunset is best for lighting.",
+  //   },
+  //   {
+  //     q: "How do we book?",
+  //     a: "Book via our website and confirm with advance payment.",
+  //   },
+  //   {
+  //     q: "What payment methods do you accept?",
+  //     a: "We accept UPI, bank transfer, cards, and cash.",
+  //   },
+  //   {
+  //     q: "What is your cancellation policy?",
+  //     a: "Advance payment is non-refundable.",
+  //   },
+  //   {
+  //     q: "Can we bring friends or family?",
+  //     a: "Yes, extra charges may apply depending on package.",
+  //   },
+  // ];
 
   const toggle = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -182,9 +255,12 @@ Shoot Locations
          
 
          <div className="text-center mt-10">
-<button className={`quote-btn ${cinzel.className}`}>
-GET A QUOTE
-</button>
+ <Link
+    href="https://booking.locationshub.in/pre-wedding-or-maternity/"
+    className={`quote-btn inline-flex items-center justify-center ${cinzel.className}`}
+  >
+    GET A QUOTE
+  </Link>
 </div>
         </div>
       </section>
@@ -200,7 +276,7 @@ GET A QUOTE
      
 
       {/* ABOUT */}
-      <AboutSection />
+      {/* <AboutSection /> */}
       <AboutSectionMobile />
 
       <section className="featured-heading">
@@ -318,8 +394,9 @@ GET A QUOTE
             <div className="why-text">
               <h3 className={amsterdam.className}>Premium Sets</h3>
               <p>
-                Make your video look elegant and grand with our premium and
-                spacious sets.
+                Make your pre wedding film look elegant and grand with our premium and spacious sets
+
+
               </p>
             </div>
           </div>
@@ -331,7 +408,7 @@ GET A QUOTE
             </div>
 
             <div className="why-text">
-              <h3 className={amsterdam.className}>Air Conditioned Sets</h3>
+              <h3 className={amsterdam.className}>Indoor AC Sets</h3>
               <p>
                 Be it summer or monsoon, you cannot always shoot outdoors. Our
                 luxurious air conditioned indoor sets are always savior.
@@ -342,12 +419,12 @@ GET A QUOTE
           {/* 3 */}
           <div className="why-row">
             <div className="why-img">
-              <Image src="/costumes-on-rent.jpg" alt="" width={319} height={237} />
+              <Image src="/costumes-on-rent.jpg" className="cstonrent" alt="" width={319} height={237} />
             </div>
 
             <div className="why-text">
               <h3 className={amsterdam.className}>Costumes on rent</h3>
-              <p className="costume-text">
+              <p className="costume-text margintop">
               Why buy when you can rent? Stand out your pre wedding with our amazing costumes on rent collection with our onsite alteration team.
 
 
@@ -376,7 +453,7 @@ GET A QUOTE
             <div className="why-text">
               <h3 className={amsterdam.className}>Inhouse makeup artist
 </h3>
-              <p>
+              <p className="margintop">
                Experience the magic of personalized makeup and looks, with our in-house makeup expert.
 
               </p>
@@ -406,6 +483,17 @@ GET A QUOTE
         </div>
       </section>
 
+      <section className="sectionpadding">
+         <div className="text-center mt-10">
+<Link
+    href="https://booking.locationshub.in/pre-wedding-or-maternity/"
+    className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
+  >
+    GET A QUOTE
+  </Link>
+</div>
+        </section> 
+  
 
        <section className="py-20 work our-set">
         <h2 className={`why-title work-title ${amsterdam.className}`}>Photos
@@ -413,8 +501,19 @@ GET A QUOTE
         <PhotoGallery />
       </section>
 
+       <section className="sectionpadding">
+         <div className="text-center mb-10">
+<Link
+    href="https://booking.locationshub.in/pre-wedding-or-maternity/"
+    className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
+  >
+    GET A QUOTE
+  </Link>
+</div>
+        </section> 
+
       {/* OUR WORK */}
-      <section className="py-20 work our-set">
+      <section className="py-20 work our-set workbg">
         <h2 className={`why-title work-title ${amsterdam.className}`}>Our Sets
 </h2>
         <OurSetsSectionPage />
@@ -438,12 +537,12 @@ GET A QUOTE
             style={{ width: "100%", height: "auto" }}
           />
 
-         <div className="bg-primary text-white p-10 bgsec flex items-center">
+         <div className="bg-[#74405B] text-white p-10 bgsec flex items-center">
 
   <div className="inner-wrapper">
-    <h3 className="text-2xl mb-6 textstand">What Makes Us Stand Out</h3>
+    <h3 className="text-2xl mb-6 textstand standout">What Makes Us Stand Out</h3>
 
-    <ul className="space-y-3 text-sm text-left">
+    {/* <ul className="space-y-3 text-sm text-left">
       <li>Plenty of Sets at the Price of One</li>
       <hr></hr>
       <li>Air Conditioned Sets</li>
@@ -455,7 +554,39 @@ GET A QUOTE
       <li>Tons of Props</li>
        <hr></hr>
       <li>Premium Sets</li>
-    </ul>
+    </ul> */}
+
+   <ul className="bg-[#74405B] text-white">
+  <li className="flex items-center gap-3 text-[14px] border-b border-white/70">
+    <span className="font-bold text-[15px]">✓</span>
+    Premium Sets
+  </li>
+
+  <li className="flex items-center gap-3 text-[14px]  border-b border-white/70">
+    <span className="font-bold text-lg text-[14px]">✓</span>
+    AC Indoor Sets
+  </li>
+
+  <li className="flex items-center gap-3 text-[14px]  border-b border-white/70">
+    <span className="font-bold  text-[14px]">✓</span>
+    Inhouse Makeup Artist
+  </li>
+
+  <li className="flex items-center gap-3  text-[14px] border-b border-white/70">
+    <span className="font-bold text-lg text-[14px]" >✓</span>
+    Inhouse Costumes on Rent
+  </li>
+
+  <li className="flex items-center gap-3 text-[14px] border-b border-white/70">
+    <span className="font-bold text-lg text-[14px]">✓</span>
+    Inhouse Veg Restaurant
+  </li>
+
+  <li className="flex items-center text-[14px] gap-3 ">
+    <span className="font-bold text-lg text-[14px]">✓</span>
+    Tons of Props
+  </li>
+</ul>
 
    
   </div>
@@ -477,7 +608,7 @@ GET A QUOTE
         Questions
       </h2>
 
-      <div className="max-w-4xl mx-auto space-y-3 px-6 text-faq">
+      <div className="max-w-6xl mx-auto space-y-3 px-6 text-faq">
 
         {faqData.map((item, index) => (
           <div key={index} className="border border-[#e5cfcf] rounded overflow-hidden">
@@ -506,9 +637,12 @@ GET A QUOTE
       </div>
 
       <div className="text-center mt-10">
-        <button className={`quote-btn ${cinzel.className}`}>
-          GET A QUOTE
-        </button>
+        <Link
+    href="https://booking.locationshub.in/pre-wedding-or-maternity/"
+    className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
+  >
+    GET A QUOTE
+  </Link>
       </div>
 
     </section>

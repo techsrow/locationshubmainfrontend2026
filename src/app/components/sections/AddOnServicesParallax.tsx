@@ -9,6 +9,8 @@ import api from "@/lib/api";
 import { getFileUrl } from "@/lib/fileUrl";
 import { useModal } from "@/app/components/modal/ModalProvider";
 import ShootTypeModal from "@/app/components/modal/ShootTypeModal";
+import { useRouter } from "next/navigation";
+import CostumeModal from "../modal/CostumeModal";
 
 interface AddOnService {
   id: string;
@@ -20,7 +22,10 @@ interface AddOnService {
 
 export default function AddOnServicesParallax() {
   const [services, setServices] = useState<AddOnService[]>([]);
+  const [selectedService, setSelectedService] = useState<AddOnService | null>(null);
+  
   const { openModal } = useModal();
+  const router = useRouter();
 
  useEffect(() => {
   const fetchServices = async () => {
@@ -39,6 +44,55 @@ export default function AddOnServicesParallax() {
 
   fetchServices();
 }, []);
+
+const handleServiceClick = (service: AddOnService) => {
+  if (service.id === "66fc9960-44b4-423c-a59f-ca5a8fc03c0d") {
+    openModal(<CostumeModal />);
+    return;
+  }
+
+  router.push(`/${service.pageUrl}`);
+};
+
+
+function AddOnServiceModal({
+  service,
+  onClose,
+}: {
+  service: AddOnService;
+  onClose: () => void;
+}) {
+  return (
+    <div className="bg-white rounded-lg p-6 max-w-md w-full text-center">
+      <h3 className="text-2xl font-bold text-[#74405B] mb-4">
+        {service.title}
+      </h3>
+
+      <div className="flex flex-col gap-3">
+        <Link
+          href={`/${service.pageUrl}`}
+          className="bg-[#74405B] text-white py-3 rounded"
+        >
+          View Details
+        </Link>
+
+        <Link
+          href="/book-now"
+          className="bg-[#ff8c1a] text-white py-3 rounded"
+        >
+          Book This Service
+        </Link>
+      </div>
+
+      <button
+        onClick={onClose}
+        className="mt-4 border px-4 py-2 rounded"
+      >
+        Close
+      </button>
+    </div>
+  );
+}
 
 
   return (
@@ -61,7 +115,7 @@ export default function AddOnServicesParallax() {
         </div>
 
         {/* Services Grid */}
-      <div className="grid grid-cols-3 md:grid-cols-5 gap-5 max-w-[900px] mx-auto">
+      {/* <div className="grid grid-cols-3 md:grid-cols-5 gap-5 max-w-[900px] mx-auto">
 {services.map((service) => (
     <Link
       key={service.id}
@@ -82,7 +136,56 @@ export default function AddOnServicesParallax() {
     </Link>
   ))}
          
+        </div> */}
+
+        <div className="grid grid-cols-3 md:grid-cols-5 gap-5 max-w-[900px] mx-auto">
+  {services.map((service) => {
+    const isCostume =
+      service.id === "66fc9960-44b4-423c-a59f-ca5a8fc03c0d";
+
+    if (isCostume) {
+      return (
+        <div
+          key={service.id}
+          onClick={() => openModal(<CostumeModal />)}
+          className="flex flex-col items-center gap-4 group cursor-pointer"
+        >
+          <Image
+            src={getFileUrl(service.imageUrl)}
+            alt={service.title}
+            width={150}
+            height={150}
+            className="object-contain transition-transform duration-300 group-hover:scale-105"
+          />
+
+          <span className="text-[14px] md:text-[18px] font-[700] text-center">
+            {service.title}
+          </span>
         </div>
+      );
+    }
+
+    return (
+      <Link
+        key={service.id}
+        href={`/${service.pageUrl}`}
+        className="flex flex-col items-center gap-4 group"
+      >
+        <Image
+          src={getFileUrl(service.imageUrl)}
+          alt={service.title}
+          width={150}
+          height={150}
+          className="object-contain transition-transform duration-300 group-hover:scale-105"
+        />
+
+        <span className="text-[14px] md:text-[18px] font-[700] text-center">
+          {service.title}
+        </span>
+      </Link>
+    );
+  })}
+</div>
 
         {/* CTA */}
         <div className="mt-16">

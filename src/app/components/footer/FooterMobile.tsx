@@ -50,7 +50,7 @@ export default function FooterMobile() {
       <div className="mt-10">
         <h3 className="font-bold mb-3 text-lg">Useful Links</h3>
         <ul className="space-y-2 text-sm">
-          <li><a href="/blog">BLOG</a></li>
+          <li><a href="/blog">BLOGS</a></li>
           <li><a href="/about-locations-hub-shoot-locations-par-excellence">ABOUT US</a></li>
           <li><a href="/cancellation-policy">CANCELLATION POLICY</a></li>
           <li><a href="/terms-and-conditions">TERMS AND CONDITION</a></li>

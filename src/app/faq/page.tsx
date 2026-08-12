@@ -1,6 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import { useState } from "react";
+
+import ShootTypeModal from "../components/modal/ShootTypeModal";
+import { useModal } from "@/app/components/modal/ModalProvider";
+import { useState, useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const faqs = [
   {
@@ -58,7 +63,81 @@ const faqs = [
 ];
 
 export default function FAQPage() {
-  const [active, setActive] = useState<number | null>(12); // last open by default
+  const [active, setActive] = useState<number | null>(12);
+
+const recaptchaRef = useRef<ReCAPTCHA>(null);
+
+const [loading, setLoading] = useState(false);
+const [success, setSuccess] = useState(false);
+const [error, setError] = useState("");
+const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+
+const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  message: "",
+});
+    const { openModal } = useModal();
+
+    const handleChange = (
+  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+
+const handleSubmit = async (
+  e: React.FormEvent<HTMLFormElement>
+) => {
+  e.preventDefault();
+
+  if (!captchaToken) {
+    setError("Please verify that you are not a robot.");
+    return;
+  }
+
+  setLoading(true);
+  setError("");
+  setSuccess(false);
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        ...formData,
+        token: captchaToken,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data.error);
+    }
+
+    setSuccess(true);
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+
+    recaptchaRef.current?.reset();
+    setCaptchaToken(null);
+  } catch (err: any) {
+    setError(err.message || "Something went wrong");
+  }
+
+  setLoading(false);
+};
 
   return (
     <main className="bg-[#fff6f3] py-16">
@@ -92,6 +171,112 @@ export default function FAQPage() {
           </div>
         ))}
       </div>
+  
+<section className="bg-[#f1d5d5] py-16 px-4">
+  <div className="max-w-3xl mx-auto">
+    {/* Heading */}
+    <div className="text-center mb-10">
+      <h2 className="text-[#74405B] text-[28px] font-bold">
+        Didn’t Find the Answer?
+      </h2>
+
+      <div className="w-20 h-[3px] bg-[#74405B] mx-auto mt-3"></div>
+
+      <p className="mt-6 text-[#74405B] text-sm">
+        Please feel free to contact us for any questions or doubts.
+      </p>
+    </div>
+
+    {/* Form */}
+    <form onSubmit={handleSubmit} className="space-y-5">
+      {success && (
+  <div className="bg-green-100 text-green-700 p-3 rounded">
+    Thank you for contacting us. We will get back to you shortly.
+  </div>
+)}
+
+{error && (
+  <div className="bg-red-100 text-red-700 p-3 rounded">
+    {error}
+  </div>
+)}
+     <input
+  name="name"
+  value={formData.name}
+  onChange={handleChange}
+  type="text"
+  placeholder="Name*"
+  required
+  className="w-full h-[40px] px-4 bg-white border border-gray-300 outline-none focus:border-[#74405B]"
+/>
+
+     <input
+  name="email"
+  value={formData.email}
+  onChange={handleChange}
+  type="email"
+  placeholder="Email*"
+  required
+  className="w-full h-[40px] px-4 bg-white border border-gray-300 outline-none focus:border-[#74405B]"
+/>
+
+     <input
+  name="phone"
+  value={formData.phone}
+  onChange={handleChange}
+  type="tel"
+  placeholder="Telephone*"
+  required
+  className="w-full h-[40px] px-4 bg-white border border-gray-300 outline-none focus:border-[#74405B]"
+/>
+
+      <textarea
+  name="message"
+  value={formData.message}
+  onChange={handleChange}
+  rows={6}
+  placeholder="Message*"
+  required
+  className="w-full p-4 bg-white border border-gray-300 outline-none resize-none focus:border-[#74405B]"
+/>
+
+      {/* Placeholder for reCAPTCHA */}
+     <ReCAPTCHA
+  ref={recaptchaRef}
+  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+  onChange={(token) => setCaptchaToken(token)}
+/>
+
+     <button
+  type="submit"
+  disabled={loading}
+  className="bg-[#74405B] text-white px-8 py-3 font-medium hover:bg-[#5f3249] transition disabled:bg-gray-400"
+>
+  {loading ? "Sending..." : "Send Message"}
+</button>
+    </form>
+  </div>
+</section>
+
+ {/* CTA */}
+       <div className="mt-16 flex justify-center">
+  <button
+    onClick={() => openModal(<ShootTypeModal />)}
+    className="bg-[#FF881D]
+    text-white
+    font-quicksand
+    text-[18px]
+    font-semibold
+    px-[70px]
+    py-[13px]
+    rounded-[3px]
+    hover:bg-[#e57c14]
+    transition"
+  >
+    Book Now
+  </button>
+</div>
     </main>
+    
   );
 }

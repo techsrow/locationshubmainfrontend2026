@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function PreWeddingPhotographers() {
   return (
     <div className="bg-[#f3f0f2] min-h-screen">
@@ -42,22 +44,29 @@ View our cinematographers work</span>
         </div>
 
         {/* Button (Exact CSS Applied) */}
-        <div className="mb-12">
-          <a href="http://" className="bg-[#FF7905]
-            font-['Quicksand']
-            font-bold
-            text-[18px]
-            px-4
-            py-2
-            rounded-[3px]
-            text-white
-            hover:opacity-90
-            transition
-            btn-mx-w
-            w-[300]">
-               Our Work
-          </a>
-         
+       <div className="mb-12">
+           <Link
+    href="https://www.trueshadesphotography.com/pre-wedding-photographers-at-locations-hub/"
+    className="
+      inline-flex
+      items-center
+      justify-center
+      bg-[#FF7905]
+      font-['Quicksand']
+      font-bold
+      text-[18px]
+      px-4
+      py-2
+      rounded-[3px]
+      text-white
+      hover:opacity-90
+      transition
+      btn-mx-w
+      w-[300px]
+    "
+  >
+    OUR WORK
+  </Link>
         </div>
 
         {/* Lorem Ipsum Content */}

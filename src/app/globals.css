@@ -533,3 +533,8 @@ color: #fff;
 .submenu{
   padding-bottom: 5px !important;
 }
+
+.theme-color{
+  color: #74405b !important;
+  font-size: 22px;
+}

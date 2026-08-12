@@ -55,7 +55,7 @@
 .hero-btn{
   margin-top:30px;
   padding:12px 28px;
-  background:#5a0f2b;
+  background:#BB687A;
   border:none;
   color:white;
   cursor:pointer;
@@ -85,7 +85,7 @@
 
 .about-title{
  font-size:80px;
-  color:#4b1d2b;
+  color:#BB687A;
   margin-bottom:60px;
   text-align:center;
   font-weight:400;
@@ -181,7 +181,7 @@ padding-bottom: 0px;
 .why-title{
 text-align:center;
 font-size:50px;
-color:#4b1d2b;
+color:#BB687A;
 margin-bottom:80px;
 }
 
@@ -194,7 +194,7 @@ margin:auto;
 display:flex;
 align-items:center;
 justify-content:space-between;
-background:#5a0f2b;
+background:#BB687A;
 padding:50px 80px;
 margin:80px 0;
 position:relative;
@@ -214,6 +214,7 @@ position:absolute;
 left:80px;
 margin-bottom: 40px;
 }
+
 
 .why-row.reverse .why-img{
 left:auto;
@@ -235,7 +236,7 @@ color: #BB687A;
 
 .why-text h3{
 font-size:38px;
-margin-bottom:30px;
+margin-bottom:50px;
 }
 
 .why-text p{
@@ -249,7 +250,7 @@ margin-bottom: 15px;
 
 .work{
   /* padding:80px 0; */
-  background-color: #fdf7f7;
+ 
 }
 
 .work-heading{
@@ -270,7 +271,7 @@ font-family: "Cinzel", Sans-serif;
 .work-btn{
   margin-top:40px;
   padding:12px 25px;
-  background:#5a0f2b;
+  background:#BB687A;
   color:white;
   border:none;
 }
@@ -281,8 +282,7 @@ font-family: "Cinzel", Sans-serif;
 .testimonials{
  
   background:#ecd1d1;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  margin-top: 50px;
 }
 
 .testimonial-slide{
@@ -331,7 +331,7 @@ font-family: "Cinzel", Sans-serif;
 }
 
 .highlight-box{
-  background:#5a0f2b;
+  background:#BB687A;
   color:white;
   padding:40px;
 }
@@ -415,7 +415,7 @@ font-family: "Cinzel", Sans-serif;
 }
 
 .featured-heading{
-  background:#5a0f2b;
+  background:#BB687A;
   padding:2px 0;
   text-align:center;
 }
@@ -677,8 +677,8 @@ padding:50px 15px;
 }
 
 section{
-padding-top:100px;
-padding-bottom:100px;
+padding-top:50px;
+padding-bottom:50px;
 }
 
 .container{
@@ -906,4 +906,30 @@ line-height:1.7;
 
 .gallery{
   column-gap: 10px;
+}
+
+.cstonrent{
+  margin-top: -80px;
+}
+
+.margintop{
+  margin-top: -20px;
+}
+
+.sectionpadding{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.workbg{
+  background-color: #F2D0CF !important;
+}
+
+.standout{
+      font-family: "AMSTERDAM", Sans-serif !important;
+      font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 50px;
 }

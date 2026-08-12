@@ -88,7 +88,7 @@ export default function SetupGalleryPage() {
         {/* Content (HTML from CMS) */}
         {setup.content && (
           <div
-            className="prose max-w-none mb-10"
+            className="prose max-w-none mb-10 theme-color"
             dangerouslySetInnerHTML={{ __html: setup.content }}
           />
         )}
@@ -103,7 +103,7 @@ export default function SetupGalleryPage() {
                width={0}
   height={0}
   sizes="100vw"
-  className="w-full h-auto max-h-[80vh] object-contain"
+  className="w-full  object-contain"
             />
           ))}
         </div>

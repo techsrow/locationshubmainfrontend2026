@@ -63,7 +63,7 @@ export default function Page() {
 
 
             <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/30 px-6 py-2 setupbtn">
-              <span className="text-white text-sm font-semibold">
+              <span className="text-white text-sm font-semibold ">
                 {setup.title}
               </span>
             </div>

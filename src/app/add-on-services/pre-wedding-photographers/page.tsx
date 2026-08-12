@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 export default function PreWeddingPhotographers() {
   return (
@@ -39,22 +40,28 @@ export default function PreWeddingPhotographers() {
 
         {/* Button (Exact CSS Applied) */}
         <div className="mb-12">
-          <button className="
-            bg-[#FF7905]
-            font-['Quicksand']
-            font-bold
-            text-[18px]
-            px-4
-            py-2
-            rounded-[3px]
-            text-white
-            hover:opacity-90
-            transition
-            btn-mx-w
-            w-[300]
-          ">
-            OUR WORK
-          </button>
+          <Link
+    href="https://www.trueshadesphotography.com/pre-wedding-photographers-at-locations-hub/"
+    className="
+      inline-flex
+      items-center
+      justify-center
+      bg-[#FF7905]
+      font-['Quicksand']
+      font-bold
+      text-[18px]
+      px-4
+      py-2
+      rounded-[3px]
+      text-white
+      hover:opacity-90
+      transition
+      btn-mx-w
+      w-[300px]
+    "
+  >
+    OUR WORK
+  </Link>
         </div>
 
         {/* Lorem Ipsum Content */}
