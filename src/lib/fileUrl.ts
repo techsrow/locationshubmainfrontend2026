@@ -10,3 +10,5 @@ export const getFileUrl = (path: string) => {
 
   return `${base}/${cleanPath}`;
 };
+
+

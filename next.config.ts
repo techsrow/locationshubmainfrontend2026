@@ -45,9 +45,30 @@ const nextConfig: NextConfig = {
 
   images: {
     remotePatterns: [
+     
       {
+  protocol: "http",
+  hostname: "localhost",
+  port: "5000",
+  pathname: "/uploads/**",
+},
+{
+  protocol: "http",
+  hostname: "192.168.137.1",
+  port: "5000",
+  pathname: "/uploads/**",
+},
+
+      {
+  protocol: "http",
+  hostname: "localhost",
+  port: "5000",
+  pathname: "/uploads/**",
+},
+
+       {
         protocol: "https",
-        hostname: "api.locationshub.in",
+        hostname: "api.ettire.in",
         pathname: "/uploads/**",
       },
       {
@@ -62,6 +83,10 @@ const nextConfig: NextConfig = {
       "localhost",
       "www.locationshub.in",
       "locationshub.in",
+      "ettire.in",
+      "www.ettire.in",
+      "api.ettire.in"
+      
     ],
   },
 
@@ -70,29 +95,23 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: [
-          {
-            key: "Content-Security-Policy",
-            value:
-              "default-src 'self'; " +
+         {
+  key: "Content-Security-Policy",
+  value:
+    "default-src 'self'; " +
 
-              // ✅ scripts
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://checkout.razorpay.com https://api.razorpay.com; " +
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://checkout.razorpay.com https://api.razorpay.com; " +
 
-              // 🔥 FIX HERE (added + at end)
-              "frame-src 'self' https://player.vimeo.com https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com https://checkout.razorpay.com https://api.razorpay.com; " +
+    "frame-src 'self' https://player.vimeo.com https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com https://checkout.razorpay.com https://api.razorpay.com http://localhost:5000 https://ettire.in https://api.ettire.in; " +
 
-              // ✅ images
-              "img-src 'self' data: https: http: blob:; " +
+    "img-src 'self' data: https: http: blob:; " +
 
-              // ✅ styles
-              "style-src 'self' 'unsafe-inline'; " +
+    "style-src 'self' 'unsafe-inline'; " +
 
-              // ✅ fonts
-              "font-src 'self' data: https:; " +
+    "font-src 'self' data: https:; " +
 
-              // ✅ connect
-              "connect-src 'self' https://www.google.com https://www.gstatic.com https://api.locationshub.in https://checkout.razorpay.com https://api.razorpay.com https://lumberjack.razorpay.com http://localhost:3000;",
-          },
+    "connect-src 'self' https://www.google.com https://www.gstatic.com https://api.locationshub.in https://checkout.razorpay.com https://api.razorpay.com https://lumberjack.razorpay.com http://localhost:3000 http://localhost:5000 https://ettire.in https://api.ettire.in;"
+}
         ],
       },
     ];

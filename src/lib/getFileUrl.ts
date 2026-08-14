@@ -1,5 +1,7 @@
 // const BASE_URL = "https://api.pagedaddy.in/uploads";
-const BASE_URL = "https://api.locationshub.in/uploads";
+// const BASE_URL = "https://api.locationshub.in/uploads";
+ const BASE_URL = "http://localhost:5000/uploads";
+
 
 export const buildImageUrl = (file: string) => {
   if (!file) return "";

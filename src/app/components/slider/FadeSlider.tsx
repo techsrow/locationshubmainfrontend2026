@@ -44,6 +44,8 @@ export default function HomeSlider() {
 
     return () => clearInterval(interval);
   }, [slides]);
+console.log("NEXT_PUBLIC_API_URL =", process.env.NEXT_PUBLIC_API_URL);
+
 
   return (
     <div className="relative">
