@@ -62,55 +62,79 @@ export default function BookingCalendar({ slug }: { slug: string }) {
      Load Product
   -------------------------------- */
 
-  useEffect(() => {
+useEffect(() => {
+  async function loadProduct() {
+    try {
+      console.log(
+        "Loading product:",
+        `/products/${slug}`
+      );
 
-    async function loadProduct() {
+      const res = await api.get(
+        // `/products/${slug}`
+         `/products/${slug}`
+      );
 
-      try {
+      console.log(
+        "Product Response:",
+        res.data
+      );
 
-        const res = await api.get<Product>(`/products/${slug}`);
-        setProduct(res.data);
-
-      } catch (error: any) {
-
-        console.error("Product load error:", error?.message);
-
-      }
-
+      setProduct(
+        res.data?.data || res.data
+      );
+    } catch (error: any) {
+      console.error(
+        "Product load error",
+        {
+          status:
+            error?.response?.status,
+          url: error?.config?.url,
+          data:
+            error?.response?.data,
+        }
+      );
     }
+  }
 
-    if (slug) loadProduct();
-
-  }, [slug]);
+  if (slug) {
+    loadProduct();
+  }
+}, [slug]);
 
   /* -------------------------------
      Load Locked Dates
   -------------------------------- */
-
 useEffect(() => {
-
   if (!product?.id) return;
 
   const loadLockedDates = async () => {
-
     try {
+      const res = await api.get(
+        "/bookings/locked-dates"
+      );
 
-      const res = await api.get<string[]>("/bookings/locked-dates", {
-        params: { productId: product.id }
-      });
+      const formattedLockedDates =
+        (res.data?.dates || []).map(
+          (item: any) =>
+            format(
+              new Date(item.date),
+              "yyyy-MM-dd"
+            )
+        );
 
-      setLockedDates(res.data);
-
+      setLockedDates(
+        formattedLockedDates
+      );
     } catch (error) {
-
-      console.error("Locked dates error:", error);
-
+      console.error(
+        "Locked dates error:",
+        error
+      );
     }
-
   };
 
   loadLockedDates();
-
 }, [product?.id]);
 
   /* -------------------------------

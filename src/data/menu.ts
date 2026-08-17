@@ -24,14 +24,14 @@ export const menu = [
   {
     name: "Book Now",
     children: [
-      // { name: "Pre Wedding | Maternity", href: "/pre-wedding-or-maternity" },
-      // { name: "Product | Garment | Fashion", href: "/product-or-garment-or-fashion" },
-      // { name: "Music Video | Ad shoot", href: "/music-video-or-ad-shoot" },
-      // { name: "Web series | TV Serial", href: "/web-series-or-tv-serials" },
-      { name: "Pre Wedding | Maternity", href: "https://booking.locationshub.in/pre-wedding-or-maternity/" },
-      { name: "Product | Garment | Fashion", href: "https://booking.locationshub.in/product-or-garment-or-fashion/" },
-      { name: "Music Video | Ad shoot", href: "https://booking.locationshub.in/music-video-or-ad-shoot/" },
-      { name: "Web series | TV Serial", href: "https://booking.locationshub.in/web-series-or-tv-serials/" },
+      { name: "Pre Wedding | Maternity", href: "/pre-wedding-or-maternity" },
+      { name: "Product | Garment | Fashion", href: "/product-or-garment-or-fashion" },
+      { name: "Music Video | Ad shoot", href: "/music-video-or-ad-shoot" },
+      { name: "Web series | TV Serial", href: "/web-series-or-tv-serials" },
+      // { name: "Pre Wedding | Maternity", href: "https://booking.locationshub.in/pre-wedding-or-maternity/" },
+      // { name: "Product | Garment | Fashion", href: "https://booking.locationshub.in/product-or-garment-or-fashion/" },
+      // { name: "Music Video | Ad shoot", href: "https://booking.locationshub.in/music-video-or-ad-shoot/" },
+      // { name: "Web series | TV Serial", href: "https://booking.locationshub.in/web-series-or-tv-serials/" },
      
      
     ]

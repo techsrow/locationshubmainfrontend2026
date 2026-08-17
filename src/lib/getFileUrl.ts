@@ -1,16 +1,23 @@
-// const BASE_URL = "https://api.pagedaddy.in/uploads";
-// const BASE_URL = "https://api.locationshub.in/uploads";
- const BASE_URL = "http://localhost:5000/uploads";
-
+const BASE_URL =
+  process.env.NEXT_PUBLIC_FILE_URL ||
+  "http://localhost:5000";
 
 export const buildImageUrl = (file: string) => {
   if (!file) return "";
 
-  // if already full url
-  if (file.startsWith("http")) return file;
+  // Already a full URL
+  if (file.startsWith("http://") || file.startsWith("https://")) {
+    return file;
+  }
 
-  // remove leading slashes
+  const base = BASE_URL.replace(/\/$/, "");
   const clean = file.replace(/^\/+/, "");
 
-  return `${BASE_URL}/${clean}`;
+  // Handle uploads/filename.jpg
+  if (clean.startsWith("uploads/")) {
+    return `${base}/${clean}`;
+  }
+
+  // Handle filename.jpg
+  return `${base}/uploads/${clean}`;
 };
