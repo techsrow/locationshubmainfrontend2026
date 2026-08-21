@@ -12,20 +12,20 @@ type Plan = {
 };
 
 export default function PreWeddingOrMaternityPage() {
-  useEffect(() => {
-    const cards = document.querySelectorAll(".pricing-card");
+  // useEffect(() => {
+  //   const cards = document.querySelectorAll(".pricing-card");
 
-    let maxHeight = 0;
+  //   let maxHeight = 0;
 
-    cards.forEach((card) => {
-      const height = (card as HTMLElement).clientHeight;
-      if (height > maxHeight) maxHeight = height;
-    });
+  //   cards.forEach((card) => {
+  //     const height = (card as HTMLElement).clientHeight;
+  //     if (height > maxHeight) maxHeight = height;
+  //   });
 
-    cards.forEach((card) => {
-      (card as HTMLElement).style.height = `${maxHeight}px`;
-    });
-  }, []);
+  //   cards.forEach((card) => {
+  //     (card as HTMLElement).style.height = `${maxHeight}px`;
+  //   });
+  // }, []);
 
   const plans: Plan[] = [
   // SILVER
@@ -49,7 +49,7 @@ export default function PreWeddingOrMaternityPage() {
     title: "Silver + MakeUp",
     price: "17,500",
     oldPrice: "24,000 INR",
-    link: "products/pre-wedding-silver-makeup",
+    link: "products/pre-wedding-silver-make-up",
     features: [
       "7am to 12pm or 2pm to 7pm",
       "For one couple only",
@@ -83,7 +83,7 @@ export default function PreWeddingOrMaternityPage() {
     title: "Silver + MakeUp + Costumes",
     price: "25,500",
     oldPrice: "38,000 INR",
-    link: "products/pre-wedding-or-maternity/",
+    link: "products/silver-makeup-costumes",
     features: [
       "7am to 12pm or 2pm to 7pm",
       "For one couple only",
@@ -119,7 +119,7 @@ export default function PreWeddingOrMaternityPage() {
     title: "Gold + MakeUp",
     price: "25,000",
     oldPrice: "32,000 INR",
-    link: "productspre-wedding-or-maternity/",
+    link: "products/pre-wedding-gold-makeup",
     features: [
       "7am to 3pm or 11am to 7pm",
       "For one couple only",
@@ -136,7 +136,7 @@ export default function PreWeddingOrMaternityPage() {
     title: "Gold + Costumes",
     price: "24,000",
     oldPrice: "34,000 INR",
-    link: "https://booking.locationshub.in/pre-wedding-or-maternity/",
+    link: "products/pre-wedding-gold-makeup",
     features: [
       "7am to 3pm or 11am to 7pm",
       "For one couple only",

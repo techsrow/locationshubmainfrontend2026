@@ -284,7 +284,7 @@ useEffect(() => {
       </div>
 
       {/* SLOT LIST */}
-      {selectedDate && (
+      {/* {selectedDate && (
 
         <div className="mt-6">
 
@@ -317,7 +317,38 @@ useEffect(() => {
 
         </div>
 
-      )}
+      )} */}
+
+      <div className="mt-6">
+
+  <h3 className="font-semibold mb-3">
+    Select your slot *
+  </h3>
+
+  <div className="space-y-2">
+
+    {product.slots.map((slot) => (
+
+      <label
+        key={slot.id}
+        className="flex items-center gap-2 cursor-pointer"
+      >
+
+        <input
+          type="checkbox"
+          checked={selectedSlots.some((s) => s.id === slot.id)}
+          onChange={() => toggleSlot(slot)}
+        />
+
+        {slot.label}
+
+      </label>
+
+    ))}
+
+  </div>
+
+</div>
 
       {/* SUMMARY */}
       {selectedDate && selectedSlots.length > 0 && (

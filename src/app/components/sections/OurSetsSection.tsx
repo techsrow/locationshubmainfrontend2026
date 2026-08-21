@@ -44,8 +44,7 @@ export default function OurSetsSection() {
   }, []);
 
   const visibleSets = showAll ? sets : sets.slice(0, 6);
-  
-  
+
   return (
     <section className="px-0 md:px-[60px] py-10 bg-white">
       {/* Heading */}

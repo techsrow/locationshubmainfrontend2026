@@ -169,11 +169,12 @@
 /* Alternating list background colors */
 .pricing-features li {
   padding: 10px 12px;
-  font-size: 13px;
+  font-size: 14px;
   color: #4d2a3a;
   text-align: center;
   border-bottom: 1px solid #d6cfd3;
   background: #ffffff; /* default (odd) */
+  font-weight: 500;
 }
 
 /* EVEN rows */
@@ -525,7 +526,7 @@ color: #fff;
   transform: translateY(-2px);
 }
 
-.dropdown-card{
+/* .dropdown-card{
   padding-top: 5px !important;
   padding-bottom: 5px !important;
 }
@@ -537,4 +538,16 @@ color: #fff;
 .theme-color{
   color: #74405b !important;
   font-size: 22px;
+} */
+
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.pb{
+  padding-bottom: 4px;
 }

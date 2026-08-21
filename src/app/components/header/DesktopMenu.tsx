@@ -37,7 +37,7 @@ export default function DesktopMenu() {
                     /* SUB MENU WITH SECOND LEVEL */
                     <div key={child.name} className="relative group/sub">
                       
-                      <div className="flex items-center justify-between  font-[500] cursor-pointer hover:text-gray-300">
+                      <div className="flex items-center justify-between pb font-[500] cursor-pointer hover:text-gray-300">
                         {child.name}
                         <span className="ml-2">›</span>
                       </div>
@@ -50,7 +50,7 @@ export default function DesktopMenu() {
                             <Link
                               key={sub.name}
                               href={sub.href}
-                              className="block   font-[500] hover:text-gray-300"
+                              className="block pb  font-[500] hover:text-gray-300"
                             >
                               {sub.name}
                             </Link>
