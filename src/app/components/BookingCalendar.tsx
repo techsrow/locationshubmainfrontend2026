@@ -34,6 +34,8 @@ type Product = {
   slots: Slot[];
 };
 
+
+
 export default function BookingCalendar({ slug }: { slug: string }) {
 
   const router = useRouter();
@@ -70,19 +72,16 @@ useEffect(() => {
         `/products/${slug}`
       );
 
-      const res = await api.get(
-        // `/products/${slug}`
-         `/products/${slug}`
-      );
+     const res = await api.get<any>(`/products/${slug}`);
+
 
       console.log(
         "Product Response:",
         res.data
+
       );
 
-      setProduct(
-        res.data?.data || res.data
-      );
+     setProduct(res.data?.data || res.data);
     } catch (error: any) {
       console.error(
         "Product load error",
@@ -110,18 +109,18 @@ useEffect(() => {
 
   const loadLockedDates = async () => {
     try {
-      const res = await api.get(
-        "/bookings/locked-dates"
-      );
+     const res = await api.get<any>(
+  "/bookings/locked-dates"
+);
 
       const formattedLockedDates =
-        (res.data?.dates || []).map(
-          (item: any) =>
-            format(
-              new Date(item.date),
-              "yyyy-MM-dd"
-            )
-        );
+  (res.data?.dates || []).map(
+    (item: any) =>
+      format(
+        new Date(item.date),
+        "dd-MM-yyyy"
+      )
+  );
 
       setLockedDates(
         formattedLockedDates
