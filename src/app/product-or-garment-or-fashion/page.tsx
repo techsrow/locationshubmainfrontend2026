@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { useEffect } from "react";
 
@@ -21,6 +22,7 @@ export default function ProductOrGarmentOrFashionPage() {
       title: "Silver",
       price: "20,000",
       oldPrice: "25,000 INR",
+       link: "products/fashion-garment-product-silver",
       features: [
         "7am to 1pm or 1pm to 7pm",
         "Shoot with multiple models",
@@ -38,6 +40,7 @@ export default function ProductOrGarmentOrFashionPage() {
       title: "Gold",
       price: "25,000",
       oldPrice: "30,000 INR",
+       link: "products/fashion-garment-product-gold",
       features: [
         "7am to 4pm or 9am to 6pm",
         "Shoot with multiple models",
@@ -55,6 +58,7 @@ export default function ProductOrGarmentOrFashionPage() {
       title: "Platinum",
       price: "30,000",
       oldPrice: "35,000 INR",
+       link: "products/fashion-garment-product-platinum",
       features: [
         "7am to 7pm or 9am to 9pm",
         "Shoot with multiple models",
@@ -124,11 +128,14 @@ export default function ProductOrGarmentOrFashionPage() {
               </ul>
 
               {/* Footer */}
-              <div className="py-6 text-center">
-                <button className="bg-[#3b1326] text-white text-sm px-6 py-2 rounded hover:bg-[#2f0f1e] transition">
-                  Book Now
-                </button>
-              </div>
+             <div className="py-6 text-center">
+  <Link
+    href={plan.link}
+    className="bg-[#3b1326] text-white text-sm px-6 py-2 rounded hover:bg-[#2f0f1e] transition inline-block"
+  >
+    Book Now
+  </Link>
+</div>
             </div>
           ))}
         </div>

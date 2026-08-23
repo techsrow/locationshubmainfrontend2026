@@ -549,5 +549,22 @@ color: #fff;
 }
 
 .pb{
-  padding-bottom: 4px;
+  padding-bottom: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+  .imghforset {
+    min-height: 490px !important;
+    max-height: 490px !important;
+  }
+}
+
+.theme-color h2 {
+  color: #74405b !important;
+  font: normal normal 700 22px/1.1em "Quicksand", Helvetica, Arial, Verdana, sans-serif !important;
+  margin: 0 !important;
+}
+
+.setup-title{
+color: #74405b !important;
 }

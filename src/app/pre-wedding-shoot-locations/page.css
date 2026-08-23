@@ -198,6 +198,8 @@ background:#BB687A;
 padding:50px 80px;
 margin:80px 0;
 position:relative;
+    min-height: 230px;
+    max-height: 229px;
 }
 
 .why-row.reverse{
@@ -892,6 +894,7 @@ line-height:1.7;
   background: transparent;
   font-size: 18px;
   cursor: pointer;
+
 }
 
 
@@ -909,7 +912,7 @@ line-height:1.7;
 }
 
 .cstonrent{
-  margin-top: -80px;
+  margin-top: -30px;
 }
 
 .margintop{

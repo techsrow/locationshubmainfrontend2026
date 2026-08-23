@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 
 export default function WebSeriesOrTvSerialsPage() {
   useEffect(() => {
@@ -26,36 +27,38 @@ export default function WebSeriesOrTvSerialsPage() {
     return () => window.removeEventListener("resize", syncHeights);
   }, []);
 
-  const plans = [
-    {
-      title: "Gold",
-      price: "45,000",
-      features: [
-        "9 Hrs",
-        "Entry fees included for 15 people",
-        "One private AC green room",
-        "Extra person Rs 1000 per head",
-        "Access to all sets, one at a time",
-        "Overtime Rs 5,000 per hour",
-        "Security deposit Rs 10,000",
-        "Non heavy lights allowed",
-      ],
-    },
-    {
-      title: "Platinum",
-      price: "60,000",
-      features: [
-        "12 Hrs",
-        "Entry fees included for 15 people",
-        "2 private AC green rooms",
-        "Extra person Rs 1000 per head",
-        "Access to all sets, one at a time",
-        "Overtime Rs 5,000 per hour",
-        "Security deposit Rs 10,000",
-        "Non heavy lights allowed",
-      ],
-    },
-  ];
+const plans = [
+  {
+    title: "Gold",
+    price: "45,000",
+    link: "products/web-series-tv-serial-gold",
+    features: [
+      "9 Hrs",
+      "Entry fees included for 15 people",
+      "One private AC green room",
+      "Extra person Rs 1000 per head",
+      "Access to all sets, one at a time",
+      "Overtime Rs 5,000 per hour",
+      "Security deposit Rs 10,000",
+      "Non heavy lights allowed",
+    ],
+  },
+  {
+    title: "Platinum",
+    price: "60,000",
+    link: "/products/web-series-tv-serial-platinum",
+    features: [
+      "12 Hrs",
+      "Entry fees included for 15 people",
+      "2 private AC green rooms",
+      "Extra person Rs 1000 per head",
+      "Access to all sets, one at a time",
+      "Overtime Rs 5,000 per hour",
+      "Security deposit Rs 10,000",
+      "Non heavy lights allowed",
+    ],
+  },
+];
 
   return (
     <section className="py-12">
@@ -110,11 +113,14 @@ export default function WebSeriesOrTvSerialsPage() {
               </ul>
 
               {/* Footer */}
-              <div className="py-6 text-center">
-                <button className="bg-[#3b1326] text-white text-sm px-6 py-2 rounded hover:bg-[#2f0f1e] transition">
-                  Book Now
-                </button>
-              </div>
+             <div className="py-6 text-center">
+  <Link
+    href={plan.link}
+    className="bg-[#3b1326] text-white text-sm px-6 py-2 rounded hover:bg-[#2f0f1e] transition inline-block"
+  >
+    Book Now
+  </Link>
+</div>
             </div>
           ))}
         </div>

@@ -1,93 +1,76 @@
 "use client";
 
-import { useEffect } from "react";
+import Link from "next/link";
 
-export default function MusicVideoOrAdShootPage() {
-  useEffect(() => {
-    const cards = document.querySelectorAll(".pricing-card");
-    let maxHeight = 0;
-
-    // reset first (important when resize or re-render)
-    cards.forEach((card) => {
-      (card as HTMLElement).style.height = "auto";
-    });
-
-    cards.forEach((card) => {
-      maxHeight = Math.max(maxHeight, (card as HTMLElement).offsetHeight);
-    });
-
-    cards.forEach((card) => {
-      (card as HTMLElement).style.height = `${maxHeight}px`;
-    });
-  }, []);
-
-  const plans = [
+export default function ProductOrGarmentOrFashionPage() {
+const plans = [
     {
       title: "Silver",
-      price: "20,000",
-      oldPrice: "25,000 INR",
+      price: "30,000",
+      oldPrice: "35,000 INR",
+      link: "products/music-video-ad-shoot-silver",
       features: [
-        "7am to 1pm or 1pm to 7pm",
-        "Shoot with multiple models",
+        "6 Hrs",
+        "Entry fees included for 15 people",
         "One private AC green room",
-        "Entry fees included for 10 people",
         "Extra person Rs 1000 per head",
-        "Above 10 extra person, Rs 2000 per head",
         "Access to all sets, one at a time",
-        "Overtime Rs 3,000 per hour",
+        "Overtime Rs 4,000 per hour",
+        "Security deposit Rs 10,000",
+        "Non heavy lights allowed",
       ],
-      btnText: "Book Now",
     },
     {
       title: "Gold",
-      price: "35,000",
+      price: "40,000",
       oldPrice: "45,000 INR",
+      link: "products/music-video-ad-shoot-gold",
       features: [
-        "7am to 7pm (12 Hours)",
-        "Shoot with multiple models",
-        "One private AC green room",
+        "9 Hrs",
         "Entry fees included for 15 people",
+        "One private AC green room",
         "Extra person Rs 1000 per head",
-        "Above 15 extra person, Rs 2000 per head",
         "Access to all sets, one at a time",
-        "Overtime Rs 3,000 per hour",
+        "Overtime Rs 4,000 per hour",
+        "Security deposit Rs 10,000",
+        "Non heavy lights allowed",
       ],
-      btnText: "Book Now",
     },
     {
       title: "Platinum",
-      price: "60,000",
-      oldPrice: "75,000 INR",
+      price: "50,000",
+      oldPrice: "60,000 INR",
+      link: "products/music-video-ad-shoot-platinum",
       features: [
-        "Full day (Up to 12 Hours)",
-        "Shoot with multiple models",
-        "Two private AC green rooms",
-        "Entry fees included for 20 people",
+        "12 Hrs",
+        "Entry fees included for 15 people",
+        "One private AC green rooms",
         "Extra person Rs 1000 per head",
-        "Above 20 extra person, Rs 2000 per head",
-        "Access to all sets (as per availability)",
-        "Overtime Rs 3,000 per hour",
+        "Access to all sets, one at a time",
+        "Overtime Rs 4,000 per hour",
+        "Security deposit Rs 10,000",
+        "Non heavy lights allowed",
       ],
-      btnText: "Book Now",
     },
   ];
 
   return (
-    <section className="py-12 bg-white">
+   <section className="py-12">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Breadcrumb like old page */}
+        {/* Breadcrumb */}
         <div className="text-center text-sm text-gray-500 mb-10">
-          Music Video | Ad Shoot
+         Music Video | Ad shoot
         </div>
 
-        {/* 3-column centered grid like screenshot (NO GAP) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 place-items-center">
+        {/* 3-column centered grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-0 place-items-center">
+
           {plans.map((plan, i) => (
             <div
               key={i}
               className="pricing-card w-full max-w-[393px] bg-white border border-black/10 flex flex-col"
             >
-              {/* Header (two-tone) */}
+              {/* Header (two-tone like screenshot) */}
               <div className="relative text-center text-white">
                 <div className="bg-[#3b1326] py-10">
                   <h3 className="text-xl font-semibold tracking-wide">
@@ -103,19 +86,19 @@ export default function MusicVideoOrAdShootPage() {
                     <div className="text-lg font-semibold leading-none">
                       {plan.price}
                     </div>
-                    <div className="text-[11px] text-[#3b1326]/80 line-through mt-1">
+                    <div className="text-[12px] text-[#3b1326]/80 line-through mt-1">
                       {plan.oldPrice}
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Features (striped) */}
+              {/* Features */}
               <ul className="flex-1">
                 {plan.features.map((item, idx) => (
                   <li
                     key={idx}
-                    className={`text-center text-sm py-3 border-t border-black/10 ${
+                    className={`text-center text-[14px] py-3 border-t border-black/10 ${
                       idx % 2 === 0 ? "bg-[#f7f6f6]" : "bg-[#ece9ea]"
                     }`}
                   >
@@ -124,12 +107,15 @@ export default function MusicVideoOrAdShootPage() {
                 ))}
               </ul>
 
-              {/* Footer (button at bottom like screenshot) */}
-              <div className="py-6 text-center">
-                <button className="bg-[#3b1326] text-white text-sm px-6 py-2 rounded hover:bg-[#2f0f1e] transition">
-                  {plan.btnText}
-                </button>
-              </div>
+              {/* Footer */}
+             <div className="py-6 text-center">
+  <Link
+    href={plan.link}
+    className="bg-[#3b1326] text-white text-sm px-6 py-2 rounded hover:bg-[#2f0f1e] transition inline-block"
+  >
+    Book Now
+  </Link>
+</div>
             </div>
           ))}
         </div>

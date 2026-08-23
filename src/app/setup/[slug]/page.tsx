@@ -81,7 +81,7 @@ export default function SetupGalleryPage() {
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Title */}
-        <h1 className="text-3xl font-semibold text-center mb-8">
+        <h1 className="text-3xl setup-title font-semibold text-center mb-8">
           {setup.title}
         </h1>
 

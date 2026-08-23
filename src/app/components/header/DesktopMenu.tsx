@@ -63,7 +63,7 @@ export default function DesktopMenu() {
                     <Link
                       key={child.name}
                       href={child.href}
-                      className="block  font-[500] submenu hover:text-gray-300"
+                      className="block pb font-[500] submenu hover:text-gray-300"
                     >
                       {child.name}
                     </Link>

@@ -136,7 +136,7 @@ export default function PreWeddingOrMaternityPage() {
     title: "Gold + Costumes",
     price: "24,000",
     oldPrice: "34,000 INR",
-    link: "products/pre-wedding-gold-makeup",
+    link: "products/pre-wedding-gold-costumes",
     features: [
       "7am to 3pm or 11am to 7pm",
       "For one couple only",
@@ -153,7 +153,7 @@ export default function PreWeddingOrMaternityPage() {
     title: "Gold + MakeUp + Costumes",
     price: "34,000",
     oldPrice: "45,000 INR",
-    link: "https://booking.locationshub.in/pre-wedding-or-maternity/",
+    link: "products/pre-wedding-gold-makeup-costumes",
     features: [
       "7am to 3pm or 11am to 7pm",
       "For one couple only",
@@ -173,7 +173,7 @@ export default function PreWeddingOrMaternityPage() {
     title: "Platinum",
     price: "20,000",
     oldPrice: "30,000 INR",
-    link: "https://booking.locationshub.in/pre-wedding-or-maternity/",
+    link: "products/pre-wedding-platinum",
     features: [
       "7am to 7pm or 9am to 9pm",
       "For one couple only",
@@ -189,7 +189,7 @@ export default function PreWeddingOrMaternityPage() {
     title: "Platinum + MakeUp",
     price: "30,000",
     oldPrice: "40,000 INR",
-    link: "https://booking.locationshub.in/pre-wedding-or-maternity/",
+    link: "products/pre-wedding-platinum-makeup",
     features: [
       "7am to 7pm or 9am to 9pm",
       "For one couple only",
@@ -206,7 +206,7 @@ export default function PreWeddingOrMaternityPage() {
     title: "Platinum + Costumes",
     price: "30,000",
     oldPrice: "45,000 INR",
-    link: "https://booking.locationshub.in/pre-wedding-or-maternity/",
+    link: "products/pre-wedding-platinum-costumes",
     features: [
       "7am to 7pm or 9am to 9pm",
       "For one couple only",
@@ -223,7 +223,7 @@ export default function PreWeddingOrMaternityPage() {
     title: "Platinum + MakeUp + Costumes",
     price: "40,000",
     oldPrice: "55,000 INR",
-    link: "https://booking.locationshub.in/pre-wedding-or-maternity/",
+    link: "products/pre-wedding-platinum-makeup-costumes",
     features: [
       "7am to 7pm or 9am to 9pm",
       "For one couple only",

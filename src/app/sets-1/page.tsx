@@ -55,8 +55,8 @@ export default function Page() {
               src={getFileUrl(set.mainImage)}
               alt={set.title}
               width={800}
-              height={500}
-              className="w-full  object-cover transition-transform duration-300 "
+              height={490}
+              className="w-full imghforset object-cover transition-transform duration-300 "
             />
 
             {/* Bottom Overlay Title */}

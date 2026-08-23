@@ -56,7 +56,7 @@ console.log("NEXT_PUBLIC_API_URL =", process.env.NEXT_PUBLIC_API_URL);
       </div>
 
       {/* DESKTOP CONTAINED */}
-      <div className="hidden md:block mx-auto md:w-[60%] lg:w-[60%] xl:w-[60%] relative overflow-hidden">
+      <div className="hidden md:block mx-auto md:w-[70%] lg:w-[70%] xl:w-[70%] relative overflow-hidden">
         {renderContent()}
       </div>
 

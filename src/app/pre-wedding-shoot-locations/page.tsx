@@ -215,7 +215,7 @@ export default function PreWeddingShootLocations() {
           </p>
 
           <button className="mt-6 px-6 py-3 bg-primary text-white text-sm">
-            GET A QUOTE
+            BOOK NOW
           </button>
         </div>
       </section> */}
@@ -256,10 +256,10 @@ Shoot Locations
 
          <div className="text-center mt-10">
  <Link
-    href="https://booking.locationshub.in/pre-wedding-or-maternity/"
+    href="/pre-wedding-or-maternity"
     className={`quote-btn inline-flex items-center justify-center ${cinzel.className}`}
   >
-    GET A QUOTE
+    BOOK NOW
   </Link>
 </div>
         </div>
@@ -388,6 +388,7 @@ Shoot Locations
                 alt=""
                 width={319}
                 height={237}
+                className="cstonrent"
               />
             </div>
 
@@ -404,7 +405,7 @@ Shoot Locations
           {/* 2 */}
           <div className="why-row reverse">
             <div className="why-img">
-              <Image src="/indoor-ac.png" alt="" width={319} height={237} />
+              <Image src="/indoor-ac.png" alt="" width={319} height={237} className="cstonrent" />
             </div>
 
             <div className="why-text">
@@ -469,6 +470,7 @@ Shoot Locations
                 alt=""
                 width={319}
                 height={237}
+                className="cstonrent"
               />
             </div>
 
@@ -486,10 +488,10 @@ Shoot Locations
       <section className="sectionpadding">
          <div className="text-center mt-10">
 <Link
-    href="https://booking.locationshub.in/pre-wedding-or-maternity/"
+    href="/pre-wedding-or-maternity"
     className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
   >
-    GET A QUOTE
+    BOOK NOW
   </Link>
 </div>
         </section> 
@@ -504,10 +506,10 @@ Shoot Locations
        <section className="sectionpadding">
          <div className="text-center mb-10">
 <Link
-    href="https://booking.locationshub.in/pre-wedding-or-maternity/"
+    href="/pre-wedding-or-maternity/"
     className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
   >
-    GET A QUOTE
+    BOOK NOW
   </Link>
 </div>
         </section> 
@@ -596,7 +598,7 @@ Shoot Locations
 
         <div className="text-center mt-10">
 <button className={`quote-btn ${cinzel.className}`}>
-GET A QUOTE
+BOOK NOW
 </button>
 </div>
       </section>
@@ -638,10 +640,10 @@ GET A QUOTE
 
       <div className="text-center mt-10">
         <Link
-    href="https://booking.locationshub.in/pre-wedding-or-maternity/"
+    href="/pre-wedding-or-maternity"
     className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
   >
-    GET A QUOTE
+    BOOK NOW
   </Link>
       </div>
 
