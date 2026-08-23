@@ -67,14 +67,14 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://booking.locationshub.in",
+    canonical: "https://www.locationshub.in",
   },
 
   openGraph: {
     title: "Location Hub | Premium Sets For Shoots",
     description:
       "Locations Hub is situated on a sprawling and picturesque 5-acre piece of land. It is ideal for shooting just about anything- a film, a fashion show, a web series, pre wedding shoots or just to indulge in the great landscape",
-    url: "https://booking.locationshub.in",
+    url: "https://www.locationshub.in",
     siteName: "Locations Hub",
     locale: "en_US",
     type: "website",

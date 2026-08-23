@@ -54,7 +54,15 @@ export default function ThankYouContent() {
     );
   }
 
-  const date = new Date(booking.bookingDate).toLocaleDateString();
+  // const date = new Date(booking.bookingDate).toLocaleDateString();
+
+  const bookingDate = new Date(booking.bookingDate);
+
+const date = `${String(
+  bookingDate.getDate()
+).padStart(2, "0")}-${String(
+  bookingDate.getMonth() + 1
+).padStart(2, "0")}-${bookingDate.getFullYear()}`;
 
   const slots = booking.slots.map((s) => s.slot.label).join(", ");
 

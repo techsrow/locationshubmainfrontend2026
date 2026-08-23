@@ -136,14 +136,25 @@ const payNow = bookingAmount + gst;
 
       /* STEP 2 — CREATE RAZORPAY ORDER */
 
-      const orderRes = await api.post<RazorpayOrder>(
-        "/payment/create-order",
-        {
-          bookingId: bookingId,
-        }
-      );
+      // const orderRes = await api.post<RazorpayOrder>(
+      //   "/payment/create-order",
+      //   {
+      //     bookingId: bookingId,
+      //   }
+      // );
 
-      const order = orderRes.data;
+      // const order = orderRes.data;
+
+      const orderRes = await api.post(
+  "/payment/create-order",
+  {
+    bookingId,
+  }
+);
+
+console.log("ORDER RESPONSE", orderRes.data);
+
+const order = orderRes.data.order;
 
       /* STEP 3 — OPEN RAZORPAY */
 
