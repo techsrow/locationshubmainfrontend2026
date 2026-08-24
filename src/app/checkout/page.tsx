@@ -154,7 +154,9 @@ const payNow = bookingAmount + gst;
 
 console.log("ORDER RESPONSE", orderRes.data);
 
-const order = orderRes.data.order;
+// const order = orderRes.data.order;
+
+const order = (orderRes.data as any).order;
 
       /* STEP 3 — OPEN RAZORPAY */
 
