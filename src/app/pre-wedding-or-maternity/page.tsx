@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
+import OfferPopup from "@/app/components/OfferPopup";
 
 type Plan = {
   title: string;
@@ -271,6 +272,11 @@ export default function PreWeddingOrMaternityPage() {
           ))}
         </div>
       </div>
+      <OfferPopup
+  title="20% Discount"
+  subtitle="For Pre Wedding Shoot (Limited Time Offer)"
+/>
     </section>
+
   );
 }

@@ -9,6 +9,7 @@ import { Autoplay, FreeMode } from "swiper/modules";
 import "./page.css";
 import VideoSection from "./VideoSection";
 import AboutSection from "./AboutSection";
+import PreWeddingGallery from "@/app/components/PreWeddingGallery";
 
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -500,7 +501,8 @@ Shoot Locations
        <section className="py-20 work our-set">
         <h2 className={`why-title work-title ${amsterdam.className}`}>Photos
 </h2>
-        <PhotoGallery />
+        {/* <PhotoGallery /> */}
+        <PreWeddingGallery />
       </section>
 
        <section className="sectionpadding">

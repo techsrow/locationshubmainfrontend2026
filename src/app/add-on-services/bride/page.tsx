@@ -9,6 +9,16 @@ import OfferModal from "@/app/components/OfferModal";
 export default function BrideAddOnPage() {
   const [images, setImages] = useState<BrideImage[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  const filteredImages =
+  selectedCategory === "all"
+    ? images
+    : images.filter(
+        (item) =>
+          item.category?.toLowerCase() ===
+          selectedCategory.toLowerCase()
+      );
 
   useEffect(() => {
     const fetchBrideImages = async () => {
@@ -41,9 +51,58 @@ export default function BrideAddOnPage() {
   return (
     <div className="px-2 md:px-6 py-2">
      
+    <div className="flex justify-center gap-3 mb-6 flex-wrap mt-5">
+  <button
+    onClick={() => setSelectedCategory("all")}
+    className={`px-5 py-2 rounded-full border font-medium transition-all duration-300 ${
+      selectedCategory === "all"
+        ? "text-white shadow-md"
+        : "bg-white text-[#3B1429] hover:bg-[#3B1429]/5"
+    }`}
+    style={{
+      backgroundColor:
+        selectedCategory === "all" ? "#3B1429" : "white",
+      borderColor: "#3B1429",
+    }}
+  >
+    All
+  </button>
+
+  <button
+    onClick={() => setSelectedCategory("Indian")}
+    className={`px-5 py-2 rounded-full border font-medium transition-all duration-300 ${
+      selectedCategory === "Indian"
+        ? "text-white shadow-md"
+        : "bg-white text-[#3B1429] hover:bg-[#3B1429]/5"
+    }`}
+    style={{
+      backgroundColor:
+        selectedCategory === "Indian" ? "#3B1429" : "white",
+      borderColor: "#3B1429",
+    }}
+  >
+    Indian
+  </button>
+
+  <button
+    onClick={() => setSelectedCategory("Western")}
+    className={`px-5 py-2 rounded-full border font-medium transition-all duration-300 ${
+      selectedCategory === "Western"
+        ? "text-white shadow-md"
+        : "bg-white text-[#3B1429] hover:bg-[#3B1429]/5"
+    }`}
+    style={{
+      backgroundColor:
+        selectedCategory === "Western" ? "#3B1429" : "white",
+      borderColor: "#3B1429",
+    }}
+  >
+    Western
+  </button>
+</div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-        {images.map((item) => (
+      {filteredImages.map((item) => (
           <div key={item.id} className="w-full">
             <img
               src={getBrideImageUrl(item.imageUrl)}
