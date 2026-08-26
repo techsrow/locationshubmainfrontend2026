@@ -23,7 +23,7 @@ if (!seo) {
 const imageUrl = seo.ogImage
   ? seo.ogImage.startsWith("http")
     ? seo.ogImage
-    : `${process.env.NEXT_PUBLIC_API_URL}${seo.ogImage}`
+    : `${process.env.NEXT_PUBLIC_FILE_URL}${seo.ogImage}`
   : undefined;
 
   return {

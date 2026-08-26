@@ -377,6 +377,20 @@ font-family: "Cinzel", Sans-serif;
     font-family: "AMSTERDAM", Sans-serif !important;
 }
 
+@media only screen and (max-width: 768px) {
+  /* Mobile styles */
+  .love{
+    margin-top: 80px;
+    margin-bottom: 80px;
+        
+    font-size: 45px;
+    font-weight: 500;
+    font-style: italic;
+    color: #fd9b48 !important;
+    font-family: "AMSTERDAM", Sans-serif !important;
+}
+}
+
 
 .video-section{
   padding:50px 20px;
@@ -649,6 +663,13 @@ min-height:auto;
 margin-left:0;
 margin-top:20px;
 }
+@media only screen and (max-width: 768px) {
+  /* Mobile styles */
+  .bgsec{
+    margin-top:0px;
+  }
+}
+
 
 /* FAQ */
 
@@ -935,4 +956,46 @@ line-height:1.7;
       font-size: 35px;
     font-weight: 400;
     margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Mobile styles */
+  .standout{
+      font-family: "AMSTERDAM", Sans-serif !important;
+      font-size: 27px;
+        line-height: 2.9em;
+        text-align: center;
+    
+}
+
+.fa-list{
+  word-spacing: -3px !important;
+  font-size: 15px;
+}
+.work-title{
+  margin-bottom: 70px;
+        margin-top: 20px;
+}
+
+
+.mobile-why-heading {
+  font-size: 30px;
+  line-height: 2.5em;
+  text-align: center;
+  font-weight: 400;
+}
+
+.mobile-why-text {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  color: #BB687A;
+  --textColor: #BB687A;
+  text-align: center;
+}
+.wsec-desktop{
+  display: none;
+}
+.why-section{
+  display: none;
+}
 }

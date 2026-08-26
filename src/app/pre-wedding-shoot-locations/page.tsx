@@ -18,6 +18,8 @@ import OurSetsSectionPage from "../components/sections/OurSetsSectionpage";
 import TestimonialsSectionPage from "../components/sections/TestimonialsSectionpage";
 import AboutSectionMobile from "./AboutSectionMobile";
 import PhotoGallery from "../components/PhotoGallery";
+import type { Metadata } from "next";
+import { getSeo } from "@/lib/seo";
 
 import { FaCheck } from "react-icons/fa";
 import Link from "next/link";
@@ -377,7 +379,7 @@ Shoot Locations
 
       {/* WHY US */}
 
-      <section className="why-section">
+      <section className="why-section wsec-desktop">
         <h2 className={`why-title ${amsterdam.className}`}>Why Us?</h2>
 
         <div className="why-wrapper">
@@ -485,6 +487,108 @@ Shoot Locations
           </div>
         </div>
       </section>
+      <section className="block md:hidden bg-white">
+<h2 className={`why-title ${amsterdam.className}`}>Why Us?</h2>
+  {/* Premium Sets */}
+  <img src="/premium-sets-1.jpg" alt="" className="w-full" />
+
+  <div className="bg-[#be7186] text-center px-6 py-10">
+    <h3 className={`${amsterdam.className} mobile-why-heading text-white text-5xl`}>
+      Premium Sets
+    </h3>
+
+    <p className="text-white text-sm leading-7 mt-4">
+      Make your pre wedding film look elegant and grand with our premium and
+      spacious sets
+    </p>
+  </div>
+
+  {/* Indoor AC */}
+  <img src="/indoor-ac.png" alt="" className="w-full" />
+
+  <div className="bg-[#f4f4f6] text-center px-6 py-10">
+    <h3
+      className={`${amsterdam.className} mobile-why-heading text-[#be7186] text-5xl leading-tight`}
+    >
+      Indoor AC
+      <br />
+      Sets
+    </h3>
+
+    <p className="text-[#be7186] text-sm leading-7 mt-4">
+      Be it summer or monsoon, you cannot always shoot outdoors. Our luxurious
+      air conditioned indoor sets are always saviors.
+    </p>
+  </div>
+
+  {/* Costumes */}
+  <img src="/costumes-on-rent.jpg" alt="" className="w-full" />
+
+  <div className="bg-[#be7186] text-center px-6 py-10">
+    <h3 className={`${amsterdam.className} text-white text-5xl mobile-why-heading`}>
+       Costumes On Rent
+    </h3>
+
+    <p className="text-white text-sm leading-7 mt-4">
+      Why buy when you can rent? Stand out your pre wedding with our amazing
+      costumes on rent collection with our onsite alteration team.
+    </p>
+
+    <button
+      className="bg-white text-[#be7186] px-5 py-2 rounded-full mt-5 text-sm font-semibold"
+      onClick={() => setShowPopup(true)}
+    >
+      Check Our Costume Collection
+    </button>
+  </div>
+
+  {/* Makeup Artist */}
+  <img src="/inhouse-makeup-artist.jpg" alt="" className="w-full" />
+
+  <div className="bg-[#f4f4f6] text-center px-6 py-10">
+    <h3
+      className={`${amsterdam.className} mobile-why-heading text-[#be7186]  leading-tight`}
+    >
+      Inhouse Makeup
+      <br />
+      Artist
+    </h3>
+
+    <p className="text-[#be7186] text-sm leading-7 mt-4">
+      Experience the magic of personalized makeup and looks, with our in-house
+      makeup expert.
+    </p>
+
+    <a
+      href="/add-on-services/makeup-artist"
+      className="inline-block bg-[#be7186] text-white px-5 py-2 rounded-full mt-5 text-sm font-semibold"
+    >
+      Check Packages
+    </a>
+  </div>
+
+  {/* Props */}
+  <img src="/tons-of-props.jpg" alt="" className="w-full" />
+
+  <div className="bg-[#be7186] text-center px-6 py-10">
+    <h3 className={`${amsterdam.className} mobile-why-heading text-white text-5xl`}>
+      Tons of Props
+    </h3>
+
+    <p className="text-white text-sm leading-7 mt-4">
+      Get top notch quality and high efficiency shoot with our tons of prop
+      options.
+    </p>
+
+    <a
+      href="/pre-wedding-or-maternity"
+      className="inline-block bg-gradient-to-r from-[#ff8a00] to-[#ffcc66] text-white px-6 py-2 rounded-full mt-5 text-sm font-semibold"
+    >
+      Book Now
+    </a>
+  </div>
+
+</section>
 
       <section className="sectionpadding">
          <div className="text-center mt-10">
@@ -520,7 +624,7 @@ Shoot Locations
       <section className="py-20 work our-set workbg">
         <h2 className={`why-title work-title ${amsterdam.className}`}>Our Sets
 </h2>
-        <OurSetsSectionPage />
+        <OurSetsSectionPage  />
       </section>
 
       {/* TESTIMONIALS */}
@@ -532,7 +636,7 @@ Shoot Locations
 
       {/* FEATURE SECTION */}
       <section className="py-20 feature-sec">
-        <div className="max-w-8xl mx-auto grid md:grid-cols-2  px-6 items-center">
+        <div className="max-w-8xl mx-auto grid md:grid-cols-2  items-center">
           <Image
             src="/what-makes-us-stand-out-commercial.jpg"
             alt=""

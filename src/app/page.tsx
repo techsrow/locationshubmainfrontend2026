@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   const imageUrl = seo.ogImage
-    ? `${process.env.NEXT_PUBLIC_API_URL}${seo.ogImage}`
+    ? `${process.env.NEXT_PUBLIC_FILE_URL}${seo.ogImage}`
     : undefined;
 
   return {

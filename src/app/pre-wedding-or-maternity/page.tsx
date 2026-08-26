@@ -14,49 +14,7 @@ type Plan = {
   features: string[];
 };
 
-export async function generateMetadata(): Promise<Metadata> {
-  const seo = await getSeo(
-    "pre-wedding-or-maternity"
-  );
 
-  if (!seo) {
-    return {
-      title: "Pre Wedding Or Maternity",
-    };
-  }
-
-  const imageUrl = seo.ogImage
-    ? `${process.env.NEXT_PUBLIC_API_URL}${seo.ogImage}`
-    : undefined;
-
-  return {
-    title: seo.metaTitle,
-    description: seo.metaDescription,
-
-    openGraph: {
-      title: seo.metaTitle,
-      description: seo.metaDescription,
-      images: imageUrl
-        ? [
-            {
-              url: imageUrl,
-              width: 1200,
-              height: 630,
-            },
-          ]
-        : [],
-    },
-
-    twitter: {
-      card: "summary_large_image",
-      title: seo.metaTitle,
-      description: seo.metaDescription,
-      images: imageUrl
-        ? [imageUrl]
-        : [],
-    },
-  };
-}
 
 export default function PreWeddingOrMaternityPage() {
   // useEffect(() => {

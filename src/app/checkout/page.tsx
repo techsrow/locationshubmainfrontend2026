@@ -285,9 +285,12 @@ rzp.open();
   }
   className="w-full border border-gray-300 p-2 mt-1"
 >
+  <option value="None">Choose an  options</option>
+  <option value="Friend">Friend/Family</option>
   <option value="Google">Google</option>
   <option value="Instagram">Instagram</option>
-  <option value="Friend">Friend</option>
+  <option value="Photographer">Photographer</option>
+  
 </select>
           </div>
 
