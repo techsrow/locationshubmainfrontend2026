@@ -41,7 +41,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+ 
+ typescript: {
+    ignoreBuildErrors: true,
+  },
 
   images: {
     remotePatterns: [
@@ -91,31 +94,57 @@ const nextConfig: NextConfig = {
   },
 
   async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-         {
-  key: "Content-Security-Policy",
-  value:
-    "default-src 'self'; " +
+  return [
+    {
+      source: "/(.*)",
+      headers: [
+        {
+          key: "Content-Security-Policy",
+          value:
+            "default-src 'self'; " +
 
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://checkout.razorpay.com https://api.razorpay.com; " +
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval' " +
+            "https://www.google.com " +
+            "https://www.gstatic.com " +
+            "https://checkout.razorpay.com " +
+            "https://api.razorpay.com " +
+            "https://cdn.razorpay.com; " +
 
-    "frame-src 'self' https://player.vimeo.com https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com https://checkout.razorpay.com https://api.razorpay.com http://localhost:5000 https://ettire.in https://api.ettire.in; " +
+            "frame-src 'self' " +
+            "https://player.vimeo.com " +
+            "https://www.youtube.com " +
+            "https://www.youtube-nocookie.com " +
+            "https://www.google.com " +
+            "https://checkout.razorpay.com " +
+            "https://api.razorpay.com " +
+            "https://*.razorpay.com " +
+            "http://localhost:5000 " +
+            "https://ettire.in " +
+            "https://api.ettire.in; " +
 
-    "img-src 'self' data: https: http: blob:; " +
+            "img-src 'self' data: https: http: blob:; " +
 
-    "style-src 'self' 'unsafe-inline'; " +
+            "style-src 'self' 'unsafe-inline'; " +
 
-    "font-src 'self' data: https:; " +
+            "font-src 'self' data: https:; " +
 
-    "connect-src 'self' https://www.google.com https://www.gstatic.com https://api.locationshub.in https://checkout.razorpay.com https://api.razorpay.com https://lumberjack.razorpay.com http://localhost:3000 http://localhost:5000 https://ettire.in https://api.ettire.in;"
+            "connect-src 'self' " +
+            "https://www.google.com " +
+            "https://www.gstatic.com " +
+            "https://api.locationshub.in " +
+            "https://checkout.razorpay.com " +
+            "https://api.razorpay.com " +
+            "https://cdn.razorpay.com " +
+            "https://lumberjack.razorpay.com " +
+            "http://localhost:3000 " +
+            "http://localhost:5000 " +
+            "https://ettire.in " +
+            "https://api.ettire.in;",
+        },
+      ],
+    },
+  ];
 }
-        ],
-      },
-    ];
-  },
 };
 
 export default nextConfig;

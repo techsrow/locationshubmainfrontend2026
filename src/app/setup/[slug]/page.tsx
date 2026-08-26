@@ -6,6 +6,7 @@ import Image from "next/image";
 import api from "@/lib/api";
 import { getFileUrl } from "@/lib/fileUrl";
 
+
 interface GalleryItem {
   id: string;
   imageUrl: string;

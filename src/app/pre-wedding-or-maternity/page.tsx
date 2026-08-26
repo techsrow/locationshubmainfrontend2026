@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import OfferPopup from "@/app/components/OfferPopup";
+import type { Metadata } from "next";
+import { getSeo } from "@/lib/seo";
 
 type Plan = {
   title: string;
@@ -11,6 +13,50 @@ type Plan = {
   link: string;
   features: string[];
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+  const seo = await getSeo(
+    "pre-wedding-or-maternity"
+  );
+
+  if (!seo) {
+    return {
+      title: "Pre Wedding Or Maternity",
+    };
+  }
+
+  const imageUrl = seo.ogImage
+    ? `${process.env.NEXT_PUBLIC_API_URL}${seo.ogImage}`
+    : undefined;
+
+  return {
+    title: seo.metaTitle,
+    description: seo.metaDescription,
+
+    openGraph: {
+      title: seo.metaTitle,
+      description: seo.metaDescription,
+      images: imageUrl
+        ? [
+            {
+              url: imageUrl,
+              width: 1200,
+              height: 630,
+            },
+          ]
+        : [],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: seo.metaTitle,
+      description: seo.metaDescription,
+      images: imageUrl
+        ? [imageUrl]
+        : [],
+    },
+  };
+}
 
 export default function PreWeddingOrMaternityPage() {
   // useEffect(() => {
@@ -240,10 +286,11 @@ export default function PreWeddingOrMaternityPage() {
   },
 ];
 
+
   return (
     <section className="pricing-wrapper">
       <div className="pricing-container">
-        <div className="pricing-grid">
+        <div className="pricing-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {plans.map((plan, i) => (
             <div className="pricing-card" key={i}>
               <div className="pricing-card-header">

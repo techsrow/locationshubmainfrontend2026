@@ -9,19 +9,19 @@ export default function ShootTypeModal() {
   const options = [
     {
       title: "Pre Wedding | Maternity",
-      url: "https://booking.locationshub.in/pre-wedding-or-maternity/",
+      url: "/pre-wedding-or-maternity/",
     },
     {
       title: "Products | Garments | Fashion",
-      url: "https://booking.locationshub.in/product-or-garment-or-fashion/",
+      url: "/product-or-garment-or-fashion/",
     },
     {
       title: "Music Video | Ad Shoot",
-      url: "https://booking.locationshub.in/music-video-or-ad-shoot/",
+      url: "/music-video-or-ad-shoot/",
     },
     {
       title: "Web series | TV Serial",
-      url: "https://booking.locationshub.in/web-series-or-tv-serials/",
+      url: "/web-series-or-tv-serials/",
     },
   ];
 

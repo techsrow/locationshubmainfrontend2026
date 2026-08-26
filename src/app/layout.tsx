@@ -44,60 +44,10 @@ const quicksand = localFont({
   display: "swap",
 });
 
-export const metadata = {
-  metadataBase: new URL("https://booking.locationshub.in"),
+import type { Metadata } from "next";
 
-  title: "Location Hub | Premium Sets For Shoots",
-
-  description:
-    "Locations Hub is situated on a sprawling and picturesque 5-acre piece of land. It is ideal for shooting just about anything- a film, a fashion show, a web series, pre wedding shoots or just to indulge in the great landscape",
-
-
-
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      maxImagePreview: "large",
-      maxSnippet: -1,
-      maxVideoPreview: -1,
-    },
-  },
-
-  alternates: {
-    canonical: "https://www.locationshub.in",
-  },
-
-  openGraph: {
-    title: "Location Hub | Premium Sets For Shoots",
-    description:
-      "Locations Hub is situated on a sprawling and picturesque 5-acre piece of land. It is ideal for shooting just about anything- a film, a fashion show, a web series, pre wedding shoots or just to indulge in the great landscape",
-    url: "https://www.locationshub.in",
-    siteName: "Locations Hub",
-    locale: "en_US",
-    type: "website",
-
-    images: [
-      {
-        url: "https://booking.locationshub.in/wp-content/uploads/2024/09/locations-for-shoot-1.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Locations Hub",
-      },
-    ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Location Hub | Premium Sets For Shoots",
-    description:
-      "Locations Hub is situated on a sprawling and picturesque 5-acre piece of land. It is ideal for shooting just about anything- a film, a fashion show, a web series, pre wedding shoots or just to indulge in the great landscape",
-    images: [
-      "https://booking.locationshub.in/wp-content/uploads/2024/09/locations-for-shoot-1.jpg",
-    ],
-  },
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.locationshub.in"),
 };
 
 export const viewport = {

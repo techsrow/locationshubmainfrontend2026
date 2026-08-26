@@ -32,17 +32,16 @@ export default function SetGalleryPage() {
   const [gallery, setGallery] = useState<GalleryItem[]>([]);
   const [title, setTitle] = useState("");
   const [loading, setLoading] = useState(true);
-   const { openModal } = useModal();
+
+  const { openModal } = useModal();
 
   useEffect(() => {
     if (!slug) return;
 
     const fetchGallery = async () => {
       try {
-        // STEP 1: get all sets
         const res = await api.get<SetBasic[]>("/set");
 
-        // STEP 2: find set whose pageUrl contains slug
         const matchedSet = res.data.find((set) => {
           const cleanUrl = set.pageUrl
             ?.replace(/^\/|\/$/g, "")
@@ -57,7 +56,6 @@ export default function SetGalleryPage() {
           return;
         }
 
-        // STEP 3: fetch full set with gallery
         const singleSet = await api.get<SetWithGallery>(
           `/set/${matchedSet.id}`
         );
@@ -98,26 +96,27 @@ export default function SetGalleryPage() {
   return (
     <div className="bg-[#f3f0f2] min-h-screen py-10">
       <div className="max-w-6xl mx-auto px-2 space-y-2">
-
-        
-
         {gallery.map((item) => (
           <Image
-  key={item.id}
-  src={getFileUrl(item.imageUrl)}
-  alt={title}
-  width={0}
-  height={0}
-  sizes="100vw"
-  className="w-full h-auto"
-/>
+            key={item.id}
+            src={getFileUrl(item.imageUrl)}
+            alt={title}
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto"
+          />
         ))}
       </div>
+
       <div className="mt-16 justify-center flex">
-                <button onClick={() => openModal(<ShootTypeModal />)} className="bg-[#ff8c1a] text-white px-10 py-3 font-[600] hover:bg-[#e57c14] transition">
-                  Book Now
-                </button>
-              </div>
+        <button
+          onClick={() => openModal(<ShootTypeModal />)}
+          className="bg-[#ff8c1a] text-white px-10 py-3 font-[600] hover:bg-[#e57c14] transition"
+        >
+          Book Now
+        </button>
+      </div>
     </div>
   );
 }
