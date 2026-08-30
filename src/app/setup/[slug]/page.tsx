@@ -78,37 +78,42 @@ export default function SetupGalleryPage() {
   }
 
   return (
-    <div className="bg-[#f3f0f2] min-h-screen py-10">
-      <div className="max-w-6xl mx-auto px-4">
+  <div className="bg-[#f3f0f2] min-h-screen py-10">
+    
+    {/* Content Section */}
+    <div className="max-w-6xl mx-auto px-4">
+      <h1 className="text-3xl setup-title font-semibold text-center mb-8">
+        {setup.title}
+      </h1>
 
-        {/* Title */}
-        <h1 className="text-3xl setup-title font-semibold text-center mb-8">
-          {setup.title}
-        </h1>
-
-        {/* Content (HTML from CMS) */}
-        {setup.content && (
-          <div
-            className="prose max-w-none mb-10 theme-color"
-            dangerouslySetInnerHTML={{ __html: setup.content }}
-          />
-        )}
-
-        {/* Gallery */}
-        <div className="space-y-8">
-          {setup.gallery.map((img) => (
-            <Image
-              key={img.id}
-              src={getFileUrl(img.imageUrl)}
-              alt={setup.title}
-               width={0}
-  height={0}
-  sizes="100vw"
-  className="w-full  object-contain"
-            />
-          ))}
-        </div>
-      </div>
+      {setup.content && (
+        <div
+          className="prose max-w-none theme-color"
+          dangerouslySetInnerHTML={{ __html: setup.content }}
+        />
+      )}
     </div>
-  );
+
+    {/* Gallery Section */}
+    {setup.gallery.length > 0 && (
+      <section className="mt-12">
+        <div className="max-w-7xl mx-auto md:px-4 px-0">
+          <div className="space-y-2">
+            {setup.gallery.map((img) => (
+              <Image
+                key={img.id}
+                src={getFileUrl(img.imageUrl)}
+                alt={setup.title}
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full object-contain"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+  </div>
+);
 }

@@ -43,7 +43,7 @@ export default function Page() {
   }
 
   return (
-    <section className="px-2 md:px-[20px] py-5 bg-white">
+    <section className="md:px-2 md:px-[20px] py-5 bg-white">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-2">
         {sets.map((set) => (
           <Link

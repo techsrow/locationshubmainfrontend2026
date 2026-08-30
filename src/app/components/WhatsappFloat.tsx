@@ -46,7 +46,7 @@ export default function WhatsappFloat() {
   return (
     <div
       className={`fixed bottom-6 right-6 md:bottom-5 md:right-5 z-50 transition-all duration-500 ${
-        showOnScroll ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+        showOnScroll ? "translate-y-0 opacity-100" : "translate-y-0"
       }`}
     >
       {/* Tooltip */}

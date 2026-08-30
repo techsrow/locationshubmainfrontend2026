@@ -84,9 +84,10 @@ export default function Header() {
        <Image
           src="/images/loaction-hub-logo-final.svg"
           alt="Locations Hub"
-          width={145}
+          width={160}
           height={60}
           priority
+          className="mobile-logo"
         />
        </Link>
         

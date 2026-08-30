@@ -11,6 +11,25 @@ import {
 export default function FooterMobile() {
   const [open, setOpen] = useState(false);
 
+  const socialLinks = [
+  {
+    icon: FaFacebookF,
+    url: "https://www.facebook.com/locations.hub",
+  },
+  {
+    icon: FaYoutube,
+    url: "https://www.youtube.com/channel/UCcwtcuHfkdMP6HzMPJdbcPw",
+  },
+  {
+    icon: FaInstagram,
+    url: "https://www.instagram.com/locations.hub/",
+  },
+  {
+    icon: FaWhatsapp,
+    url: "https://api.whatsapp.com/message/HH47DA3IHQ4OA1?autoload=1&app_absent=0",
+  },
+];
+
   return (
     <footer className="md:hidden bg-primary text-white px-6 pt-10 pb-8">
       {/* ADDRESS */}
@@ -33,17 +52,18 @@ export default function FooterMobile() {
 
         {/* Social Icons */}
         <div className="flex gap-3 mt-5">
-          {[FaFacebookF, FaYoutube, FaInstagram, FaWhatsapp].map(
-            (Icon, i) => (
-              <div
-                key={i}
-                className="w-9 h-9 flex items-center justify-center rounded-full bg-white/15"
-              >
-                <Icon size={14} />
-              </div>
-            )
-          )}
-        </div>
+  {socialLinks.map(({ icon: Icon, url }, i) => (
+    <a
+      key={i}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-9 h-9 flex items-center justify-center rounded-full bg-white/15"
+    >
+      <Icon size={14} />
+    </a>
+  ))}
+</div>
       </div>
 
       {/* USEFUL LINKS */}

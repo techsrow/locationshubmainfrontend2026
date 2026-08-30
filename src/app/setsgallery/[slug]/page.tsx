@@ -95,7 +95,7 @@ export default function SetGalleryPage() {
 
   return (
     <div className="bg-[#f3f0f2] min-h-screen py-10">
-      <div className="max-w-6xl mx-auto px-2 space-y-2">
+      <div className="max-w-6xl mx-auto  px-2-mobile space-y-2">
         {gallery.map((item) => (
           <Image
             key={item.id}

@@ -43,7 +43,7 @@ export default function Page() {
   }
 
   return (
-    <section className="px-2 md:px-[120px] py-10 bg-white">
+    <section className="md:px-2 md:px-[120px] py-10 bg-white">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
         {visibleSetups.map((setup) => (
           <Link

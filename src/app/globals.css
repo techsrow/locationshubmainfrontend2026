@@ -50,6 +50,10 @@
   font-weight: 500;
 }
 
+.mobile-logo{
+  max-width: 100% !important;
+}
+
 .swiper-pagination{
   position: relative !important;
   margin-top: 15px !important;
@@ -339,6 +343,7 @@
 
 .whatsapp-pulse {
   animation: whatsappPulse 2s infinite;
+  
 }
 @keyframes fadeIn {
   from {
@@ -567,4 +572,31 @@ color: #fff;
 
 .setup-title{
 color: #74405b !important;
+}
+
+@media (min-width: 600px) {
+  .px-2{
+    padding-inline:0px !important;
+  }
+
+  .px-2-mobile{
+    padding-inline:0px !important;
+  }
+  
+.whatsapp-pulse {
+  animation: whatsappPulse 2s infinite;
+  margin-bottom: 15px !important;
+}
+
+
+  
+}
+
+
+/* All mobile phones */
+@media (max-width: 767px) {
+  /* Your mobile styles */
+  .mobile-logo{
+  max-width: 70% !important;
+}
 }

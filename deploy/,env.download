@@ -1,9 +1,0 @@
-NEXT_PUBLIC_API_URL=https://api.locationshub.in/api
-NEXT_PUBLIC_FILE_URL=https://api.locationshub.in
-EMAIL_USER=techsrow@gmail.com
-EMAIL_PASS=xdugawheopdkdszk
-NEXT_PUBLIC_RECAPTCHA_SITE_KEY=6Lc5un4sAAAAAE5O-FsQXACcyt1Ae-bmli3QTKRx
-RECAPTCHA_SECRET_KEY=6Lc5un4sAAAAAK0gPorngCVoW4vyLA77zuI6b7XX
-NEXT_PUBLIC_RAZORPAY_KEY=rzp_live_SA2gg1AjE0WyCc
-#NEXT_PUBLIC_API_URL=http://localhost:5000/api
-# NEXT_PUBLIC_FILE_URL=http://localhost:5000
