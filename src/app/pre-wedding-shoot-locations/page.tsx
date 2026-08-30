@@ -24,14 +24,20 @@ import { getSeo } from "@/lib/seo";
 import { FaCheck } from "react-icons/fa";
 import Link from "next/link";
 
+
+
+
+
 const cinzel = Cinzel({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
 });
 
 const amsterdam = localFont({
-  src: "../../fonts/AmsterdamOneSlant-0WglP.ttf",
+  // src: "../../fonts/AmsterdamOneSlant-0WglP.ttf",
+  src: "../../fonts/Amsterdam.ttf",
   display: "swap",
+  
 });
 
 export default function PreWeddingShootLocations() {
@@ -280,7 +286,7 @@ Shoot Locations
 
       {/* ABOUT */}
       {/* <AboutSection /> */}
-      <AboutSectionMobile />
+      {/* <AboutSectionMobile /> */}
 
       <section className="featured-heading">
         <h2 className={cinzel.className}>Featured In</h2>
@@ -580,12 +586,7 @@ Shoot Locations
       options.
     </p>
 
-    <a
-      href="/pre-wedding-or-maternity"
-      className="inline-block bg-gradient-to-r from-[#ff8a00] to-[#ffcc66] text-white px-6 py-2 rounded-full mt-5 text-sm font-semibold"
-    >
-      Book Now
-    </a>
+   
   </div>
 
 </section>
@@ -703,14 +704,17 @@ Shoot Locations
         </div>
 
         <div className="text-center mt-10">
-<button className={`quote-btn ${cinzel.className}`}>
-BOOK NOW
-</button>
+<Link
+    href="/pre-wedding-or-maternity"
+    className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
+  >
+    BOOK NOW
+  </Link>
 </div>
       </section>
 
       {/* FAQ */}
-      <section className="bg-primary text-white py-20 faq">
+      <section className="hidden md:block bg-primary text-white py-20 faq">
 
       <h2 className="text-center text-3xl mb-10 faqheading">
         Questions
@@ -754,6 +758,54 @@ BOOK NOW
       </div>
 
     </section>
+
+    {/* Mobile FAQ */}
+<section className="block md:hidden bg-[#f3f0f2] py-10">
+
+  <h2 className="text-center text-2xl font-semibold text-[#74405B] mb-6">
+    Questions
+  </h2>
+
+  <div className="px-5">
+
+    {faqData.map((item, index) => (
+      <div
+        key={index}
+        className="border-b border-[#e5cfcf]"
+      >
+        <button
+          onClick={() => toggle(index)}
+          className="w-full flex justify-between items-center py-5 text-left"
+        >
+          <span className="text-[#74405B] text-[15px] pr-4 font-bold">
+            {item.q}
+          </span>
+
+          <span className="text-[#74405B] text-xl shrink-0">
+            ▶
+          </span>
+        </button>
+
+        {activeIndex === index && (
+          <div className="pb-5 text-[#74405B] text-[15px] ">
+            {item.a}
+          </div>
+        )}
+      </div>
+    ))}
+
+  </div>
+
+  <div className="text-center mt-8 px-5">
+    <Link
+      href="/pre-wedding-or-maternity"
+      className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
+    >
+      BOOK NOW
+    </Link>
+  </div>
+
+</section>
 
 {showPopup && (
   <div className="popup-overlay">
