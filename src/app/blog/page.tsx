@@ -254,20 +254,36 @@ export default function BlogPage() {
             className="flex gap-8 py-8 border-b border-gray-200 last:border-none"
           >
             {/* Image */}
-            <div className="w-[300px] h-[180px] relative shrink-0">
+            {/* <div className="w-[300px] h-[180px] relative shrink-0">
               <Image
                 src={blog.image}
                 alt={blog.title}
                 fill
                 className="object-cover rounded-sm"
               />
-            </div>
+            </div> */}
+            <Link
+  href={`/${blog.slug}`}
+  className="w-[300px] h-[190px] relative shrink-0 block"
+>
+  <Image
+    src={blog.image}
+    alt={blog.title}
+    fill
+    className="object-cover  hover:opacity-90 transition"
+  />
+</Link>
 
             {/* Content */}
             <div className="flex-1">
               <h2 className="text-[18px] font-semibold text-gray-800 mb-3 capitalize">
-                {blog.title}
-              </h2>
+  <Link
+    href={`/${blog.slug}`}
+    className="hover:text-[#FF881D] transition-colors"
+  >
+    {blog.title}
+  </Link>
+</h2>
 
               <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
                 {blog.description}

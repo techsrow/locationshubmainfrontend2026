@@ -232,10 +232,10 @@ Yet another team of experienced photographers, Bliss Memoir specializes in pre w
         </div>
 
         {/* ================= 8 ================= */}
-        <h3 className="b-h3">8. Photo Tantra</h3>
+        <h3 className="b-h3">8. Mazel Tov Studio</h3>
         <Image
           src="/images/blog/09/8.-Mazel-Tov-Studio_1.jpg"
-          alt="Photo Tantra"
+          alt="Mazel Tov Studio"
           width={1200}
           height={600}
           className="main-image"
@@ -405,7 +405,7 @@ Yet another team of experienced photographers, Bliss Memoir specializes in pre w
 
 
 </i></p>
-        <div className="content">{/* FULL paragraph */}
+        <div className="content mt-5 text-[#74405b]">{/* FULL paragraph */}
 
             is a popular pre wedding photography brand in the <Link href="https://www.trueshadesphotography.com/pre-wedding-photographers-in-mumbai/"><strong><u>top 15 pre wedding photographers in Pune.</u></strong></Link>. Tess Fernandes, a talented young photographer is behind this brand and has picked up the industry ropes pretty fast. She is a cut apart and her lens captures raw emotions that go into the making of a wedding. In fact, she can handle the entire gamut of a wedding, right from pre wedding to the bridal send-off and beyond. 
 

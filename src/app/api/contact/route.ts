@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: "hello@locationshub.in",
+      to: "hello@locationshub.in,techsrow@gmail.com",
       subject: "New Contact Form Enquiry",
       html: `
         <h3>New Enquiry</h3>
