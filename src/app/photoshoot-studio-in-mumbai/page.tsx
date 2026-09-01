@@ -10,7 +10,6 @@ import { useModal } from "@/app/components/modal/ModalProvider";
 import ShootTypeModal from "@/app/components/modal/ShootTypeModal";
 
 export default function PunePhotographers() {
-
   const { openModal } = useModal();
   return (
     <div className="page-wrapper">
@@ -57,7 +56,13 @@ export default function PunePhotographers() {
 
         <div className="content">
           <p>
-            Locations Hub reveals the Top Photoshoot locations in Mumbai.
+            Locations Hub reveals the Top <Link
+    href="https://www.locationshub.in/shooting-locations-in-mumbai"
+    
+  >
+    <strong className="highlight"><b>Photoshoot locations in Mumbai</b></strong>
+  </Link>.
+            
             Whether it’s dramatic backgrounds or lush props you seek, they blend
             great sets with vast open spaces, offering the perfect balance for
             your creative vision. Let their sets bring your ideas to life with
@@ -91,15 +96,21 @@ export default function PunePhotographers() {
 
           <p>
             Mumbai, where dreams come alive, is perfect for capturing
-            unforgettable moments. A photoshoot studio in Mumbai like Mehboob
-            Studio offers creative themes and stunning backdrops that reflect
+            unforgettable moments. A photoshoot studio in Mumbai like <Link
+    href="https://en.wikipedia.org/wiki/Mehboob_Studio">
+    <strong className="highlight"><b> Mehboob Studio </b></strong> 
+  </Link> 
+             Studio offers creative themes and stunning backdrops that reflect
             the city’s vibrant spirit. Whether for glamorous edgy fashion
             shoots, Mumbai’s expert photographers turn every moment into a
             masterpiece
           </p>
           <p>
             With a blend of tradition and contemporary flair, a photoshoot
-            studio in Mumbai like Reliance Studios ensures your memories are
+            studio in Mumbai like <Link
+    href="https://en.wikipedia.org/wiki/Reliance_Entertainment">
+    <strong className="highlight"><b> Reliance Studios </b></strong>
+</Link>ensures your memories are
             preserved with top-notch quality and imaginative style. From vast
             open spaces to intricate set designs, these studios offer
             unparalleled versatility, catering to diverse photography styles.
@@ -139,7 +150,10 @@ export default function PunePhotographers() {
           <p>
             Locations Hub, a{" "}
             <span className="highlight">
-              <b>top-tier photoshoot studio in Mumbai</b>
+              <Link
+    href="https://www.locationshub.in/">
+    <strong className="highlight"><b>top-tier photoshoot studio in Mumbai</b></strong>
+</Link>
             </span>
             , is fully pet-friendly, because we know that pets are part of the
             family. Whether you’re looking to capture candid moments with your
@@ -149,18 +163,23 @@ export default function PunePhotographers() {
           </p>
         </div>
 
-         <h3 className="b-h3">
-         Custom Studio Settings to Elevate Your Creativity
-
+        <h3 className="b-h3">
+          Custom Studio Settings to Elevate Your Creativity
         </h3>
 
         <div className="content mt-4">
           {/* 👉 Paste FULL Ajinkya paragraph here */}
 
           <p>
-           Bring your vision to life with Locations Hub, a leading photoshoot studio in Mumbai that offers fully customizable studio settings. From a variety of backdrop options to bespoke set designs, they align everything with your creative goals. Whether it’s a themed shoot, a brand campaign, or a personal portrait session, you can tailor every detail to match your project’s aesthetic and mood.
-
-
+            Bring your vision to life with Locations Hub, a leading photoshoot
+            studio in <Link
+    href="https://en.wikipedia.org/wiki/Mumbai">
+    <strong className="highlight"><b>Mumbai</b></strong>
+</Link> that offers fully customizable studio settings.
+            From a variety of backdrop options to bespoke set designs, they
+            align everything with your creative goals. Whether it’s a themed
+            shoot, a brand campaign, or a personal portrait session, you can
+            tailor every detail to match your project’s aesthetic and mood.
           </p>
         </div>
 
@@ -172,7 +191,6 @@ export default function PunePhotographers() {
           className="main-image"
         />
 
-
         <div className="center mb-2">
           <a
             href="https://www.locationshub.in/sets-1/"
@@ -183,44 +201,55 @@ export default function PunePhotographers() {
           </a>
         </div>
 
-        <h3 className="b-h3">Explore the Best Film and PhotoShoot Studio in Mumbai
-</h3>
+        <h3 className="b-h3">
+          Explore the Best Film and PhotoShoot Studio in Mumbai
+        </h3>
 
         <div className="content mt-4">
           {/* FULL paragraph */}
           <p>
-            Dive into the dynamic world of film and photography at Locations Hub, a highly sought-after photoshoot studio in Mumbai. Equipped with modern technology, an expert crew, and a versatile range of spaces, this studio is perfect for everything from cinematic film shoots to professional photography sessions. Experience Mumbai’s creative pulse in this premier studio environment.
-
+            Dive into the dynamic world of film and photography at Locations
+            Hub, a highly sought-after photoshoot studio in Mumbai. Equipped
+            with modern technology, an expert crew, and a versatile range of
+            spaces, this studio is perfect for everything from cinematic film
+            shoots to professional photography sessions. Experience Mumbai’s
+            creative pulse in this premier studio environment.
           </p>
         </div>
 
-         <h3 className="b-h3">Unleash Your Creativity: The Best Studio in Mumbai for Stunning Shots
-
-</h3>
+        <h3 className="b-h3">
+          Unleash Your Creativity: The Best Studio in Mumbai for Stunning Shots
+        </h3>
 
         <div className="content mt-4">
           {/* FULL paragraph */}
           <p>
-           Take your photo-shoot to new heights at Locations Hub, the best photoshoot studio in Mumbai for photographers and artists alike. Offering endless customizations, cutting-edge equipment, and inspiring environments, the studio provides everything you need to unleash your creativity and produce standout results. Whatever your concept, this space can make it happen
-
-
-
+            Take your photo-shoot to new heights at Locations Hub, the <Link
+    href="https://www.locationshub.in/">
+    <strong className="highlight"><b>best photoshoot studio in Mumbai</b></strong>
+</Link> for photographers and artists alike.
+            Offering endless customizations, cutting-edge equipment, and
+            inspiring environments, the studio provides everything you need to
+            unleash your creativity and produce standout results. Whatever your
+            concept, this space can make it happen
           </p>
         </div>
-        <h3 className="b-h3">Iconic Backdrops, Limitless Creativity: The Hub of Visual Storytelling
-
-
-</h3>
+        <h3 className="b-h3">
+          Iconic Backdrops, Limitless Creativity: The Hub of Visual Storytelling
+        </h3>
 
         <div className="content mt-4">
           {/* FULL paragraph */}
           <p>
-          Locations Hub, an iconic photoshoot studio in Mumbai, combines meticulously curated backdrops with cutting-edge technology to provide the ultimate space for visual storytelling. From fashion editorials to lifestyle shoots, every frame captured here speaks volumes. Step into a world of unlimited possibilities where your vision meets flawless execution
-
-
-
-
-
+            Locations Hub, an <Link
+    href="https://www.locationshub.in/">
+    <strong className="highlight"><b>iconic photoshoot studio in Mumbai</b></strong>
+</Link>, combines
+            meticulously curated backdrops with cutting-edge technology to
+            provide the ultimate space for visual storytelling. From fashion
+            editorials to lifestyle shoots, every frame captured here speaks
+            volumes. Step into a world of unlimited possibilities where your
+            vision meets flawless execution
           </p>
         </div>
 
@@ -236,9 +265,12 @@ export default function PunePhotographers() {
         <GetQuoteButton className="get-quote-btn text-center" /> */}
 
         <div className="center">
-          <button onClick={() => openModal(<ShootTypeModal />)} className="bg-[#ff8c1a] text-white px-10 py-3 font-[600] hover:bg-[#e57c14] transition">
-                    Book Now
-                  </button>
+          <button
+            onClick={() => openModal(<ShootTypeModal />)}
+            className="bg-[#ff8c1a] text-white px-10 py-3 font-[600] hover:bg-[#e57c14] transition"
+          >
+            Book Now
+          </button>
         </div>
       </div>
     </div>

@@ -40,7 +40,7 @@ const { openModal } = useModal();
         <h4 className="b-h3">Unveil Mumbai’s Hidden Gems: Perfect Locations for Stunning Photoshoots</h4>  
 
         <div className="content">
-         Discover the most exclusive <Link href="https://booking.locationshub.in/pre-wedding-shoot-locations/"><span className="highlight"><strong>Photoshoot locations in Mumbai</strong></span></Link>, Locations Hub. From the charm of stylish cityscapes to the serenity of peaceful outdoor spots, they provide a unique canvas for every frame. Seamlessly accessible, this hidden gem is perfect for capturing both the bustling spirit and tranquil beauty, ensuring your shoot stands out.
+         Discover the most exclusive <Link href="https://www.locationshub.in/pre-wedding-shoot-locations/"><span className="highlight"><strong>Photoshoot locations in Mumbai</strong></span></Link>, Locations Hub. From the charm of stylish cityscapes to the serenity of peaceful outdoor spots, they provide a unique canvas for every frame. Seamlessly accessible, this hidden gem is perfect for capturing both the bustling spirit and tranquil beauty, ensuring your shoot stands out.
         </div>
        
 
@@ -53,13 +53,13 @@ const { openModal } = useModal();
 
         <div className="content">
           <p>
-            Locations Hub reveals the <Link href="https://booking.locationshub.in/pre-wedding-shoot-locations/"><span className="highlight"><strong> Top Photoshoot locations in Mumbai</strong></span></Link>. Whether it’s dramatic backgrounds or lush props you seek, they blend great sets with vast open spaces, offering the perfect balance for your creative vision. Let their sets bring your ideas to life with stunning backgrounds that are perfect for any occasion.
+            Locations Hub reveals the <Link href="https://www.locationshub.in/pre-wedding-shoot-locations/"><span className="highlight"><strong> Top Photoshoot locations in Mumbai</strong></span></Link>. Whether it’s dramatic backgrounds or lush props you seek, they blend great sets with vast open spaces, offering the perfect balance for your creative vision. Let their sets bring your ideas to life with stunning backgrounds that are perfect for any occasion.
           </p>
           <h6 className="h6"><strong>Other well know places open to all</strong>
 
 </h6>
           <p>
-           Mumbai, the city of dreams, is a vibrant mix of culture, history, and stunning backdrops, making it perfect for photoshoots. From iconic landmarks like the Gateway of India and Marine Drive to serene settings such as Sanjay Gandhi National Park and Powai Lake, the city offers a variety of picturesque spots. Historic South Mumbai contrasts with the modern flair of Bandra Fort and Worli Sea Face, while Juhu and Versova beaches add coastal charm. 
+           Mumbai, the city of dreams, is a vibrant mix of culture, history, and stunning backdrops, making it perfect for photoshoots. From iconic landmarks like the <Link href="https://en.wikipedia.org/wiki/Gateway_of_India"><span className="highlight"><strong> Gateway of India</strong></span></Link> and <Link href="https://en.wikipedia.org/wiki/Marine_Drive,_Mumbai"><span className="highlight"><strong> Marine Drive</strong></span></Link> to serene settings such as <Link href="https://en.wikipedia.org/wiki/Sanjay_Gandhi_National_Park"><span className="highlight"><strong> Sanjay Gandhi National Park </strong></span></Link> and <Link href="https://en.wikipedia.org/wiki/Powai_Lake"><span className="highlight"><strong> Powai Lake </strong></span></Link>, the city offers a variety of picturesque spots. Historic South Mumbai contrasts with the modern flair of Bandra Fort and <Link href="https://en.wikipedia.org/wiki/Worli"><span className="highlight"><strong> Worli Sea Face, </strong></span></Link>, while Juhu and Versova beaches add coastal charm. 
 
 Nature enthusiasts will appreciate green spaces like Aarey Colony. Whether you’re a pro or capturing special moments, Mumbai’s diverse locations ensure a spectacular shoot
           </p>
@@ -165,7 +165,7 @@ Nature enthusiasts will appreciate green spaces like Aarey Colony. Whether you�
                 <div className="content mt-4">
                   {/* FULL paragraph */}
         <p>
-            Discover Mumbai’s top photoshoot locations in Mumbai with Locations Hub, where stunning sets, expansive spaces, and natural beauty combine to offer perfect shooting conditions. They cater to all types of photography, ensuring you capture moments that are as vibrant and dynamic as the city itself.
+            Discover Mumbai’s top photoshoot locations in Mumbai with Locations Hub, where <Link href="https://www.locationshub.in/sets-1"><span className="highlight"><strong> stunning sets </strong></span></Link>, expansive spaces, and natural beauty combine to offer perfect shooting conditions. They cater to all types of photography, ensuring you capture moments that are as vibrant and dynamic as the city itself.
 
 
         
