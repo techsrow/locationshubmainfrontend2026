@@ -23,17 +23,25 @@ export default function PunePhotographers() {
             target="_blank"
             className="main-btn"
           >
-            Find Perfect Sets for your Shoot
+           Find Perfect Sets for your Pre Wedding
           </a>
         </div>
 
-        <h4 className="sub-heading mt-50 ">
+        {/* <h4 className="sub-heading mt-50 ">
           Cinematic Romance: Discover Iconic <u>Pre Wedding Sets in Pune</u>
-        </h4>
+        </h4> */}
 
-        <div className="content">
+        <Link
+    href="https://www.locationshub.in/">
+   <h2 className="h2"> <strong  className="highlight font[22px] mb-2 new-heading"><b> Cinematic Romance: Discover Iconic <u>Pre Wedding Sets in Pune</u> </b></strong></h2>
+</Link>
+
+        <div className="content mt-4">
           <p>
-            Pre wedding shoots are a cherished tradition, and <u className="highlight"><b>pre wedding sets in Pune</b></u> offer stunning, versatile options perfect for capturing these moments. The region boasts diverse locations, from serene gardens and heritage sites to modern interiors, each designed to enhance the beauty of your love story. These thoughtfully crafted sets provide ample opportunities for creative expression and personalized themes. Choosing the right one ensures both beautiful photos and a memorable experience, making it the ideal choice to celebrate your romance.
+            Pre wedding shoots are a cherished tradition, and <Link
+    href="https://www.locationshub.in/">
+    <strong className="highlight"><b> pre wedding sets in Pune </b></strong>
+</Link> offer stunning, versatile options perfect for capturing these moments. The region boasts diverse locations, from serene gardens and heritage sites to modern interiors, each designed to enhance the beauty of your love story. These thoughtfully crafted sets provide ample opportunities for creative expression and personalized themes. Choosing the right one ensures both beautiful photos and a memorable experience, making it the ideal choice to celebrate your romance.
           </p>
 
           <p>
@@ -56,7 +64,10 @@ export default function PunePhotographers() {
 
         <div className="content">
           <p>
-           Experience the romance of nature with pre wedding shoots in vibrant botanical gardens. Surrounded by lush greenery and colorful blooms, this location offer a serene and enchanting backdrop for capturing your love story. With pre wedding sets in Pune being some of the most picturesque, Locations Hub connects you with the most beautiful botanical sets to make your shoot truly magical. Whether you’re in Pune or Mumbai, you’ll find the perfect blend of nature and lovehttps://www.locationshub.in/
+           Experience the romance of nature with pre wedding shoots in vibrant botanical gardens. Surrounded by lush greenery and colorful blooms, this location offer a serene and enchanting backdrop for capturing your love story. With <Link
+    href="https://www.locationshub.in/sets-1">
+    <strong className="highlight"><b> pre wedding sets in Pune </b></strong>
+</Link>being some of the most picturesque, Locations Hub connects you with the most beautiful botanical sets to make your shoot truly magical. Whether you’re in Pune or Mumbai, you’ll find the perfect blend of nature and love https://www.locationshub.in/
 
 
           </p>

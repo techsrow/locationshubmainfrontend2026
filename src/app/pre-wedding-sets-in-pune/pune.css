@@ -13,6 +13,11 @@
 
 }
 
+.new-heading{
+  font-size: 22px !important;
+  margin-bottom: 20px;
+}
+
 .main-image {
   width: 100%;
   height: auto;
@@ -228,6 +233,7 @@ h4 {
   .content{
     padding-right: 5px;
     padding-left :5px ;
+    margin-top: 25px !important;
   }
 
   .b-h1{
