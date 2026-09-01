@@ -37,25 +37,17 @@ export default function PunePhotographers() {
 
         <div className="content">
           <p>
-            Discover the unparalleled experience of shooting at a premier
-            photo-shoot studio in Mumbai like Locations Hub. With
-            state-of-the-art equipment, meticulously designed sets, and a highly
-            skilled team, every photo shoot turns into a masterpiece. From
-            glamorous portraits to bold artistic projects, this photoshoot
-            studio in Mumbai offers the perfect backdrop for your creative
-            vision. Whether you’re planning a commercial shoot or a personal
-            session, the ideal setting awaits at{" "}
+           When seeking the perfect location for your creative projects, the <Link
+    href="https://www.locationshub.in/">
+    <strong className="highlight"><b>shooting studio in Mumbai</b></strong>
+</Link> at <Link
+    href="https://www.locationshub.in/">
+    <strong className="highlight"><b>Locations Hub</b></strong>
+</Link> is an exceptional choice. This premier studio provides everything you need, from state-of-the-art equipment to versatile set designs. This location in Mumbai offer a diverse range of options to bring your vision to life. At Locations Hub, you’ll find features tailored to enhance your shoot, including ample natural lighting, customizable sets, and pet-friendly accommodations with in house restaurant.
           </p>
 
           <p>
-            The expansive spaces and high-quality facilities cater to both film
-            and photography projects, ensuring a professional and inspiring
-            environment. Whether you’re filming or shooting stills, shoot
-            locations in Mumbai like those at Locations Hub are designed to meet
-            every need. For an unparalleled shooting experience, Locations Hub
-            is the ideal choice, combining comprehensive offerings with a prime
-            location. Explore the variety of shoot locations in Mumbai to
-            elevate your creative projects to the next level.
+            The expansive spaces and high-quality facilities cater to both film and photography projects, ensuring a professional and inspiring environment. Whether you’re filming or shooting stills, shoot locations in Mumbai like those at Locations Hub are designed to meet every need. For an unparalleled shooting experience, Locations Hub is the ideal choice, combining comprehensive offerings with a prime location. Explore the variety of shoot locations in Mumbai to elevate your creative projects to the next level.
           </p>
         </div>
 
@@ -207,8 +199,10 @@ export default function PunePhotographers() {
         <div className="content mt-4">
           {/* FULL paragraph */}
           <p>
-            Whether you’re shooting a film or capturing the magic of a shooting
-            studio in Mumbai, this studio’s versatile spaces are crafted to
+            Whether you’re shooting a film or capturing the magic of a <Link
+    href="https://www.locationshub.in/">
+    <strong className="highlight"><b> shooting studio in Mumbai </b></strong>
+</Link>, this studio’s versatile spaces are crafted to
             inspire. From indoor sets to outdoor backdrops, the endless
             possibilities make it the perfect creative playground for any
             project
