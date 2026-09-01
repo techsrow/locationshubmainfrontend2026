@@ -29,7 +29,16 @@ export default function PunePhotographers() {
           <YouTubeAutoPlay videoId="Kautj5HqYro" />
         </div>
 
-        <h4 className="sub-heading">Find Perfect Sets for your Pre Wedding</h4>
+     <div className="text-center my-4 mb-5">
+  <a
+    href="https://www.locationshub.in/sets-1/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="main-btn inline-block font-normal"
+  >
+    Find Perfect Sets for your Shoot
+  </a>
+</div>
         <h4 className="b-h3">
           Set the Scene: Dreamy{" "}
           <span>
@@ -80,7 +89,16 @@ export default function PunePhotographers() {
           className="main-image"
         />
 
-        <h4 className="sub-heading">Find Perfect Sets for your Pre Wedding</h4>
+         <div className="text-center my-4 mb-5">
+  <a
+    href="https://www.locationshub.in/sets-1/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="main-btn inline-block font-normal"
+  >
+    Find Perfect Sets for your Shoot
+  </a>
+</div>
         {/* ================= 3 ================= */}
         <h3 className="b-h3">
           Elevate Your Pre Wedding Photos with Unique Sets in Mumbai
@@ -158,7 +176,16 @@ export default function PunePhotographers() {
           className="main-image"
         />
 
-        <h4 className="sub-heading">Find Perfect Sets for your Pre Wedding</h4>
+         <div className="text-center my-4 mb-5">
+  <a
+    href="https://www.locationshub.in/sets-1/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="main-btn inline-block font-normal"
+  >
+    Find Perfect Sets for your Shoot
+  </a>
+</div>
         <h3 className="b-h3">
           Reserve Your Perfect Pre Wedding Scene with Unique Sets in Mumbai
         </h3>
