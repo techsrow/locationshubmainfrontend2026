@@ -22,7 +22,7 @@ export default function PunePhotographers() {
             target="_blank"
             className="main-btn"
           >
-            Find Perfect Sets for your Shoot
+            Find Perfect Sets for your Pre Wedding
           </a>
         </div>
 
@@ -73,7 +73,7 @@ export default function PunePhotographers() {
             target="_blank"
             className="main-btn"
           >
-            Find Perfect Sets for your Shoot
+            Find Perfect Sets for your Pre Wedding
           </a>
         </div>
 
@@ -84,7 +84,7 @@ export default function PunePhotographers() {
           {/* 👉 Paste FULL Ajinkya paragraph here */}
 
           <p>
-          That does have a dampening effect, but that’s where Locations Hub comes into the picture. Being True Shades’ latest venture, it has everything that couples might need in terms of pre wedding shoots. Pune may be a beautiful city in Maharashtra but Location Hub’s pre wedding shoot locations drape over magnificently with its hidden gems.
+          That does have a dampening effect, but that’s where <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> Locations Hub </u></b></Link> comes into the picture. Being True Shades’ latest venture, it has everything that couples might need in terms of pre wedding shoots. Pune may be a beautiful city in Maharashtra but Location Hub’s pre wedding shoot locations drape over magnificently with its hidden gems.
 
            
 
@@ -98,7 +98,7 @@ export default function PunePhotographers() {
 </li>
           </ul>
           <p>
-            <strong>Locations Hub</strong> Locations Hub is geared to meet any contingency and meet any request for customization as well. During a pre wedding shoot, you want to have a lot of time at your disposal so that you can do as much as you want during the day. Without really worrying about time, you should be able to carry on from one session to the next. That is the basic reason we have so many features:
+            <strong><Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> Locations Hub </u></b></Link></strong> Locations Hub is geared to meet any contingency and meet any request for customization as well. During a pre wedding shoot, you want to have a lot of time at your disposal so that you can do as much as you want during the day. Without really worrying about time, you should be able to carry on from one session to the next. That is the basic reason we have so many features:
 
           </p>
           <ul className="ul">
@@ -134,7 +134,7 @@ export default function PunePhotographers() {
             target="_blank"
             className="main-btn"
           >
-            Find Perfect Sets for your Shoot
+            Find Perfect Sets for your Pre Wedding
           </a>
         </div>
 
@@ -155,7 +155,7 @@ export default function PunePhotographers() {
 
           </p>
           <p>
-            While at Pre wedding shoot locations in Pune, an important point that is often overlooked by many photographers and studios is the fact that clients love to take their pets along. Pets give them additional confidence as they cuddle up to the owners. Separation from pets can sometimes be a downside to certain peoples’ moods. This is well understood and therefore pets are allowed in the locations. Get your pets along by all means- we are pet-friendly at Locations Hub! Also, we understand that the crew will need to carry and store a lot of equipment, besides the vehicles you travel in and other accessories like trailers. We have you covered for all these and more.
+            While at Pre wedding shoot locations in Pune, an important point that is often overlooked by many photographers and studios is the fact that clients love to take their pets along. Pets give them additional confidence as they cuddle up to the owners. Separation from pets can sometimes be a downside to certain peoples’ moods. This is well understood and therefore pets are allowed in the locations. Get your pets along by all means- we are pet-friendly at <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> Locations Hub </u></b></Link>! Also, we understand that the crew will need to carry and store a lot of equipment, besides the vehicles you travel in and other accessories like trailers. We have you covered for all these and more.
 
           </p>
 
@@ -189,7 +189,7 @@ export default function PunePhotographers() {
             target="_blank"
             className="main-btn"
           >
-            Find Perfect Sets for your Shoot
+            Find Perfect Sets for your Pre Wedding
           </a>
         </div>
 
@@ -221,7 +221,7 @@ export default function PunePhotographers() {
 
           </p>
               <p>
-                Holding a candle to True Shades’ Locations Hub is a tough task and not an enviable one. If you are going to tie the knot soon and are looking for pre wedding shoot locations in Pune, then come and visit us. We are sure that you’ll like what you see and won’t need to think twice to decide. We are here to give you the best experience- something you will treasure every time you look at the lovely photographs!
+                Holding a candle to True Shades’ <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> Locations Hub </u></b></Link> is a tough task and not an enviable one. If you are going to tie the knot soon and are looking for pre wedding shoot locations in Pune, then come and visit us. We are sure that you’ll like what you see and won’t need to think twice to decide. We are here to give you the best experience- something you will treasure every time you look at the lovely photographs!
               </p>
 
         </div>
