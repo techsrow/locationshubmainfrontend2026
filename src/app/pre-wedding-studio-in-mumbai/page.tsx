@@ -23,17 +23,22 @@ export default function PunePhotographers() {
             target="_blank"
             className="main-btn"
           >
-            Find Perfect Sets for your Shoot
+            Find Perfect Sets for your Pre Wedding
           </a>
         </div>
 
-        <h4 className="sub-heading mt-50 ">
-          The Art of Love: Discover <u>Premier Pre Wedding Studio in Mumbai</u>
-        </h4>
+       <Link href="https://www.locationshub.in/pre-wedding-shoot-locations">
+  <h2 className="h2 mb-5">
+    <strong className="text-[#fd9b48] text-[22px] mb-2 new-heading">
+      The Art of Love: Discover{" "}
+      <u>Premier Pre Wedding Studio in Mumbai</u>
+    </strong>
+  </h2>
+</Link>
 
         <div className="content">
           <p>
-            <b><u>Pre wedding studio in Mumbai</u></b> offers stunning settings, perfect for capturing your love story in glamorous or intimate environments. Known for their creativity and versatility, these studios feature modern spaces with high-end props and elegant, classic backdrops. Professional lighting and expert teams ensure a personalized and memorable experience. Choosing a right one guarantees beautiful photos and a seamless shoot, making it the ideal place to create lasting memories of your special moments.
+            <Link href="https://www.locationshub.in"><b><u className="text-[#fd9b48]">Pre wedding studio in Mumbai</u></b></Link> offers stunning settings, perfect for capturing your love story in glamorous or intimate environments. Known for their creativity and versatility, these studios feature modern spaces with high-end props and elegant, classic backdrops. Professional lighting and expert teams ensure a personalized and memorable experience. Choosing a right one guarantees beautiful photos and a seamless shoot, making it the ideal place to create lasting memories of your special moments.
           </p>
 
          
@@ -48,7 +53,7 @@ export default function PunePhotographers() {
 
         <div className="content">
           <p>
-          Discover the finest Pre wedding studio in Mumbai, where every detail is designed to make your love story shine. With great sets and vast open spaces, these studios offer the perfect backdrop for capturing unforgettable moments. Whether you’re looking for a classic or modern setup, locations hub provides a versatile space for your dream shoot. They connect you with the best options to bring your vision to life.
+          Discover the finest <Link href="https://www.locationshub.in"><b><u className="text-[#fd9b48]">Pre wedding studio in Mumbai</u></b></Link> where every detail is designed to make your love story shine. With great sets and vast open spaces, these studios offer the perfect backdrop for capturing unforgettable moments. Whether you’re looking for a classic or modern setup, <Link href="https://www.locationshub.in"><b><u className="text-[#fd9b48]">Location Hub</u></b></Link> provides a versatile space for your dream shoot. They connect you with the best options to bring your vision to life.
 
 
 
@@ -85,7 +90,7 @@ export default function PunePhotographers() {
           {/* 👉 Paste FULL Ajinkya paragraph here */}
 
           <p>
-          Step into the spotlight with the top <b><u>Pre wedding studio in Mumbai</u></b>, featuring ample natural lighting and stylish settings to ensure your photos are nothing short of cinematic. Locations Hub is equipped with professional lighting and expert setups that capture your love in the best light. They offer exclusive access to these stunning spaces, ensuring a seamless and extraordinary shoot
+          Step into the spotlight with the top <b><u>Pre wedding studio in Mumbai</u></b>, featuring ample natural lighting and stylish settings to ensure your photos are nothing short of cinematic. <Link href="https://www.locationshub.in"><b><u className="text-[#fd9b48]">Location Hub</u></b></Link> is equipped with professional lighting and expert setups that capture your love in the best light. They offer exclusive access to these stunning spaces, ensuring a seamless and extraordinary shoot
 
 
 
@@ -95,7 +100,7 @@ export default function PunePhotographers() {
 
         {/* ================= 3 ================= */}
         <h3 className="b-h3">
-          Create Your Love Story: Mumbai’s Best Pre Wedding Studio, Locations Hub
+          Create Your Love Story: Mumbai’s Best Pre Wedding Studio, <Link href="https://www.locationshub.in"><b><u className="text-[#fd9b48]">Location Hub</u></b></Link>
 
 
         </h3>
@@ -104,7 +109,7 @@ export default function PunePhotographers() {
           {/* 👉 Paste FULL Ajinkya paragraph here */}
 
           <p>
-        Looking for the ideal Pre wedding studio in Mumbai to tell your love story? These studios offer a variety of themes and environments, from modern chic to classic elegance, perfectly suited for your pre-wedding shoot. With Locations Hub, let your love story unfold in the heart of the city
+        Looking for the ideal Pre wedding studio in Mumbai to tell your love story? These studios offer a variety of themes and environments, from modern chic to classic elegance, perfectly suited for your pre-wedding shoot. With <Link href="https://www.locationshub.in"><b><u className="text-[#fd9b48]">Location Hub</u></b></Link>, let your love story unfold in the heart of the city
 
 
 
@@ -121,7 +126,7 @@ export default function PunePhotographers() {
           {/* 👉 Paste FULL Ajinkya paragraph here */}
 
           <p>
-          Experience the magic of a Pre wedding studio in Mumbai, where creativity meets convenience. These studios provide a professional setup with ample space, making it easy to bring your ideas to life. Whether you’re after a glamorous shoot or a more intimate setting, each studio in Mumbai offers the ideal mix of aesthetics and comfort. Locations Hub ensures you get the best deals and access for your shoot.https://en.wikipedia.org/wiki/Mumbai
+          Experience the magic of a <Link href="https://www.locationshub.in"><b><u className="text-[#fd9b48]">Pre wedding studio in Mumbai</u></b></Link> where creativity meets convenience. These studios provide a professional setup with ample space, making it easy to bring your ideas to life. Whether you’re after a glamorous shoot or a more intimate setting, each studio in Mumbai offers the ideal mix of aesthetics and comfort. <Link href="https://www.locationshub.in"><b><u className="text-[#fd9b48]">Location Hub</u></b></Link> ensures you get the best deals and access for your shoot.https://en.wikipedia.org/wiki/Mumbai
 
 
 
@@ -139,7 +144,7 @@ export default function PunePhotographers() {
           {/* 👉 Paste FULL Ajinkya paragraph here */}
 
           <p>
-          Put your love in the spotlight with Mumbai’s top-rated Studio. Offering everything from great sets to professional lighting, this studio guarantees stunning results for your pre-wedding shoot. This is designed to provide a unique experience that reflects your love story. With Locations Hub, securing the perfect spot has never been easier
+          Put your love in the spotlight with Mumbai’s top-rated Studio. Offering everything from great sets to professional lighting, this studio guarantees stunning results for your pre-wedding shoot. This is designed to provide a unique experience that reflects your love story. With <Link href="https://www.locationshub.in"><b><u className="text-[#fd9b48]">Location Hub</u></b></Link>, securing the perfect spot has never been easier
 
 
 
@@ -160,7 +165,7 @@ export default function PunePhotographers() {
             target="_blank"
             className="main-btn"
           >
-            Find Perfect Sets for your Shoot
+            Find Perfect Sets for your Pre Wedding
           </a>
         </div>
 
@@ -173,7 +178,7 @@ export default function PunePhotographers() {
         <div className="content mt-4">
           {/* FULL paragraph */}
           <p>
-          From intimate scenes to grand setups, <b><u>locations hub</u></b> has it all. These sets are perfect for crafting a visual narrative that reflects your unique love story. Whether you prefer a luxurious space or a more minimalist theme, they offer a range of options to suit your style. They guide you to the studio that’s just right for you and your partner.
+          From intimate scenes to grand setups, <b><u><Link href="https://www.locationshub.in"><b><u className="text-[#fd9b48]">Location Hub</u></b></Link></u></b> has it all. These sets are perfect for crafting a visual narrative that reflects your unique love story. Whether you prefer a luxurious space or a more minimalist theme, they offer a range of options to suit your style. They guide you to the studio that’s just right for you and your partner.
 
 
 
