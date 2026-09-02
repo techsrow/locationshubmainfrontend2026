@@ -99,7 +99,7 @@ const blogs: Blog[] = [
 
    {
     id: 11,
-    title: "shoot locations in mumba",
+    title: "shoot locations in mumbai",
     description:
       "Mumbai, the city that never sleeps, is a treasure trove of mesmerizing shoot locations that cater to every creative vision. From its iconic landmarks to hidden gems, this bustling metropolis offers a diverse range of settings perfect for capturing unforgettable moments. Whether you’re looking to infuse your shoot with urban chic, timeless elegance, or natural beauty, Mumbai has it all. Dive into our guide to discover the most captivating shoot locations in Mumbai, each offering its unique charm and backdrop to make your photos stand out. Join us as we unveil the top spots that will transform your creative ideas into stunning visual stories",
      image: "/images/blog/09/Shoot-locations-in-Mumbai-1-1.jpg",
