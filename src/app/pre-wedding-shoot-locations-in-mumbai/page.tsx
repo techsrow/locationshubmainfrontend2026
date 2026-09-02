@@ -27,13 +27,13 @@ export default function PunePhotographers() {
           </a>
         </div>
 
-        <h1 className="text-[#74405b]">Pre wedding Shoot Locations in Mumbai</h1>
+        <h1 className="text-[#74405b]"><Link href="https://www.locationshub.in/pre-wedding-shoot-locations"><b><u className="text-[#fd9b48]"> Pre wedding Shoot Locations in Mumbai </u></b></Link></h1>
 
        
 
         <div className="content">
           <p>
-            Pre wedding Shoot Locations in Mumbai are plenty but you need to find the right one for your requirements. When you want to strike a pose with your bae and freeze that shot in time you obviously need to be relaxed and ‘at home’ wherever on earth you are! The big day is perhaps around the corner and there are so many things to be taken care of that it would be difficult to manage both time and workload. That’s precisely why True Shades Photography and Locations Hub are around and will make sure that a huge load of responsibility is off your overburdened shoulders. Other than taking care of your wedding photography and videography, we will ensure that you have a great set of pre wedding memories captured for you, naturally and professionally.
+            <Link href="https://www.locationshub.in/pre-wedding-shoot-locations"><b><u className="text-[#fd9b48]"> Pre wedding Shoot Locations in Mumbai </u></b></Link> are plenty but you need to find the right one for your requirements. When you want to strike a pose with your bae and freeze that shot in time you obviously need to be relaxed and ‘at home’ wherever on earth you are! The big day is perhaps around the corner and there are so many things to be taken care of that it would be difficult to manage both time and workload. That’s precisely why True Shades Photography and <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> Locations Hub </u></b></Link> </u></b></Link> are around and will make sure that a huge load of responsibility is off your overburdened shoulders. Other than taking care of your wedding photography and videography, we will ensure that you have a great set of pre wedding memories captured for you, naturally and professionally.
 
 
           </p>
@@ -83,26 +83,26 @@ export default function PunePhotographers() {
 
           </p>
           <p>
-            Pre wedding Shoot Locations in Mumbai are plenty but you need to find the right one for your requirements. When you want to strike a pose with your bae and freeze that shot in time you obviously need to be relaxed and ‘at home’ wherever on earth you are! The big day is perhaps around the corner and there are so many things to be taken care of that it would be difficult to manage both time and workload. That’s precisely why True Shades Photography and Locations Hub are around and will make sure that a huge load of responsibility is off your overburdened shoulders. Other than taking care of your wedding photography and videography, we will ensure that you have a great set of pre wedding memories captured for you, naturally and professionally.
+            <Link href="https://www.locationshub.in/pre-wedding-shoot-locations"><b><u className="text-[#fd9b48]"> Pre wedding Shoot Locations in Mumbai </u></b></Link> are plenty but you need to find the right one for your requirements. When you want to strike a pose with your bae and freeze that shot in time you obviously need to be relaxed and ‘at home’ wherever on earth you are! The big day is perhaps around the corner and there are so many things to be taken care of that it would be difficult to manage both time and workload. That’s precisely why True Shades Photography and <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> Locations Hub </u></b></Link> </u></b></Link> are around and will make sure that a huge load of responsibility is off your overburdened shoulders. Other than taking care of your wedding photography and videography, we will ensure that you have a great set of pre wedding memories captured for you, naturally and professionally.
           </p>
 
           <p>
             Pre wedding shoots are a la mode and have become an integral part of almost all weddings. They give the prospective bride and groom an opportunity to be together before the big day and share some private and intimate moments. More than that, it is the encapsulation of golden memories in the crucible of time.
           </p>
           <p>
-            Capturing the natural expressions of the couple and genuine emotions against natural, scenic backdrops, and bringing out the best in them, is the art of true photography. There are some wonderful pre wedding shoot locations in Mumbai that would provide the perfect background for the shoots. They make for stunning photography and vibrant albums.
+            Capturing the natural expressions of the couple and genuine emotions against natural, scenic backdrops, and bringing out the best in them, is the art of true photography. There are some wonderful <Link href="https://www.locationshub.in/pre-wedding-shoot-locations"><b><u className="text-[#fd9b48]"> Pre wedding Shoot Locations in Mumbai </u></b></Link> that would provide the perfect background for the shoots. They make for stunning photography and vibrant albums.
 
 
           </p>
           <p>
-            However, the downside is that you have to get permission at some places to have a pre wedding shoot and invariably you’re charged an entry fee. But if you want the icing on the cake and the cake too, True Shades’ Locations Hub provides it all sans the running around!
+            However, the downside is that you have to get permission at some places to have a pre wedding shoot and invariably you’re charged an entry fee. But if you want the icing on the cake and the cake too, True Shades’ <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> Locations Hub </u></b></Link> </u></b></Link> provides it all sans the running around!
 
           </p>
         </div>
 
         {/* ================= 3 ================= */}
         <h3 className="b-h3">
-         Stunning pre wedding shoot locations in Mumbai
+         Stunning <Link href="https://www.locationshub.in/pre-wedding-shoot-locations"><b><u className="text-[#fd9b48]"> Pre wedding Shoot Locations in Mumbai </u></b></Link>
 
 
 
@@ -129,7 +129,7 @@ export default function PunePhotographers() {
           {/* 👉 Paste FULL Ajinkya paragraph here */}
 
           <p>
-       Locations Hub provides stunning locations for your pre wedding shoots, both indoors and outdoors. Our vast open land with woods, parks, mountainous backdrop, and ample natural light around is a haven for photographers and cinematographers alike. The huge plus is that you can change your attire according to the scenery or according to the prevailing mood. There are some stunning natural as well as customized locations, all in one place, and all within the perimeters. The obvious but huge advantages are:
+       <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> Locations Hub </u></b></Link> </u></b></Link> provides stunning locations for your pre wedding shoots, both indoors and outdoors. Our vast open land with woods, parks, mountainous backdrop, and ample natural light around is a haven for photographers and cinematographers alike. The huge plus is that you can change your attire according to the scenery or according to the prevailing mood. There are some stunning natural as well as customized locations, all in one place, and all within the perimeters. The obvious but huge advantages are:
 
 
 
@@ -197,7 +197,7 @@ export default function PunePhotographers() {
 
           </p>
           <p>
-            If you’re wondering what sort of pre wedding shoot locations in Mumbai we can offer, do not worry! You name it and we have it. Every couple dreams of having photoshoots in iconic locations in the city of Mumbai. After all, Mumbai is the ‘city that never sleeps’ and a city that has a mix of Victorian and Indian architecture and rich heritage. Locations Hub can just provide whatever scenic setting you want- whether it’s the beaches, the temples, caves, or even museums. Or take you right there, pronto!  On these sprawling grounds, there are:
+            If you’re wondering what sort of <Link href="https://www.locationshub.in/pre-wedding-shoot-locations"><b><u className="text-[#fd9b48]"> Pre wedding Shoot Locations in Mumbai </u></b></Link> we can offer, do not worry! You name it and we have it. Every couple dreams of having photoshoots in iconic locations in the city of Mumbai. After all, Mumbai is the ‘city that never sleeps’ and a city that has a mix of Victorian and Indian architecture and rich heritage. <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> Locations Hub </u></b></Link> </u></b></Link> can just provide whatever scenic setting you want- whether it’s the beaches, the temples, caves, or even museums. Or take you right there, pronto!  On these sprawling grounds, there are:
 
 
           </p>
@@ -213,7 +213,7 @@ export default function PunePhotographers() {
 
 
  <h3 className="b-h3">
-        Delivered: the best pre wedding shoot locations in Mumbai
+        Delivered: the best <Link href="https://www.locationshub.in/pre-wedding-shoot-locations"><b><u className="text-[#fd9b48]"> Pre wedding Shoot Locations in Mumbai </u></b></Link>
 
 
 
@@ -243,7 +243,7 @@ export default function PunePhotographers() {
           {/* 👉 Paste FULL Ajinkya paragraph here */}
 
           <p>
-          Whatever you dream, whatever setting you are looking for, we can provide just about all of them. Our photoshoot locations are so picturesque and romantic by themselves that they invigorate the couple to express themselves freely and most wonderfully. When you thought of pre wedding shoot locations in Mumbai, you must have also thought of the parking uncertainties. At Locations Hub, even minor details are not overlooked. Free parking is a bonus!
+          Whatever you dream, whatever setting you are looking for, we can provide just about all of them. Our photoshoot locations are so picturesque and romantic by themselves that they invigorate the couple to express themselves freely and most wonderfully. When you thought of <Link href="https://www.locationshub.in/pre-wedding-shoot-locations"><b><u className="text-[#fd9b48]"> Pre wedding Shoot Locations in Mumbai </u></b></Link>, you must have also thought of the parking uncertainties. At <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> Locations Hub </u></b></Link> </u></b></Link>, even minor details are not overlooked. Free parking is a bonus!
 
 
 
@@ -258,7 +258,7 @@ export default function PunePhotographers() {
 
 </p>
 <p>
-  So, your search for pre wedding shoot locations in Mumbai ends right here! Here, not only will the whole exercise be cost-effective but it will save time and lessen the strain of travel. Locations Hub provides it all – from the magnificent to the picturesque, from the earthy to the iconic. Your memories at Locations hub will be as good as the pre wedding shoot itself!
+  So, your search for <Link href="https://www.locationshub.in/pre-wedding-shoot-locations"><b><u className="text-[#fd9b48]"> Pre wedding Shoot Locations in Mumbai </u></b></Link> ends right here! Here, not only will the whole exercise be cost-effective but it will save time and lessen the strain of travel. <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> Locations Hub </u></b></Link> </u></b></Link> provides it all – from the magnificent to the picturesque, from the earthy to the iconic. Your memories at <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> <Link href="https://locationshub.in/"><b><u className="text-[#fd9b48]"> Locations Hub </u></b></Link> </u></b></Link> will be as good as the pre wedding shoot itself!
 
 
 </p>
