@@ -9,6 +9,8 @@ import WhatsappFloat from "@/app/components/WhatsappFloat";
 import Script from "next/script";
 import { QuoteProvider } from "./components/quote/QuoteProvider";
 import { BookingProvider } from "./context/BookingContext";
+import { WeddingQuoteProvider } from "./components/quote/WeddingQuoteProvider";
+import ScrollRestoration from "./components/ScrollRestoration";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -67,24 +69,26 @@ export default function RootLayout({
       <body
         className={`${quicksand.variable} ${roboto.variable} ${quicksand.className} min-h-screen flex flex-col`}
       >
+        <ScrollRestoration />
         <Script
-          id="gtm4wp-datalayer"
-          strategy="beforeInteractive"
-        >
-          {`
-            var gtm4wp_datalayer_name = "dataLayer";
-            var dataLayer = dataLayer || [];
-            const gtm4wp_use_sku_instead = false;
-            const gtm4wp_currency = 'INR';
-            const gtm4wp_product_per_impression = 10;
-            const gtm4wp_clear_ecommerce = false;
-          `}
-        </Script>
+  id="gtm4wp-datalayer"
+  strategy="beforeInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      var gtm4wp_datalayer_name = "dataLayer";
+      var dataLayer = dataLayer || [];
+      const gtm4wp_use_sku_instead = false;
+      const gtm4wp_currency = 'INR';
+      const gtm4wp_product_per_impression = 10;
+      const gtm4wp_clear_ecommerce = false;
+    `,
+  }}
+/>
 
         <Header />
 
         <main className="flex-1">
-          <ModalProvider>
+          {/* <ModalProvider>
             <QuoteProvider>
               <BookingProvider>
                 {children}
@@ -92,7 +96,20 @@ export default function RootLayout({
             </QuoteProvider>
 
             <WhatsappFloat />
-          </ModalProvider>
+
+          </ModalProvider> */}
+
+          <ModalProvider>
+  <QuoteProvider>
+    <WeddingQuoteProvider>
+      <BookingProvider>
+        {children}
+      </BookingProvider>
+    </WeddingQuoteProvider>
+  </QuoteProvider>
+
+  <WhatsappFloat />
+</ModalProvider>
         </main>
 
         <Footer />
