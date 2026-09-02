@@ -1,4 +1,3 @@
-
 "use client";
 import Image from "next/image";
 import "./pune.css";
@@ -8,7 +7,6 @@ import { useModal } from "@/app/components/modal/ModalProvider";
 import ShootTypeModal from "@/app/components/modal/ShootTypeModal";
 
 export default function PunePhotographers() {
-
   const { openModal } = useModal();
   return (
     <div className="page-wrapper">
@@ -16,7 +14,6 @@ export default function PunePhotographers() {
         {/* ================= Banner ================= */}
         <div className="image-wrapper mt-15">
           <YouTubeAutoPlay videoId="Kautj5HqYro" />
-          
         </div>
 
         <div className="center mb-10">
@@ -25,44 +22,84 @@ export default function PunePhotographers() {
             target="_blank"
             className="main-btn"
           >
-            Find Perfect Sets for your Shoot
+            Find Perfect Sets for your Pre Wedding
           </a>
         </div>
 
-        <h4 className="sub-heading mt-50 ">
-          Mumbai’s Most Magical Pre Wedding Spots: Unveil the Top Locations
-        </h4>
+        <Link href="https://www.locationshub.in">
+          <h2 className="h2 mb-5">
+            <strong className="text-[#fd9b48] text-[22px] mb-2 new-heading">
+              The Art of Love: Discover{" "}
+              <u>
+                Mumbai’s Most Magical Pre Wedding Spots: Unveil the Top
+                Locations
+              </u>
+            </strong>
+          </h2>
+        </Link>
 
         <div className="content">
           <p>
             Mumbai’s vibrant landscape offers an array of stunning options among
-            the <b>best pre wedding locations in Mumbai</b>, setting the stage
-            for unforgettable photos. Imagine capturing your love story against
-            the backdrop of the city’s iconic landmarks or within the versatile
-            settings of Locations Hub. Whether you’re enchanted by the elegance
-            of a historic fort, the serene beauty of a lakeside, or the chic
-            ambiance of an urban rooftop, Mumbai provides the perfect canvas.
-            Each location, from picturesque gardens to modern studios, adds a
-            unique flair to your shoot, ensuring your pre wedding photos are as
-            exceptional as your love story. Explore these top spots to find the
-            ideal setting that reflects your style and romance
+            the{" "}
+            <b>
+              <Link href="https://www.locationshub.in/">
+                <b>
+                  <u className="text-[#fd9b48]">
+                    best pre wedding locations in Mumbai
+                  </u>
+                </b>
+              </Link>
+            </b>
+            , setting the stage for unforgettable photos. Imagine capturing your
+            love story against the backdrop of the city’s iconic landmarks or
+            within the versatile settings of{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>
+            . Whether you’re enchanted by the elegance of a historic fort, the
+            serene beauty of a lakeside, or the chic ambiance of an urban
+            rooftop, Mumbai provides the perfect canvas. Each location, from
+            picturesque gardens to modern studios, adds a unique flair to your
+            shoot, ensuring your pre wedding photos are as exceptional as your
+            love story. Explore these top spots to find the ideal setting that
+            reflects your style and romance
           </p>
         </div>
 
         {/* ================= 1 ================= */}
         <h3 className="b-h3">
-          Discover the Charm: Top <u>Pre Wedding Spots in Mumbai</u>
+          Discover the Charm: Top{" "}
+          <u>
+            <Link href="https://www.locationshub.in/pre-wedding-shoot-locations">
+              <b>
+                <u className="text-[#fd9b48]">Pre Wedding Spots in Mumbai</u>
+              </b>
+            </Link>
+          </u>
         </h3>
 
         <div className="content">
           <p>
             Explore the allure of Mumbai with best pre wedding locations in
-            Mumbai, including the versatile settings at Locations Hub. From
-            picturesque beaches to lush gardens, each spot offers a unique
-            backdrop for your love story. Whether you’re looking for a serene
-            escape or a vibrant cityscape, Locations Hub and other hidden gems
-            make your pre wedding shoot truly memorable, capturing the essence
-            of Mumbai’s charm in every frame.
+            Mumbai, including the versatile settings at{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>
+            . From picturesque beaches to lush gardens, each spot offers a
+            unique backdrop for your love story. Whether you’re looking for a
+            serene escape or a vibrant cityscape,{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>{" "}
+            and other hidden gems make your pre wedding shoot truly memorable,
+            capturing the essence of Mumbai’s charm in every frame.
           </p>
         </div>
 
@@ -80,7 +117,7 @@ export default function PunePhotographers() {
             target="_blank"
             className="main-btn"
           >
-            Find Perfect Sets for your Shoot
+            Find Perfect Sets for your Pre Wedding
           </a>
         </div>
 
@@ -94,12 +131,22 @@ export default function PunePhotographers() {
 
           <p>
             Create magical moments at iconic pre wedding venues in Mumbai, with
-            Locations Hub offering a variety of settings. Whether you’re
-            dreaming of a vintage-themed shoot with classic architecture or a
-            modern, chic setting with sleek lines and bold colors, these
-            locations provide the perfect canvas. Let Locations Hub enhance your
-            love story, offering styles and atmospheres that make your pre
-            wedding photos as unique as your relationship.
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]"> Locations Hub</u>
+              </b>
+            </Link>{" "}
+            offering a variety of settings. Whether you’re dreaming of a
+            vintage-themed shoot with classic architecture or a modern, chic
+            setting with sleek lines and bold colors, these locations provide
+            the perfect canvas. Let{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>{" "}
+            enhance your love story, offering styles and atmospheres that make
+            your pre wedding photos as unique as your relationship.
           </p>
         </div>
 
@@ -114,12 +161,28 @@ export default function PunePhotographers() {
           <p>
             Looking for the perfect backdrop for your pre wedding photos? Check
             out these dreamy pre wedding locations in Mumbai. On the top is
-            Locations Hub, a true reflection of your personalities and love
-            story among other public places are Gateway of India and Marine
-            Drive to serene settings such as Sanjay Gandhi National Park and
-            Powai Lake, the city offers a variety of picturesque spots. Historic
-            South Mumbai contrasts with the modern flair of Bandra Fort and
-            Worli Sea Face, while Juhu and Versova beaches add coastal charm.
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]"> Locations Hub </u>
+              </b>
+            </Link>
+            , a true reflection of your personalities and love story among other
+            public places are{" "}
+            <Link href="https://en.wikipedia.org/wiki/Gateway_of_India">
+              <b>
+                <u className="text-[#fd9b48]"> Gateway of India </u>
+              </b>
+            </Link>{" "}
+            and <Link href="https://en.wikipedia.org/wiki/Marine_Drive,_Mumbai"><b><u className="text-[#fd9b48]"> Marine Drive </u></b></Link> to serene settings such as{" "}
+            <Link href="https://en.wikipedia.org/wiki/Sanjay_Gandhi_National_Park">
+              <b>
+                <u className="text-[#fd9b48]"> Sanjay Gandhi National Park </u>
+              </b>
+            </Link>{" "}
+            and <Link href="https://en.wikipedia.org/wiki/Powai_Lake"><b><u className="text-[#fd9b48]"> Powai Lake </u></b></Link>, the city offers a variety of picturesque spots.
+            Historic South Mumbai contrasts with the modern flair of <Link href="https://en.wikipedia.org/wiki/Castella_de_Aguada"><b><u className="text-[#fd9b48]"> Bandra Fort </u></b></Link>
+            and <Link href="https://en.wikipedia.org/wiki/Worli"><b><u className="text-[#fd9b48]"> Worli Sea Face </u></b></Link>, while <Link href="https://en.wikipedia.org/wiki/Juhu"><b><u className="text-[#fd9b48]"> Juhu </u></b></Link> and <Link href="https://en.wikipedia.org/wiki/Versova,_Mumbai"><b><u className="text-[#fd9b48]"> Versova beaches </u></b></Link> add coastal
+            charm.
           </p>
         </div>
 
@@ -132,11 +195,22 @@ export default function PunePhotographers() {
 
           <p>
             Fall in love all over again at these must-visit best pre wedding
-            locations in Mumbai, with Locations Hub offering enchanting studio
-            settings. Picture yourself amidst serene lakesides with the gentle
-            ripple of water or in vibrant urban settings with the city’s
-            heartbeat as your backdrop. These spots, including Locations Hub,
-            are perfect for capturing the romance and excitement of your
+            locations in Mumbai, with{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>{" "}
+            offering enchanting studio settings. Picture yourself amidst serene
+            lakesides with the gentle ripple of water or in vibrant urban
+            settings with the city’s heartbeat as your backdrop. These spots,
+            including{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>
+            , are perfect for capturing the romance and excitement of your
             upcoming nuptials, adding a touch of magic to your pre wedding
             shoot.
           </p>
@@ -152,11 +226,22 @@ export default function PunePhotographers() {
           <p>
             Planning your pre wedding shoot? Look no further than this guide to
             stunning pre wedding settings in Mumbai, featuring the diverse
-            settings at Locations Hub. From tranquil gardens to bustling city
-            streets, these locations, including Locations Hub’s customizable
-            sets, will add a touch of magic to your pre wedding photos. Whether
-            you’re looking for classic elegance or modern flair, this guide
-            helps you find the ideal spot to capture your love story
+            settings at{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>
+            . From tranquil gardens to bustling city streets, these locations,
+            including{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>
+            ’s customizable sets, will add a touch of magic to your pre wedding
+            photos. Whether you’re looking for classic elegance or modern flair,
+            this guide helps you find the ideal spot to capture your love story
           </p>
         </div>
 
@@ -174,7 +259,7 @@ export default function PunePhotographers() {
             target="_blank"
             className="main-btn"
           >
-            Find Perfect Sets for your Shoot
+            Find Perfect Sets for your Pre Wedding
           </a>
         </div>
 
@@ -187,12 +272,22 @@ export default function PunePhotographers() {
           <p>
             Make your pre wedding shoot extraordinary with exclusive pre wedding
             locations in Mumbai, including the luxurious and versatile settings
-            at Locations Hub. These locations offer stunning backdrops, from
-            customizable studios to natural landscapes that highlight the beauty
-            of the outdoors. Whether you prefer a chic cityscape or a serene
-            escape, Locations Hub and other spots are perfect for capturing your
-            love story in style and making your pre wedding photos truly stand
-            out.
+            at{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>
+            . These locations offer stunning backdrops, from customizable
+            studios to natural landscapes that highlight the beauty of the
+            outdoors. Whether you prefer a chic cityscape or a serene escape,{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>{" "}
+            and other spots are perfect for capturing your love story in style
+            and making your pre wedding photos truly stand out.
           </p>
         </div>
 
@@ -204,38 +299,76 @@ export default function PunePhotographers() {
           {/* FULL paragraph */}
           <p>
             Discover where to find glamour and elegance with best pre wedding
-            locations in Mumbai, with Locations Hub offering sophisticated
-            studio settings. These top spots, including Locations Hub, provide
-            the ideal backdrop for stylish and refined pre wedding photos that
-            will capture the essence of your love story with grace and elegance.
+            locations in Mumbai, with{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>{" "}
+            offering sophisticated studio settings. These top spots, including{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>
+            , provide the ideal backdrop for stylish and refined pre wedding
+            photos that will capture the essence of your love story with grace
+            and elegance.
           </p>
         </div>
 
-         <h3 className="b-h3">
-         Enchanting Settings: Curated Pre Wedding Venues in Mumbai
-
+        <h3 className="b-h3">
+          Enchanting Settings: Curated Pre Wedding Venues in Mumbai
         </h3>
 
         <div className="content mt-4">
           {/* FULL paragraph */}
           <p>
-            Whether you’re looking for rustic charm or a chic urban vibe, curated pre wedding venues in Mumbai, including Locations Hub, offer a variety of settings to suit every couple’s taste. From enchanting gardens with blooming flowers to trendy urban rooftops with breathtaking views, these locations provide the perfect atmosphere to create lasting memories. Find your ideal spot at Locations Hub and elsewhere to capture enchanting pre wedding moments.
-
+            Whether you’re looking for rustic charm or a chic urban vibe,
+            curated pre wedding venues in Mumbai, including{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>
+            , offer a variety of settings to suit every couple’s taste. From
+            enchanting gardens with blooming flowers to trendy urban rooftops
+            with breathtaking views, these locations provide the perfect
+            atmosphere to create lasting memories. Find your ideal spot at{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>{" "}
+            and elsewhere to capture enchanting pre wedding moments.
           </p>
         </div>
 
-          <h3 className="b-h3">
-        Where Love Blooms: Romantic Pre Wedding Backdrops in Mumbai
-
-
+        <h3 className="b-h3">
+          Where Love Blooms: Romantic Pre Wedding Backdrops in Mumbai
         </h3>
 
         <div className="content mt-4">
           {/* FULL paragraph */}
           <p>
-           Let your love bloom at romantic pre wedding backdrops in Mumbai, with Locations Hub offering picturesque studio settings. With beautiful gardens, scenic viewpoints, and romantic hideaways, including Locations Hub, these spots offer a picturesque backdrop for your pre wedding shoot. Embrace the romance and serenity of these locations, ensuring your photos are filled with genuine emotions and stunning visuals that celebrate your journey together.
-
-
+            Let your love bloom at romantic pre wedding backdrops in Mumbai,
+            with{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>{" "}
+            offering picturesque studio settings. With beautiful gardens, scenic
+            viewpoints, and romantic hideaways, including{" "}
+            <Link href="https://www.locationshub.in">
+              <b>
+                <u className="text-[#fd9b48]">Locations Hub</u>
+              </b>
+            </Link>
+            , these spots offer a picturesque backdrop for your pre wedding
+            shoot. Embrace the romance and serenity of these locations, ensuring
+            your photos are filled with genuine emotions and stunning visuals
+            that celebrate your journey together.
           </p>
         </div>
 
@@ -251,9 +384,12 @@ export default function PunePhotographers() {
         <GetQuoteButton className="get-quote-btn text-center" /> */}
 
         <div className="center">
-          <button onClick={() => openModal(<ShootTypeModal />)} className="bg-[#ff8c1a] text-white px-10 py-3 font-[600] hover:bg-[#e57c14] transition">
-                                       Book Now
-                                     </button>
+          <button
+            onClick={() => openModal(<ShootTypeModal />)}
+            className="bg-[#ff8c1a] text-white px-10 py-3 font-[600] hover:bg-[#e57c14] transition"
+          >
+            Book Now
+          </button>
         </div>
       </div>
     </div>

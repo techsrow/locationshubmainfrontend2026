@@ -23,7 +23,7 @@ export default function PunePhotographers() {
             target="_blank"
             className="main-btn"
           >
-            Find Perfect Sets for your Shoot
+            Find Perfect Sets for your Pre Wedding
           </a>
         </div>
 
