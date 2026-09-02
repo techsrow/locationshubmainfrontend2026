@@ -27,13 +27,17 @@ export default function PunePhotographers() {
           </a>
         </div>
 
-        <h4 className="sub-heading mt-50 ">
-          Snap the City <u>Best place for photoshoot in mumbai</u>
+        <Link href="https://www.trueshadesphotography.com/">
+
+ <h4 className="sub-heading mt-50 ">
+          Snap the City <u><Link href="https://www.trueshadesphotography.com/"><b><u className="text-[#fd9b48]">best place for photoshoot in Mumbai</u></b></Link></u>
         </h4>
+
+</Link>
 
         <div className="content">
           <p>
-            Mumbai, the city of dreams, is a vibrant mix of culture, history, and stunning backdrops, making it perfect for photoshoots. From iconic landmarks like the <b>Gateway of India</b> and <b><u>Marine Drive</u></b> to serene settings such as <b><u>Sanjay Gandhi National Park</u></b> and <b><u>Powai Lake</u></b>, the city offers a variety of picturesque spots. Historic South Mumbai contrasts with the modern flair of <b><u>Bandra Fort</u></b> and Worli Sea Face, while Juhu and Versova beaches add coastal charm.
+            Mumbai, the city of dreams, is a vibrant mix of culture, history, and stunning backdrops, making it perfect for photoshoots. From iconic landmarks like the <b><Link href="https://en.wikipedia.org/wiki/Gateway_of_India"><b><u className="text-[#fd9b48]">Gateway of India</u></b></Link></b> and <b><u><Link href="https://en.wikipedia.org/wiki/Marine_Drive,_Mumbai"><b><u className="text-[#fd9b48]">Marine Drive</u></b></Link></u></b> to serene settings such as <b><u><Link href="https://sgnp.maharashtra.gov.in/Site/Home/Index.aspx"><b><u className="text-[#fd9b48]">Sanjay Gandhi National Park</u></b></Link></u></b> and <b><u><Link href="https://en.wikipedia.org/wiki/Powai_Lake"><b><u className="text-[#fd9b48]">Powai Lake</u></b></Link></u></b>, the city offers a variety of picturesque spots. Historic South Mumbai contrasts with the modern flair of <b><u><Link href="https://en.wikipedia.org/wiki/Castella_de_Aguada"><b><u className="text-[#fd9b48]">Bandra Fort</u></b></Link></u></b> and <Link href="https://en.wikipedia.org/wiki/Worli"><b><u className="text-[#fd9b48]">Worli Sea Face</u></b></Link> , while <Link href="https://en.wikipedia.org/wiki/Juhu"><b><u className="text-[#fd9b48]">Juhu</u></b></Link> and <Link href="https://en.wikipedia.org/wiki/Versova,_Mumbai"><b><u className="text-[#fd9b48]">Versova</u></b></Link> beaches add coastal charm.
 Nature enthusiasts will appreciate green spaces like Aarey Colony. Whether you’re a pro or capturing special moments, Mumbai’s diverse locations ensure a spectacular shoot.
           </p>
 
@@ -50,7 +54,7 @@ Nature enthusiasts will appreciate green spaces like Aarey Colony. Whether you�
 
         <div className="content">
           <p>
-        Discover Mumbai’s most exclusive photoshoot locations with Locations Hub, the best place for photoshoot in Mumbai. From stylish cityscapes to peaceful outdoor spots, these unique settings enhance your shoot with ease and accessibility. Whether you’re after rustic charm or urban elegance, this hidden gem are ideal for capturing unforgettable moments. The seamless mix of modernity and tradition makes each spot a versatile canvas for any type of photography.
+        Discover Mumbai’s most exclusive photoshoot locations with <Link href="https://www.locationshub.in/"><b><u className="text-[#fd9b48]">Locations Hub</u></b></Link>, the <Link href="https://www.trueshadesphotography.com/"><b><u className="text-[#fd9b48]">best place for photoshoot in Mumbai</u></b></Link>. From stylish cityscapes to peaceful outdoor spots, these unique settings enhance your shoot with ease and accessibility. Whether you’re after rustic charm or urban elegance, this hidden gem are ideal for capturing unforgettable moments. The seamless mix of modernity and tradition makes each spot a versatile canvas for any type of photography.
 
 
 
@@ -89,7 +93,7 @@ Nature enthusiasts will appreciate green spaces like Aarey Colony. Whether you�
           {/* 👉 Paste FULL Ajinkya paragraph here */}
 
           <p>
-          Locations Hub unveils the best places for photoshoot in Mumbai. Whether you’re looking for stunning sets or vast open spaces, these locations offer the perfect blend of urban and natural backdrops to bring your vision to life. With a wide range of settings, from the hustle of the city to serene, quiet escapes, you’ll find the ideal ambiance to make your photos shine. Perfect for commercial shoots or personal projects, these venues cater to every creative need.
+          <Link href="https://www.locationshub.in/"><b><u className="text-[#fd9b48]">Locations Hub</u></b></Link> unveils the <Link href="https://www.trueshadesphotography.com/"><b><u className="text-[#fd9b48]">best places for photoshoot in Mumbai</u></b></Link>. Whether you’re looking for stunning sets or vast open spaces, these locations offer the perfect blend of urban and natural backdrops to bring your vision to life. With a wide range of settings, from the hustle of the city to serene, quiet escapes, you’ll find the ideal ambiance to make your photos shine. Perfect for commercial shoots or personal projects, these venues cater to every creative need.
 
 
 
@@ -109,7 +113,7 @@ Nature enthusiasts will appreciate green spaces like Aarey Colony. Whether you�
           {/* 👉 Paste FULL Ajinkya paragraph here */}
 
           <p>
-        Looking for the perfect backdrop for your pre wedding photos? Check out these dreamy pre wedding locations in Mumbai. On the top is Locations Hub, a true reflection of your personalities and love story among other public places are Gateway of India and Marine Drive to serene settings such as Sanjay Gandhi National Park and Powai Lake, the city offers a variety of picturesque spots. Historic South Mumbai contrasts with the modern flair of Bandra Fort and Worli Sea Face, while Juhu and Versova beaches add coastal charm.
+        Looking for the perfect backdrop for your pre wedding photos? Check out these dreamy pre wedding locations in Mumbai. On the top is <Link href="https://www.locationshub.in/"><b><u className="text-[#fd9b48]">Locations Hub</u></b></Link>, a true reflection of your personalities and love story among other public places are <Link href="https://en.wikipedia.org/wiki/Gateway_of_India"><b><u className="text-[#fd9b48]">Gateway of India</u></b></Link> and <Link href="https://en.wikipedia.org/wiki/Marine_Drive,_Mumbai"><b><u className="text-[#fd9b48]">Marine Drive</u></b></Link> to serene settings such as <Link href="https://sgnp.maharashtra.gov.in/Site/Home/Index.aspx"><b><u className="text-[#fd9b48]">Sanjay Gandhi National Park</u></b></Link> and <Link href="https://en.wikipedia.org/wiki/Powai_Lake"><b><u className="text-[#fd9b48]">Powai Lake</u></b></Link>, the city offers a variety of picturesque spots. Historic South Mumbai contrasts with the modern flair of <Link href="https://en.wikipedia.org/wiki/Castella_de_Aguada"><b><u className="text-[#fd9b48]">Bandra Fort</u></b></Link> and <Link href="https://en.wikipedia.org/wiki/Worli"><b><u className="text-[#fd9b48]">Worli</u></b></Link> Sea Face, while <Link href="https://en.wikipedia.org/wiki/Juhu"><b><u className="text-[#fd9b48]">Juhu</u></b></Link> and <Link href="https://en.wikipedia.org/wiki/Versova,_Mumbai"><b><u className="text-[#fd9b48]">Versova</u></b></Link> beaches add coastal charm.
 
 
 
@@ -129,7 +133,7 @@ Nature enthusiasts will appreciate green spaces like Aarey Colony. Whether you�
           {/* 👉 Paste FULL Ajinkya paragraph here */}
 
           <p>
-         Explore Mumbai’s best place for photoshoot in Mumbai with Locations Hub. Offering ample natural light and versatile settings, these locations are perfect for glamorous fashion shoots or candid lifestyle photography. Each space is meticulously designed to bring out the best in every shot, whether you’re seeking the raw beauty of nature or the sophistication of modern architecture. Capture every magical moment with Mumbai’s finest backdrops.
+         Explore Mumbai’s <Link href="https://www.trueshadesphotography.com/"><b><u className="text-[#fd9b48]">best place for photoshoot in Mumbai</u></b></Link> with <Link href="https://www.locationshub.in/"><b><u className="text-[#fd9b48]">Locations Hub</u></b></Link>. Offering ample natural light and versatile settings, these locations are perfect for glamorous fashion shoots or candid lifestyle photography. Each space is meticulously designed to bring out the best in every shot, whether you’re seeking the raw beauty of nature or the sophistication of modern architecture. Capture every magical moment with Mumbai’s finest backdrops.
 
 
 
@@ -150,7 +154,7 @@ Nature enthusiasts will appreciate green spaces like Aarey Colony. Whether you�
           {/* 👉 Paste FULL Ajinkya paragraph here */}
 
           <p>
-       Locations Hub, featuring pet-friendly environments and stunning scenery. Whether you’re looking for tranquil nature or dramatic cityscapes, these spots will elevate your photos. With locations that cater to all themes, you’ll be able to shoot everything from contemporary to classic with ease. Discover picture-perfect spots designed to make every moment shine, no matter the occasion.
+       <Link href="https://www.locationshub.in/"><b><u className="text-[#fd9b48]">Locations Hub</u></b></Link>, featuring pet-friendly environments and stunning scenery. Whether you’re looking for tranquil nature or dramatic cityscapes, these spots will elevate your photos. With locations that cater to all themes, you’ll be able to shoot everything from contemporary to classic with ease. Discover picture-perfect spots designed to make every moment shine, no matter the occasion.
 
 
 
@@ -187,7 +191,7 @@ Nature enthusiasts will appreciate green spaces like Aarey Colony. Whether you�
         <div className="content mt-4">
           {/* FULL paragraph */}
           <p>
-         Discover the best place for photoshoot in Mumbai with Locations Hub’s curated list of stunning architectural wonders and serene nature spots. Each location is designed to offer exceptional features for your next creative project. Whether you’re planning a fashion editorial, a pre-wedding shoot, or a commercial campaign, these hidden venues provide the flexibility and charm needed to create a flawless shoot experience
+         Discover the <Link href="https://www.trueshadesphotography.com/"><b><u className="text-[#fd9b48]">best place for photoshoot in Mumbai</u></b></Link> with <Link href="https://www.locationshub.in/"><b><u className="text-[#fd9b48]">Locations Hub</u></b></Link>’s curated list of stunning architectural wonders and serene nature spots. Each location is designed to offer exceptional features for your next creative project. Whether you’re planning a fashion editorial, a pre-wedding shoot, or a commercial campaign, these hidden venues provide the flexibility and charm needed to create a flawless shoot experience
 
 
 
