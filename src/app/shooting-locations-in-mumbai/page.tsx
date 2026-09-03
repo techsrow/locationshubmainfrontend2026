@@ -23,8 +23,10 @@ const cinzel = Cinzel({
 });
 
 const amsterdam = localFont({
-  src: "../../fonts/AmsterdamOneSlant-0WglP.ttf",
+  // src: "../../fonts/AmsterdamOneSlant-0WglP.ttf",
+  src: "../../fonts/Amsterdam.ttf",
   display: "swap",
+  
 });
 
 export default function HomePage() {
@@ -136,7 +138,7 @@ GET A QUOTE
       </section>
 
       {/* FEATURED IN */}
-      <section className="featured-logos">
+      <section className="featured-logos featured-desktop">
         <Swiper
           modules={[Autoplay, FreeMode]}
           slidesPerView={5}
@@ -222,6 +224,95 @@ GET A QUOTE
 </SwiperSlide>
         </Swiper>
       </section>
+      <section className="featured-logos featured-mobile">
+  <Swiper
+  modules={[Autoplay]}
+  slidesPerView={2}
+  spaceBetween={20}
+  loop={true}
+  allowTouchMove={false}
+  speed={5000}
+  autoplay={{
+    delay: 1,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+  }}
+  breakpoints={{
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 5,
+    },
+  }}
+>
+    <SwiperSlide>
+      <div className="mobile-logo">
+        <Image
+          src="/1times-of-india.png"
+          alt="Times of India"
+          width={150}
+          height={80}
+        />
+      </div>
+    </SwiperSlide>
+
+    <SwiperSlide>
+      <div className="mobile-logo">
+        <Image
+          src="/2weddingsutra-1.png"
+          alt="Wedding Sutra"
+          width={150}
+          height={80}
+        />
+      </div>
+    </SwiperSlide>
+
+    <SwiperSlide>
+      <div className="mobile-logo">
+        <Image
+          src="/4wedmegood-1.png"
+          alt="WedMeGood"
+          width={150}
+          height={80}
+        />
+      </div>
+    </SwiperSlide>
+
+    <SwiperSlide>
+      <div className="mobile-logo">
+        <Image
+          src="/5thhindustantimes-1.png"
+          alt="Hindustan Times"
+          width={150}
+          height={80}
+        />
+      </div>
+    </SwiperSlide>
+
+    <SwiperSlide>
+      <div className="mobile-logo">
+        <Image
+          src="/3shaadisaga-1.png"
+          alt="Shaadi Saga"
+          width={150}
+          height={80}
+        />
+      </div>
+    </SwiperSlide>
+
+    <SwiperSlide>
+      <div className="mobile-logo">
+        <Image
+          src="/6bigfatindianwedding.png"
+          alt="Big Fat Indian Wedding"
+          width={150}
+          height={80}
+        />
+      </div>
+    </SwiperSlide>
+  </Swiper>
+</section>
 
       {/* WHY US */}
       {/* WHY US SECTION */}
@@ -340,7 +431,7 @@ GET A QUOTE
 
       {/* FEATURE SECTION */}
       <section className="py-20 feature-sec">
-        <div className="max-w-8xl mx-auto grid md:grid-cols-2  px-6 items-center">
+        <div className="max-w-8xl mx-auto grid md:grid-cols-2   items-center">
           <Image
             src="/what-makes-us-stand-out-commercial.jpg"
             alt=""
@@ -352,7 +443,7 @@ GET A QUOTE
          <div className="bg-primary text-white p-10 bgsec flex items-center">
 
   <div className="inner-wrapper">
-    <h3 className="text-2xl mb-6 textstand">What Makes Us Stand Out</h3>
+    <h3 className="text-2xl mb-6 textstand standout">What Makes Us Stand Out</h3>
 
     <ul className="space-y-3 text-sm text-left">
       <li>Plenty of Sets at the Price of One</li>

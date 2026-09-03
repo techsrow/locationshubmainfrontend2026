@@ -35,13 +35,13 @@ export default function AboutSection(): JSX.Element {
 
         <div className="about-image">
           <Image
-            src="/trueshades-founder-1.jpg"
-            alt="About Locations Hub"
-            width={420}
-            height={320}
-            priority
-            className="about-img"
-          />
+  src="/trueshades-founder-1.jpg"
+  alt="About Locations Hub"
+  width={500}
+  height={380}
+  priority
+  className="about-img"
+/>
         </div>
 
       </div>
