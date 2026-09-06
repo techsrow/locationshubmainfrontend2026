@@ -56,7 +56,7 @@ export default function Page() {
               alt={set.title}
               width={800}
               height={490}
-              className="w-full imghforset object-cover transition-transform duration-300 "
+              className="w-full  object-cover transition-transform duration-300 "
             />
 
             {/* Bottom Overlay Title */}

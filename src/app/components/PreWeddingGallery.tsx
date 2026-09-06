@@ -1,9 +1,10 @@
-// app/components/PreWeddingGallery.tsx
-
 "use client";
 
 import { useEffect, useState } from "react";
 import Masonry from "react-masonry-css";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
 import api from "@/lib/api";
 import { GalleryImage } from "@/types/gallery";
 import { getGalleryImageUrl } from "@/lib/getGalleryImageUrl";
@@ -18,6 +19,9 @@ export default function PreWeddingGallery() {
   const [images, setImages] = useState<GalleryImage[]>([]);
   const [visibleCount, setVisibleCount] = useState(15);
   const [loading, setLoading] = useState(true);
+
+  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     fetchGallery();
@@ -42,6 +46,10 @@ export default function PreWeddingGallery() {
 
   if (loading) return null;
 
+  const slides = images.map((item) => ({
+    src: getGalleryImageUrl(item.imageUrl),
+  }));
+
   return (
     <section className="py-20">
       <div className="max-w-[1120px] mx-auto px-4">
@@ -53,10 +61,14 @@ export default function PreWeddingGallery() {
         >
           {images
             .slice(0, visibleCount)
-            .map((item) => (
+            .map((item, idx) => (
               <div
                 key={item.id}
-                className="overflow-hidden"
+                className="overflow-hidden cursor-pointer"
+                onClick={() => {
+                  setIndex(idx);
+                  setOpen(true);
+                }}
               >
                 <img
                   src={getGalleryImageUrl(item.imageUrl)}
@@ -80,6 +92,13 @@ export default function PreWeddingGallery() {
             </button>
           </div>
         )}
+
+        <Lightbox
+          open={open}
+          close={() => setOpen(false)}
+          index={index}
+          slides={slides}
+        />
 
       </div>
     </section>
