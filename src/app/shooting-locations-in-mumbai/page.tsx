@@ -138,7 +138,7 @@ GET A QUOTE
       </section>
 
       {/* FEATURED IN */}
-      <section className="featured-logos featured-desktop">
+      {/* <section className="featured-logos featured-desktop">
         <Swiper
           modules={[Autoplay, FreeMode]}
           slidesPerView={5}
@@ -312,7 +312,94 @@ GET A QUOTE
       </div>
     </SwiperSlide>
   </Swiper>
-</section>
+</section> */}
+{/* FEATURED IN */}
+      <section className="featured-logos">
+        <Swiper
+          modules={[Autoplay, FreeMode]}
+          slidesPerView={5}
+          spaceBetween={5}
+          loop={true}
+          freeMode={true}
+          speed={3000}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+          }}
+          breakpoints={{
+            320: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 5 },
+          }}
+        >
+         <SwiperSlide>
+  <div className="image-wrapper">
+    <Image
+      src="/1times-of-india.png"
+      alt="Times of India"
+      fill
+      className="img-full"
+    />
+  </div>
+</SwiperSlide>
+
+<SwiperSlide>
+  <div className="image-wrapper">
+    <Image
+      src="/2weddingsutra-1.png"
+      alt="Wedding Sutra"
+      fill
+      className="img-full"
+    />
+  </div>
+</SwiperSlide>
+
+<SwiperSlide>
+  <div className="image-wrapper">
+    <Image
+      src="/4wedmegood-1.png"
+      alt="WedMeGood"
+      fill
+      className="img-full"
+    />
+  </div>
+</SwiperSlide>
+
+<SwiperSlide>
+  <div className="image-wrapper">
+    <Image
+      src="/5thhindustantimes-1.png"
+      alt="Hindustan Times"
+      fill
+      className="img-full"
+    />
+  </div>
+</SwiperSlide>
+
+<SwiperSlide>
+  <div className="image-wrapper">
+    <Image
+      src="/3shaadisaga-1.png"
+      alt="Shaadi Saga"
+      fill
+      className="img-full"
+    />
+  </div>
+</SwiperSlide>
+
+<SwiperSlide>
+  <div className="image-wrapper">
+    <Image
+      src="/6bigfatindianwedding.png"
+      alt="Big Fat Indian Wedding"
+      fill
+      className="img-full"
+    />
+  </div>
+</SwiperSlide>
+        </Swiper>
+      </section>
 
       {/* WHY US */}
       {/* WHY US SECTION */}

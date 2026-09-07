@@ -52,7 +52,7 @@ export default function PreWeddingGallery() {
 
   return (
     <section className="py-20">
-      <div className="max-w-[1120px] mx-auto px-4">
+      <div className="max-w-[1120px] mx-auto px-0 lg:px-4">
 
         <Masonry
           breakpointCols={breakpointColumnsObj}
@@ -86,9 +86,9 @@ export default function PreWeddingGallery() {
               onClick={() =>
                 setVisibleCount((prev) => prev + 15)
               }
-              className="px-8 py-3 rounded-full text-white font-medium bg-gradient-to-r from-pink-500 to-orange-400 hover:opacity-90 transition"
+              className="bg-[#ff8c1a] text-white px-3 py-3 font-semibold hover:bg-[#e57c14] transition rounded"
             >
-              Load More Photos
+              Load More
             </button>
           </div>
         )}
