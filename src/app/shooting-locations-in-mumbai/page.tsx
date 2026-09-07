@@ -16,6 +16,9 @@ import OurSetsSection from "../components/sections/OurSetsSection";
 import OurSetsSectionPage from "../components/sections/OurSetsSectionpage";
 import TestimonialsSectionPage from "../components/sections/TestimonialsSectionpage";
 import AboutSectionMobile from "./AboutSectionMobile";
+import CommercialShootButton from "../components/commercial-shoot/CommercialShootButton";
+
+
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -113,9 +116,11 @@ export default function HomePage() {
           </p>
 
          <div className="text-center mt-10">
-<button className={`quote-btn ${cinzel.className}`}>
-GET A QUOTE
-</button>
+<CommercialShootButton
+  className={`quote-btn ${cinzel.className}`}
+>
+  GET A QUOTE
+</CommercialShootButton>
 </div>
         </div>
       </section>
@@ -406,7 +411,7 @@ GET A QUOTE
 
       {/* WHY US */}
 
-      <section className="why-section">
+      <section className= "hidden lg:block why-section">
         <h2 className={`why-title ${amsterdam.className}`}>Why Us?</h2>
 
         <div className="why-wrapper">
@@ -503,6 +508,125 @@ GET A QUOTE
         </div>
       </section>
 
+       <section className="block md:hidden bg-white pt-0 pb-0">
+         <h2 className={`why-title ${amsterdam.className}`}>Why Us?</h2>
+  <div className="">
+
+    {/* Premium Sets */}
+    <div className="overflow-hidden bg-[#5A0F2B] text-white">
+      <Image
+        src="/premium-sets-1.jpg"
+        alt="Premium Sets"
+        width={800}
+        height={600}
+        className="w-full h-auto block"
+      />
+
+      <div className="px-6 py-8 text-center">
+        <h3 className={` mt-text-heading mb-4 ${amsterdam.className}`}>
+          Premium Sets
+        </h3>
+
+        <p className="text-sm leading-7 m-content">
+          Make your pre wedding film look elegant and grand
+          with our premium and spacious sets.
+        </p>
+      </div>
+    </div>
+
+    {/* Air Conditioned Sets */}
+    <div className="overflow-hidden bg-white">
+      <Image
+        src="/indoor-ac.png"
+        alt="Air Conditioned Sets"
+        width={800}
+        height={600}
+        className="w-full h-auto block"
+      />
+
+      <div className="px-6 py-8 text-center content-area">
+        <h3 className={`mt-text-heading mb-4 ${amsterdam.className}`}>
+          Air Conditioned Sets
+        </h3>
+
+        <p className="text-sm leading-7 m-content">
+          Be it summer or monsoon, you cannot always shoot
+          outdoors. Our luxurious air conditioned indoor sets
+          are always a savior.
+        </p>
+      </div>
+    </div>
+
+    {/* Tons of Props */}
+    <div className="overflow-hidden bg-white">
+      <Image
+        src="/tons-of-props.jpg"
+        alt="Tons of Props"
+        width={800}
+        height={600}
+        className="w-full h-auto block"
+      />
+
+      <div className="px-6 py-8 text-center content-area">
+        <h3 className={`mt-text-heading mb-4 ${amsterdam.className}`}>
+          Tons of Props
+        </h3>
+
+        <p className="text-sm leading-7 m-content">
+          Get top notch quality and high efficiency shoot
+          with our many props options.
+        </p>
+      </div>
+    </div>
+
+    {/* Inhouse Restaurant */}
+    <div className="overflow-hidden bg-white">
+      <Image
+        src="/inhouse-restaurant.jpg"
+        alt="Inhouse Restaurant"
+        width={800}
+        height={600}
+        className="w-full h-auto block"
+      />
+
+      <div className="px-6 py-8 text-center content-area">
+        <h3 className={`mt-text-heading mb-4 ${amsterdam.className}`}>
+          Inhouse Restaurant
+        </h3>
+
+        <p className="text-sm leading-7 m-content">
+          Relax while you shoot. Dine at our inhouse restaurant
+          and enjoy food as memorable as your shoot.
+        </p>
+      </div>
+    </div>
+
+    {/* Overnight Accommodation */}
+    <div className="overflow-hidden bg-white">
+      <Image
+        src="/overnight-accommodation.jpg"
+        alt="Overnight Accommodation"
+        width={800}
+        height={600}
+        className="w-full h-auto block"
+      />
+
+      <div className="px-6 py-8 text-center content-area">
+        <h3 className={`mt-text-heading  mt-text-heading mb-4 ${amsterdam.className}`}>
+          Overnight Accommodation
+        </h3>
+
+        <p className="text-sm leading-7 m-content">
+          Experience a peaceful stay with our comfortable
+          overnight accommodation rooms and wake up refreshed
+          next day for your shoot.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
       {/* OUR WORK */}
       <section className="py-20 work our-set">
         <h2 className={`why-title work-title ${amsterdam.className}`}>Our Work</h2>
@@ -517,7 +641,7 @@ GET A QUOTE
       </section>
 
       {/* FEATURE SECTION */}
-      <section className="py-20 feature-sec">
+      <section className="py-20 feature-sec mobile-padding-bottom">
         <div className="max-w-8xl mx-auto grid md:grid-cols-2   items-center">
           <Image
             src="/what-makes-us-stand-out-commercial.jpg"
@@ -553,75 +677,142 @@ GET A QUOTE
         </div>
 
         <div className="text-center mt-10">
-<button className={`quote-btn ${cinzel.className}`}>
-GET A QUOTE
-</button>
+<CommercialShootButton
+  className={`quote-btn ${cinzel.className}`}
+>
+  GET A QUOTE
+</CommercialShootButton>
 </div>
       </section>
 
       {/* FAQ */}
-      <section className="bg-primary text-white py-20 faq">
+      <section className="hidden md:block bg-primary text-white py-20 faq">
 
-<h2 className="text-center text-3xl mb-10 faqheading">
-Questions
-</h2>
+  <h2 className="text-center text-3xl mb-10 faqheading">
+    Questions
+  </h2>
 
-<div className="max-w-4xl mx-auto space-y-4 px-6 text-faq">
+  <div className="max-w-4xl mx-auto space-y-4 px-6 text-faq">
 
-<Faq 
-q="How does your Pre-Wedding process work ?"
-a={
-<>
-<p>1. Consultation – We consult the couple to understand their vision, preferences and ideas. Based on this we advise them location, outfits, theme, props and other details.</p>
+    <Faq
+      q="How does your Pre-Wedding process work ?"
+      a={
+        <>
+          <p>1. Consultation – We consult the couple to understand their vision, preferences and ideas. Based on this we advise them location, outfits, theme, props and other details.</p>
 
-<p>2. Storyboarding – Once booking is done, we plan and conceptualize the shoot (storyboard). After that we fix a shoot date with the couple’s confirmation.</p>
+          <p>2. Storyboarding – Once booking is done, we plan and conceptualize the shoot (storyboard). After that we fix a shoot date with the couple’s confirmation.</p>
 
-<p>3. Shoot – On the shoot day we help you with poses, expressions and almost everything to make your love story unique and real.</p>
+          <p>3. Shoot – On the shoot day we help you with poses, expressions and almost everything to make your love story unique and real.</p>
 
-<p>4. Post Production and Delivery – We take around 4 weeks for post processing photos and videos. All high resolution photos and videos are shared via Dropbox.</p>
-</>
-}
-/>
+          <p>4. Post Production and Delivery – We take around 4 weeks for post processing photos and videos. All high resolution photos and videos are shared via Dropbox.</p>
+        </>
+      }
+    />
 
-<Faq 
-q="Why should we have a Pre-Wedding Photoshoot ?"
-a="It’s a chance to celebrate your love story in a relaxed environment, capturing authentic emotions and chemistry that enhances your wedding memories."
-/>
+    <Faq
+      q="Why should we have a Pre-Wedding Photoshoot ?"
+      a="It’s a chance to celebrate your love story in a relaxed environment, capturing authentic emotions and chemistry that enhances your wedding memories."
+    />
 
-<Faq 
-q="How long does a Pre-Wedding Photoshoot typically last ?"
-a="The duration of a pre-wedding shoot varies based on the package you choose and the locations involved. On average it can last anywhere from 6 to 12 hours."
-/>
+    <Faq
+      q="How long does a Pre-Wedding Photoshoot typically last ?"
+      a="The duration of a pre-wedding shoot varies based on the package you choose and the locations involved. On average it can last anywhere from 6 to 12 hours."
+    />
 
-<Faq 
-q="How long does it take to receive the edited photos and videos ?"
-a="Our editing process usually takes around 4 weeks depending on the complexity of the shoot and number of images. We ensure each photo receives detailed attention."
-/>
+    <Faq
+      q="How long does it take to receive the edited photos and videos ?"
+      a="Our editing process usually takes around 4 weeks depending on the complexity of the shoot and number of images."
+    />
 
-<Faq 
-q="Can we choose the song for our wedding film ?"
-a="Absolutely! We encourage you to select a song that holds special meaning to you. If it does not match the film perfectly we may choose another song of the same genre from our library."
-/>
+    <Faq
+      q="Can we choose the song for our wedding film ?"
+      a="Absolutely! We encourage you to select a song that holds special meaning to you."
+    />
 
-<Faq 
-q="What should we wear for the Pre-Wedding shoot?"
-a="Your outfit plays a crucial role. We recommend wearing outfits that complement the theme and song. We will guide you in finalizing the outfits."
-/>
+    <Faq
+      q="What should we wear for the Pre-Wedding shoot?"
+      a="Your outfit plays a crucial role. We recommend wearing outfits that complement the theme and song."
+    />
 
-<Faq 
-q="What are your Pre-Wedding packages ?"
-a="We have different packages. Please click the 'GET QUOTE' button below and we will send you packages and details via WhatsApp."
-/>
+    <Faq
+      q="What are your Pre-Wedding packages ?"
+      a="We have different packages. Please click the GET QUOTE button below and we will send you packages and details via WhatsApp."
+    />
 
-</div>
+  </div>
 
-<div className="text-center mt-10">
-<button className={`quote-btn ${cinzel.className}`}>
-GET A QUOTE
-</button>
-</div>
+  <div className="text-center mt-10">
+   <CommercialShootButton
+  className={`quote-btn ${cinzel.className}`}
+>
+  GET A QUOTE
+</CommercialShootButton>
+  </div>
 
 </section>
+<section className="block md:hidden  bg-primary text-white py-10 mb-5">
+
+  <h2 className="text-center text-[#6b3553] text-3xl mb-8 faqheading">
+    Questions
+  </h2>
+
+  <div className="px-5">
+
+    <Faq
+      q="How does your Pre-Wedding process work ?"
+      a={
+        <>
+          <p>1. Consultation – We consult the couple to understand their vision.</p>
+          <p>2. Storyboarding – We plan and conceptualize the shoot.</p>
+          <p>3. Shoot – We guide poses and expressions.</p>
+          <p>4. Delivery – Photos and videos are delivered in around 4 weeks.</p>
+        </>
+      }
+    />
+
+    <Faq
+      q="Why should we have a Pre-Wedding Photoshoot ?"
+      a="It’s a chance to celebrate your love story in a relaxed environment."
+    />
+
+    <Faq
+      q="How long does a Pre-Wedding Photoshoot typically last ?"
+      a="Usually between 6 and 12 hours depending on locations and package."
+    />
+
+    <Faq
+      q="How long does it take to receive the edited photos and videos ?"
+      a="Usually around 4 weeks."
+    />
+
+    <Faq
+      q="Can we choose the song for our wedding film ?"
+      a="Yes, absolutely."
+    />
+
+    <Faq
+      q="What should we wear for the Pre-Wedding shoot?"
+      a="We will guide you based on your selected theme."
+    />
+
+    <Faq
+      q="What are your Pre-Wedding packages ?"
+      a="Contact us via GET QUOTE for package details."
+    />
+
+  </div>
+
+  
+
+</section>
+
+<div className="text-center mt-10 mb-10">
+    <CommercialShootButton
+  className={`quote-btn ${cinzel.className}`}
+>
+  GET A QUOTE
+</CommercialShootButton>
+  </div>
     </main>
   );
 }

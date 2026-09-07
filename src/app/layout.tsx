@@ -11,6 +11,7 @@ import { QuoteProvider } from "./components/quote/QuoteProvider";
 import { BookingProvider } from "./context/BookingContext";
 import { WeddingQuoteProvider } from "./components/quote/WeddingQuoteProvider";
 import ScrollRestoration from "./components/ScrollRestoration";
+import { CommercialShootProvider } from "./components/commercial-shoot/CommercialShootProvider";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -99,12 +100,26 @@ export default function RootLayout({
 
           </ModalProvider> */}
 
-          <ModalProvider>
+          {/* <ModalProvider>
   <QuoteProvider>
     <WeddingQuoteProvider>
       <BookingProvider>
         {children}
       </BookingProvider>
+    </WeddingQuoteProvider>
+  </QuoteProvider>
+
+  <WhatsappFloat />
+</ModalProvider> */}
+
+<ModalProvider>
+  <QuoteProvider>
+    <WeddingQuoteProvider>
+      <CommercialShootProvider>
+        <BookingProvider>
+          {children}
+        </BookingProvider>
+      </CommercialShootProvider>
     </WeddingQuoteProvider>
   </QuoteProvider>
 

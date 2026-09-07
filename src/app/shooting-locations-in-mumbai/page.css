@@ -893,4 +893,168 @@ text-align: center;
 }
 }
 
+
+/* ========================================
+   WHY US MOBILE SECTION
+======================================== */
+
+.why-mobile {
+  display: block;
+  background: #fff;
+  padding: 40px 0;
+}
+
+.why-mobile-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  
+}
+
+.content-area{
+background-color: #5A0F2B;
+padding: 40px 24px;
+}
+
+.why-mobile-card {
+  overflow: hidden;
+  background: #fff;
+}
+
+.why-mobile-card.pink {
+  background: #c47a92;
+  color: #fff;
+}
+
+.why-mobile-image {
+  width: 100%;
+  display: block;
+}
+
+.why-mobile-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.why-mobile-content {
+  padding: 30px 24px;
+  text-align: center;
+}
+
+.why-mobile-content h3 {
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.why-mobile-content p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ========================================
+   MOBILE DEVICES
+======================================== */
+
+/* Small Phones */
+@media (max-width: 360px) {
+  .why-mobile-content {
+    padding: 24px 18px;
+  }
+
+  .why-mobile-content .mt-text-heading h3 {
+  font-size: 35px;
+        line-height: 84px;
+  }
+
+  .why-mobile-content p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+
+/* Standard Phones */
+@media (min-width: 361px) and (max-width: 480px) {
+  .why-mobile-content .mt-text-heading h3 {
+    font-size: 42px;
+  }
+
+  .why-mobile-content p {
+    font-size: 14px;
+  }
+}
+
+/* Large Phones */
+@media (min-width: 481px) and (max-width: 767px) {
+  .why-mobile-content  {
+    padding: 36px 32px;
+  }
+
+  .why-mobile-content h3 .mt-text-heading {
+    font-size: 48px;
+  }
+
+  .why-mobile-content p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+}
+
+/* Hide on Tablet/Desktop */
+@media (min-width: 768px) {
+  .why-mobile {
+    display: none;
+  }
+}
         
+
+.mt-text-heading{
+          font-size: 30px;
+        line-height: 2.5em;
+        text-align: center;
+        font-weight: 400;
+        color: #fff;
+    
+}
+
+.m-content{
+  font-weight: 14px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #fff;
+}
+
+.pt-0,.pb-0{
+  padding-top: 60px !important;
+  padding-bottom: 0px !important;
+}
+
+@media (max-width: 767px) {
+
+  .faq-item {
+    border-bottom: 1px solid #eadce4;
+    padding: 18px 0;
+  }
+
+  .faq-question {
+    color: #6b3553;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .faq-answer {
+    color: #6b3553;
+    margin-top: 12px;
+    line-height: 1.8;
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  /* Mobile styles here */
+.mobile-padding-bottom{
+  padding-bottom: 40px;
+}
+}
