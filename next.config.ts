@@ -47,6 +47,10 @@ output: "standalone",
  typescript: {
     ignoreBuildErrors: true,
   },
+experimental: {
+    scrollRestoration: true
+  },
+  
 
   images: {
     remotePatterns: [
