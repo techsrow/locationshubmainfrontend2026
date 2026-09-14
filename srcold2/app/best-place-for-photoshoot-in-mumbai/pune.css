@@ -1,0 +1,216 @@
+.page-wrapper {
+
+ padding: 40px 0px;
+ padding-top: 0px;
+}
+
+.container {
+  max-width: 1120px;
+  margin: auto;
+  padding: 40px 0px;
+  padding-top: 0px;
+
+
+}
+
+@media (max-width: 768px) {
+.container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.center {
+  text-align: center;
+ 
+}
+
+/* BUTTON */
+.main-btn {
+  font-size: 18px;
+  background: #fd9b48;
+  color: #fff;
+  font-family: "Quicksand", Sans-serif;
+  font-weight: 700;
+  border-radius: 0px;
+  padding: 10px 50px;
+  text-decoration: none;
+  display: inline-block;
+  z-index: 9999;
+}
+
+/* H1 */
+h1 {
+  font-family: "Quicksand", Sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+ 
+  margin-bottom: 20px;
+}
+
+/* H3 */
+h3 {
+  font-family: "Quicksand", Sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+ 
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-family: "Quicksand", Sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+ 
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* P */
+.content p {
+  font-family: "Quicksand", Sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #74405b;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.image-wrapper {
+  /* position: relative; */
+  width: 100%;
+  aspect-ratio: 1024 / 630; /* maintain original ratio */
+  margin-bottom: -30px;
+  
+}
+
+.responsive-image {
+  object-fit: contain; /* or cover if you prefer */
+}
+
+.sub-heading{
+      font-family: "Quicksand", Sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #FF7500;
+    margin-top: 50px;
+}
+.b-h3{
+     color: #74405b;
+}
+.b-h1{
+    color: #74405b;
+}
+
+.button-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.pre-wedding-btn {
+  display: inline-block;
+  background: #fd9b48;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  font-family: "Quicksand";
+  padding: 13px 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.get-quote-btn {
+  display: block;
+  margin: 20px auto 0 auto;
+  background: #fd9b48;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Quicksand";
+  padding: 10px 28px;
+  border: none;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.youtube-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.youtube-wrapper iframe,
+.youtube-wrapper img {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+}
+
+.youtube-thumbnail {
+  position: relative;
+  cursor: pointer;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.play-button::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 22px;
+  border-style: solid;
+  border-width: 14px 0 14px 22px;
+  border-color: transparent transparent transparent white;
+}
+
+.youtube-wrapper {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.youtube-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none; /* makes it behave like background */
+}
+
+.btn-book{
+  background-color: #FF881D;
+    background-image: none;
+    font-family: "Quicksand", Sans-serif;
+    font-weight: 700;
+    border-radius: 0px 0px 0px 0px;
+    padding: 13px 70px 13px 70px;
+    color: #fff;
+}
+
+.h6{
+  color: #74405b;
+}
+
+.highlight{
+      color: #ff6600;
+      text-decoration: underline;
+      font-size: 15px;
+      font-weight: 500;
+}

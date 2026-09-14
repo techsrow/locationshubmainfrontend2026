@@ -5,10 +5,11 @@ import Image from "next/image";
 import api from "@/lib/api";
 import { getPropImageUrl } from "@/lib/getPropImageUrl";
 import { PropType } from "@/types/props";
+import { useClientMemoryState } from "@/lib/clientMemoryCache";
 
 export default function PropsPage() {
-  const [propsData, setPropsData] = useState<PropType[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [propsData, setPropsData] = useClientMemoryState<PropType[]>("view:props:data", []);
+  const [loading, setLoading] = useState(propsData.length === 0);
 
   useEffect(() => {
     const fetchProps = async () => {

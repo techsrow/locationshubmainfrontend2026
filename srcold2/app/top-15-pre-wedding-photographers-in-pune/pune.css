@@ -1,0 +1,142 @@
+.page-wrapper {
+
+ padding: 40px 0px;
+ padding-top: 0px;
+}
+
+.container {
+  max-width: 1120px;
+  margin: auto;
+  padding: 40px 0px;
+  padding-top: 0px;
+
+
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.center {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* BUTTON */
+.main-btn {
+  font-size: 18px;
+  background: #fd9b48;
+  color: #fff;
+  font-family: "Quicksand", Sans-serif;
+  font-weight: 700;
+  border-radius: 0px;
+  padding: 10px 50px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* H1 */
+h1 {
+  font-family: "Quicksand", Sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+ 
+  margin-bottom: 20px;
+}
+
+/* H3 */
+h3 {
+  font-family: "Quicksand", Sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+ 
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+/* P */
+.content p {
+  font-family: "Quicksand", Sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #74405b;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1024 / 654; /* maintain original ratio */
+}
+
+.responsive-image {
+  object-fit: contain; /* or cover if you prefer */
+}
+
+.b-h3{
+     color: #74405b;
+}
+.b-h1{
+    color: #74405b;
+}
+
+.button-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.pre-wedding-btn {
+  display: inline-block;
+  background: #fd9b48;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  font-family: "Quicksand";
+  padding: 13px 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.get-quote-btn {
+  display: block;
+  margin: 20px auto 0 auto;
+  background: #fd9b48;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Quicksand";
+  padding: 10px 28px;
+  border: none;
+  cursor: pointer;
+  margin-top: 50px;
+}
+.b2h{
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .center{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .content{
+    padding-right: 10px;
+    padding-left :10px ;
+  }
+
+  .b-h1{
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 1;
+  }
+
+  .b-h3{
+    padding-left: 10px;
+  }
+  .ref{
+    padding-left: 10px;
+  }
+}

@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 import api from "@/lib/api";
 import { getFileUrl } from "@/lib/fileUrl";
+import { getClientMemoryCache, setClientMemoryCache } from "@/lib/clientMemoryCache";
 
 
 interface GalleryItem {
@@ -23,8 +24,12 @@ interface SetupItem {
 
 export default function SetupGalleryPage() {
   const { slug } = useParams();
-  const [setup, setSetup] = useState<SetupItem | null>(null);
-  const [loading, setLoading] = useState(true);
+  const slugKey = Array.isArray(slug) ? slug[0] : slug;
+  const cachedSetup = slugKey
+    ? getClientMemoryCache<SetupItem>(`view:setup-detail:${slugKey}`)
+    : undefined;
+  const [setup, setSetup] = useState<SetupItem | null>(cachedSetup ?? null);
+  const [loading, setLoading] = useState(!cachedSetup);
 
   useEffect(() => {
     if (!slug) return;
@@ -50,6 +55,9 @@ export default function SetupGalleryPage() {
             (a.displayOrder ?? 0) - (b.displayOrder ?? 0)
         );
 
+        if (slugKey) {
+          setClientMemoryCache(`view:setup-detail:${slugKey}`, matched);
+        }
         setSetup(matched);
       } catch (error) {
         console.error("Error fetching setup:", error);
@@ -59,7 +67,7 @@ export default function SetupGalleryPage() {
     };
 
     fetchSetup();
-  }, [slug]);
+  }, [slug, slugKey]);
 
   if (loading) {
     return (

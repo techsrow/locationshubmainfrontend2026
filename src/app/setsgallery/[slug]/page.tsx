@@ -8,6 +8,7 @@ import api from "@/lib/api";
 import { getFileUrl } from "@/lib/fileUrl";
 import { useModal } from "@/app/components/modal/ModalProvider";
 import ShootTypeModal from "@/app/components/modal/ShootTypeModal";
+import { getClientMemoryCache, setClientMemoryCache } from "@/lib/clientMemoryCache";
 
 interface SetBasic {
   id: string;
@@ -29,9 +30,13 @@ interface SetWithGallery {
 
 export default function SetGalleryPage() {
   const { slug } = useParams();
-  const [gallery, setGallery] = useState<GalleryItem[]>([]);
-  const [title, setTitle] = useState("");
-  const [loading, setLoading] = useState(true);
+  const slugKey = Array.isArray(slug) ? slug[0] : slug;
+  const cachedPage = slugKey
+    ? getClientMemoryCache<{ gallery: GalleryItem[]; title: string }>(`view:set-gallery:${slugKey}`)
+    : undefined;
+  const [gallery, setGallery] = useState<GalleryItem[]>(cachedPage?.gallery ?? []);
+  const [title, setTitle] = useState(cachedPage?.title ?? "");
+  const [loading, setLoading] = useState(!cachedPage);
 
   const { openModal } = useModal();
 
@@ -65,6 +70,10 @@ export default function SetGalleryPage() {
             (a.displayorder ?? 0) - (b.displayorder ?? 0)
         );
 
+        setClientMemoryCache(`view:set-gallery:${slugKey}`, {
+          title: singleSet.data.title,
+          gallery: sortedGallery,
+        });
         setTitle(singleSet.data.title);
         setGallery(sortedGallery);
       } catch (error) {
@@ -75,7 +84,7 @@ export default function SetGalleryPage() {
     };
 
     fetchGallery();
-  }, [slug]);
+  }, [slug, slugKey]);
 
   if (loading) {
     return (

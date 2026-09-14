@@ -33,6 +33,7 @@
 
 import { useEffect, useState } from "react";
 import api from "@/lib/api";
+import { useClientMemoryState } from "@/lib/clientMemoryCache";
 
 interface Video {
   id: string;
@@ -42,7 +43,7 @@ interface Video {
 }
 
 export default function VideoSection() {
-  const [videos, setVideos] = useState<Video[]>([]);
+  const [videos, setVideos] = useClientMemoryState<Video[]>("view:commercial-videos:data", []);
 
   useEffect(() => {
     loadVideos();

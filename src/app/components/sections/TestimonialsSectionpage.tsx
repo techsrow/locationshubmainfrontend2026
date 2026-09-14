@@ -8,6 +8,7 @@ import api from "@/lib/api";
 import { buildImageUrl } from "@/lib/getFileUrl";
 import { useModal } from "@/app/components/modal/ModalProvider";
 import ShootTypeModal from "@/app/components/modal/ShootTypeModal";
+import { useClientMemoryState } from "@/lib/clientMemoryCache";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -22,8 +23,8 @@ interface Testimonial {
 }
 
 export default function TestimonialsSectionPage() {
-  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [testimonials, setTestimonials] = useClientMemoryState<Testimonial[]>("view:testimonials-page:data", []);
+  const [loading, setLoading] = useState(testimonials.length === 0);
 const { openModal } = useModal();
   useEffect(() => {
     const fetchTestimonials = async () => {

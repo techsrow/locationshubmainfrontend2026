@@ -6,11 +6,12 @@ import Link from "next/link";
 import api from "@/lib/api";
 import { getFileUrl } from "@/lib/fileUrl";
 import { SetupType } from "@/types/setup";
+import { useClientMemoryState } from "@/lib/clientMemoryCache";
 
 export default function Page() {
-  const [setups, setSetups] = useState<SetupType[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [showAll, setShowAll] = useState(false);
+  const [setups, setSetups] = useClientMemoryState<SetupType[]>("view:setup-list:data", []);
+  const [loading, setLoading] = useState(setups.length === 0);
+  const [showAll, setShowAll] = useClientMemoryState("view:setup-list:show-all", false);
 
   useEffect(() => {
     const fetchSetups = async () => {

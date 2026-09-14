@@ -5,6 +5,7 @@ import Image from "next/image";
 import api from "@/lib/api";
 import { getFileUrl } from "@/lib/fileUrl";
 import Link from "next/link";
+import { useClientMemoryState } from "@/lib/clientMemoryCache";
 
 interface SetItem {
   id: string;
@@ -17,9 +18,9 @@ interface SetItem {
 }
 
 export default function OurSetsSectionPage() {
-  const [sets, setSets] = useState<SetItem[]>([]);
-  const [showAll, setShowAll] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [sets, setSets] = useClientMemoryState<SetItem[]>("view:sets-page:data", []);
+  const [showAll, setShowAll] = useClientMemoryState("view:sets-page:show-all", false);
+  const [loading, setLoading] = useState(sets.length === 0);
 
   useEffect(() => {
     const fetchSets = async () => {

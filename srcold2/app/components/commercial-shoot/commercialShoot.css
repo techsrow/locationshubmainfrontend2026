@@ -1,0 +1,88 @@
+.commercial-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  padding: 20px;
+}
+
+.commercial-modal {
+  background: #fff;
+  width: 100%;
+  max-width: 650px;
+  border-radius: 12px;
+  padding: 30px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.commercial-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.commercial-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.commercial-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.commercial-form input,
+.commercial-form select,
+.commercial-form textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 14px;
+  border-radius: 6px;
+  outline: none;
+}
+
+.commercial-submit {
+  background: #3B1429;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.commercial-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.success-message {
+  color: green;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .commercial-modal {
+    padding: 20px;
+  }
+
+  .commercial-title {
+    font-size: 22px;
+  }
+}

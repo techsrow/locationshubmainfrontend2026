@@ -8,6 +8,7 @@ import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useEffect } from "react";
 import api from "@/lib/api";
+import { useClientMemoryState } from "@/lib/clientMemoryCache";
 
 
 interface FAQ {
@@ -75,9 +76,9 @@ const faqs = [
 
 export default function FAQPage() {
 
-  const [faqs, setFaqs] = useState<FAQ[]>([]);
-const [faqLoading, setFaqLoading] = useState(true);
-  const [active, setActive] = useState<number | null>(12);
+  const [faqs, setFaqs] = useClientMemoryState<FAQ[]>("view:faq:data", []);
+const [faqLoading, setFaqLoading] = useState(faqs.length === 0);
+  const [active, setActive] = useClientMemoryState<number | null>("view:faq:active", 12);
 
 
 const recaptchaRef = useRef<ReCAPTCHA>(null);

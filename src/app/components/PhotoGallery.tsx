@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import { useClientMemoryState } from "@/lib/clientMemoryCache";
 
 type ImageItem = {
   src: string;
@@ -76,7 +77,7 @@ const images: ImageItem[] = [
 
 export default function PhotoGallery() {
   const [index, setIndex] = useState(-1);
-  const [visibleCount, setVisibleCount] = useState(20); // 👈 initial 20
+  const [visibleCount, setVisibleCount] = useClientMemoryState("view:photo-gallery:visible-count", 20); // preserve on Back
 
   const visibleImages = images.slice(0, visibleCount);
 

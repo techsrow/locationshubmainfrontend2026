@@ -20,6 +20,7 @@ import AboutSectionMobile from "./AboutSectionMobile";
 import PhotoGallery from "../components/PhotoGallery";
 import type { Metadata } from "next";
 import { getSeo } from "@/lib/seo";
+import { useClientMemoryState } from "@/lib/clientMemoryCache";
 
 import { FaCheck } from "react-icons/fa";
 import Link from "next/link";
@@ -43,7 +44,7 @@ const amsterdam = localFont({
 export default function PreWeddingShootLocations() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
-  const [activeIndex, setActiveIndex] = useState<number | null>(0);
+  const [activeIndex, setActiveIndex] = useClientMemoryState<number | null>("view:pre-wedding-shoot-locations:faq-active", 0);
   const faqData = [
   {
     q: "How far in advance should we book the studio?",

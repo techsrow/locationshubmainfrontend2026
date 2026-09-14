@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link"; // ✅ FIXED
 import api from "@/lib/api";
 import { getFileUrl } from "@/lib/fileUrl";
+import { useClientMemoryState } from "@/lib/clientMemoryCache";
 
 interface SetType {
   id: string;
@@ -16,8 +17,8 @@ interface SetType {
 }
 
 export default function Page() {
-  const [sets, setSets] = useState<SetType[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [sets, setSets] = useClientMemoryState<SetType[]>("view:sets-1:data", []);
+  const [loading, setLoading] = useState(sets.length === 0);
 
   useEffect(() => {
     const fetchSets = async () => {

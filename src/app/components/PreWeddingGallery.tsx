@@ -8,6 +8,7 @@ import "yet-another-react-lightbox/styles.css";
 import api from "@/lib/api";
 import { GalleryImage } from "@/types/gallery";
 import { getGalleryImageUrl } from "@/lib/getGalleryImageUrl";
+import { useClientMemoryState } from "@/lib/clientMemoryCache";
 
 const breakpointColumnsObj = {
   default: 2,
@@ -16,9 +17,9 @@ const breakpointColumnsObj = {
 };
 
 export default function PreWeddingGallery() {
-  const [images, setImages] = useState<GalleryImage[]>([]);
-  const [visibleCount, setVisibleCount] = useState(15);
-  const [loading, setLoading] = useState(true);
+  const [images, setImages] = useClientMemoryState<GalleryImage[]>("view:pre-wedding-gallery:data", []);
+  const [visibleCount, setVisibleCount] = useClientMemoryState("view:pre-wedding-gallery:visible-count", 15);
+  const [loading, setLoading] = useState(images.length === 0);
 
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);

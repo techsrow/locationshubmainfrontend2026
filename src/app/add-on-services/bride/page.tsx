@@ -5,11 +5,12 @@ import api from "@/lib/api";
 import { BrideImage } from "@/types/bride";
 import { getBrideImageUrl } from "@/lib/getBrideImageUrl";
 import OfferModal from "@/app/components/OfferModal";
+import { useClientMemoryState } from "@/lib/clientMemoryCache";
 
 export default function BrideAddOnPage() {
-  const [images, setImages] = useState<BrideImage[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [images, setImages] = useClientMemoryState<BrideImage[]>("view:bride:data", []);
+  const [loading, setLoading] = useState<boolean>(images.length === 0);
+  const [selectedCategory, setSelectedCategory] = useClientMemoryState("view:bride:category", "all");
 
   const filteredImages =
   selectedCategory === "all"

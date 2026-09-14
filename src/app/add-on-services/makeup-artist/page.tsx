@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ArrowUp } from "lucide-react";
 import api from "@/lib/api";
 import { getMakeupArtistImageUrl } from "@/lib/getMakeupArtistImageUrl";
+import { useClientMemoryState } from "@/lib/clientMemoryCache";
 
 interface MakeupArtistType {
   id: string;
@@ -13,7 +14,7 @@ interface MakeupArtistType {
 }
 
 export default function MakeupArtistPage() {
-  const [images, setImages] = useState<MakeupArtistType[]>([]);
+  const [images, setImages] = useClientMemoryState<MakeupArtistType[]>("view:makeup-artist:data", []);
   const [activeImage, setActiveImage] = useState<string | null>(null);
 
   // useEffect(() => {
