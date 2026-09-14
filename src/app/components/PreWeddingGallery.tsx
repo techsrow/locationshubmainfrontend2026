@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Masonry from "react-masonry-css";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
@@ -10,98 +9,177 @@ import { GalleryImage } from "@/types/gallery";
 import { getGalleryImageUrl } from "@/lib/getGalleryImageUrl";
 import { useClientMemoryState } from "@/lib/clientMemoryCache";
 
-const breakpointColumnsObj = {
-  default: 2,
-  768: 2,
-  480: 1,
-};
-
 export default function PreWeddingGallery() {
-  const [images, setImages] = useClientMemoryState<GalleryImage[]>("view:pre-wedding-gallery:data", []);
-  const [visibleCount, setVisibleCount] = useClientMemoryState("view:pre-wedding-gallery:visible-count", 15);
-  const [loading, setLoading] = useState(images.length === 0);
+  const [images, setImages] =
+    useClientMemoryState<GalleryImage[]>(
+      "view:pre-wedding-gallery:data",
+      []
+    );
+
+  const [visibleCount, setVisibleCount] =
+    useClientMemoryState(
+      "view:pre-wedding-gallery:visible-count",
+      16
+    );
+
+  const [loading, setLoading] = useState(
+    images.length === 0
+  );
 
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+    const fetchGallery = async () => {
+      try {
+        if (images.length === 0) {
+          setLoading(true);
+        }
+
+        const res = await api.get("/gallery");
+
+        const sorted = [...res.data].sort(
+          (
+            a: GalleryImage,
+            b: GalleryImage
+          ) => a.displayOrder - b.displayOrder
+        );
+
+        setImages(sorted);
+      } catch (error) {
+        console.error(
+          "Pre Wedding Gallery Error:",
+          error
+        );
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchGallery();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  const fetchGallery = async () => {
-    try {
-      const res = await api.get("/gallery");
-
-      const sorted = [...res.data].sort(
-        (a: GalleryImage, b: GalleryImage) =>
-          a.displayOrder - b.displayOrder
-      );
-
-      setImages(sorted);
-    } catch (error) {
-      console.error("Gallery Error:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  if (loading) return null;
 
   const slides = images.map((item) => ({
     src: getGalleryImageUrl(item.imageUrl),
   }));
 
-  return (
-    <section className="py-20">
-      <div className="max-w-[1120px] mx-auto px-0 lg:px-4">
+  const visibleImages = images
+    .slice(0, visibleCount)
+    .map((item, originalIndex) => ({
+      item,
+      originalIndex,
+    }));
 
-        <Masonry
-          breakpointCols={breakpointColumnsObj}
-          className="flex gap-4"
-          columnClassName="space-y-4"
-        >
-          {images
-            .slice(0, visibleCount)
-            .map((item, idx) => (
-              <div
-                key={item.id}
-                className="overflow-hidden cursor-pointer"
-                onClick={() => {
-                  setIndex(idx);
-                  setOpen(true);
-                }}
-              >
-                <img
-                  src={getGalleryImageUrl(item.imageUrl)}
-                  alt=""
-                  loading="lazy"
-                  className="w-full block transition duration-300 hover:scale-105"
-                />
-              </div>
-            ))}
-        </Masonry>
+  /*
+   * TWO INDEPENDENT COLUMNS
+   *
+   * 0,2,4,6... → left
+   * 1,3,5,7... → right
+   */
+  const leftColumn = visibleImages.filter(
+    (_, position) => position % 2 === 0
+  );
 
-        {visibleCount < images.length && (
-          <div className="text-center mt-10">
-            <button
-              onClick={() =>
-                setVisibleCount((prev) => prev + 15)
-              }
-              className="bg-[#ff8c1a] text-white px-3 py-3 font-semibold hover:bg-[#e57c14] transition rounded"
-            >
-              Load More
-            </button>
+  const rightColumn = visibleImages.filter(
+    (_, position) => position % 2 !== 0
+  );
+
+  const renderImage = ({
+    item,
+    originalIndex,
+  }: {
+    item: GalleryImage;
+    originalIndex: number;
+  }) => (
+    <button
+      key={item.id}
+      type="button"
+      className="prewedding-gallery-item"
+      onClick={() => {
+        setIndex(originalIndex);
+        setOpen(true);
+      }}
+      aria-label={`Open pre wedding photo ${
+        originalIndex + 1
+      }`}
+    >
+      <img
+        src={getGalleryImageUrl(item.imageUrl)}
+        alt={`Pre wedding shoot photo ${
+          originalIndex + 1
+        }`}
+        loading={
+          originalIndex < 6 ? "eager" : "lazy"
+        }
+        decoding="async"
+        className="prewedding-gallery-image"
+      />
+    </button>
+  );
+
+  if (loading && images.length === 0) {
+    return (
+      <div className="prewedding-gallery-container">
+        <div className="prewedding-gallery-columns">
+          <div className="prewedding-gallery-column">
+            <div className="prewedding-gallery-skeleton" />
+            <div className="prewedding-gallery-skeleton" />
           </div>
-        )}
 
-        <Lightbox
-          open={open}
-          close={() => setOpen(false)}
-          index={index}
-          slides={slides}
-        />
+          <div className="prewedding-gallery-column">
+            <div className="prewedding-gallery-skeleton" />
+            <div className="prewedding-gallery-skeleton" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="prewedding-gallery-container">
+
+      {/* TWO INDEPENDENT COLUMNS */}
+      <div className="prewedding-gallery-columns">
+
+        {/* LEFT */}
+        <div className="prewedding-gallery-column">
+          {leftColumn.map(renderImage)}
+        </div>
+
+        {/* RIGHT */}
+        <div className="prewedding-gallery-column">
+          {rightColumn.map(renderImage)}
+        </div>
 
       </div>
-    </section>
+
+      {/* LOAD MORE */}
+      {visibleCount < images.length && (
+        <div className="prewedding-gallery-loadmore">
+          <button
+            type="button"
+            onClick={() =>
+              setVisibleCount(
+                (previous) => previous + 16
+              )
+            }
+            className="prewedding-gallery-loadmore-btn"
+          >
+            Load More
+          </button>
+        </div>
+      )}
+
+      {/* LIGHTBOX */}
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        index={index}
+        slides={slides}
+      />
+
+    </div>
   );
 }

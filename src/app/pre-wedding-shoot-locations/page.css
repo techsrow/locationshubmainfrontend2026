@@ -283,7 +283,7 @@ font-family: "Cinzel", Sans-serif;
 
 .testimonials{
  
-  background:#ecd1d1;
+  background:#FDF7F7;
   margin-top: 50px;
 }
 
@@ -950,7 +950,7 @@ line-height:1.7;
 }
 
 .workbg{
-  background-color: #F2D0CF !important;
+  background-color: #FDF7F7 !important;
 }
 
 .standout{
@@ -1386,3 +1386,3553 @@ line-height:1.7;
   display:none;
 }
 
+/* =========================================================
+   PRE WEDDING DREAM SECTION
+   Matches existing Pre Wedding page branding
+========================================================= */
+
+.prewedding-dream-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  background: #fdf7f7;
+
+  padding: 0px 20px 60px;
+}
+
+
+/* INNER WIDTH */
+
+.prewedding-dream-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1350px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   TOP LABEL
+========================================================= */
+
+.prewedding-dream-label {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 430px;
+
+  margin: 0 auto 38px;
+
+  padding: 15px 45px 17px;
+
+  background: #bb687a;
+
+  border-radius: 0 0 25px 25px;
+
+  color: #ffffff;
+
+  line-height: 1.25;
+
+  box-shadow:
+    0 10px 25px rgba(116, 64, 91, 0.12);
+}
+
+
+.prewedding-dream-label span {
+  display: block;
+
+  font-size: 18px;
+  font-weight: 400;
+
+  letter-spacing: 0.5px;
+}
+
+
+.prewedding-dream-label strong {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 26px;
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   TEXT AREA
+========================================================= */
+
+.prewedding-dream-content {
+  position: relative;
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+}
+
+
+/* SMALL INTRO */
+
+.prewedding-dream-small {
+  margin: 0 0 15px;
+
+  color: #bb687a;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+
+/* MAIN HEADING */
+
+.prewedding-dream-heading {
+  margin: 0;
+
+  color: #3f3036;
+
+  font-size: 42px;
+  line-height: 1.35;
+
+  font-weight: 500;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* AMSTERDAM HIGHLIGHT */
+
+.prewedding-dream-highlight {
+  margin-top: 20px;
+
+  color: #bb687a;
+
+  font-size: 50px;
+  line-height: 1.5;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+
+.prewedding-dream-pattern {
+  position: absolute;
+
+  top: 20px;
+  right: -40px;
+
+  width: 400px;
+  height: 260px;
+
+  opacity: 0.35;
+
+  background-image:
+    radial-gradient(
+      circle,
+      #d9b7bf 1.5px,
+      transparent 1.5px
+    );
+
+  background-size: 22px 22px;
+
+  mask-image:
+    linear-gradient(
+      to left,
+      black,
+      rgba(0, 0, 0, 0.55),
+      transparent
+    );
+
+  -webkit-mask-image:
+    linear-gradient(
+      to left,
+      black,
+      rgba(0, 0, 0, 0.55),
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .prewedding-dream-section {
+    padding: 0px 20px 55px;
+  }
+
+  .prewedding-dream-label {
+    min-width: 390px;
+
+    margin-bottom: 32px;
+  }
+
+  .prewedding-dream-heading {
+    font-size: 36px;
+  }
+
+  .prewedding-dream-highlight {
+    font-size: 44px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .prewedding-dream-section {
+    padding: 0px 15px 42px;
+  }
+
+  .prewedding-dream-label {
+    width: 100%;
+    min-width: 0;
+    max-width: 320px;
+
+    margin-bottom: 28px;
+
+    padding: 13px 20px 15px;
+
+    border-radius: 0 0 20px 20px;
+  }
+
+  .prewedding-dream-label span {
+    font-size: 14px;
+
+    letter-spacing: 0.3px;
+  }
+
+  .prewedding-dream-label strong {
+    font-size: 20px;
+  }
+
+  .prewedding-dream-small {
+    margin-bottom: 12px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+
+  .prewedding-dream-heading {
+    font-size: 25px;
+    line-height: 1.4;
+
+    letter-spacing: 0;
+  }
+
+  .prewedding-dream-highlight {
+    margin-top: 13px;
+
+    font-size: 34px;
+    line-height: 1.6;
+  }
+
+  .prewedding-dream-pattern {
+    width: 230px;
+    height: 180px;
+
+    top: 10px;
+    right: -100px;
+
+    opacity: 0.25;
+
+    background-size: 18px 18px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .prewedding-dream-section {
+    padding: 0px 15px 38px;
+  }
+
+  .prewedding-dream-label {
+    max-width: 290px;
+
+    margin-bottom: 25px;
+
+    padding: 12px 18px 14px;
+  }
+
+  .prewedding-dream-label span {
+    font-size: 13px;
+  }
+
+  .prewedding-dream-label strong {
+    font-size: 18px;
+  }
+
+  .prewedding-dream-heading {
+    font-size: 22px;
+  }
+
+  .prewedding-dream-highlight {
+    font-size: 30px;
+  }
+}
+
+/* =========================================================
+   FULL WIDTH PRE-WEDDING VIDEO SECTION
+========================================================= */
+
+.prewedding-full-video-section {
+  position: relative;
+
+  width: 100%;
+  max-width: none;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: #000;
+
+  overflow: hidden;
+}
+
+
+/* VIDEO CONTAINER */
+
+.prewedding-full-video-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #000;
+}
+
+
+/* VIMEO VIDEO */
+
+.prewedding-full-video-frame {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  display: block;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1440px) {
+
+  .prewedding-full-video-wrapper {
+    aspect-ratio: 16 / 7.5;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .prewedding-full-video-wrapper {
+    aspect-ratio: 16 / 9;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .prewedding-full-video-section {
+    width: 100%;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .prewedding-full-video-wrapper {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    margin: 0;
+  }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+
+  .prewedding-full-video-wrapper {
+    aspect-ratio: 16 / 9;
+  }
+
+}
+
+/* =========================================================
+   FEATURED IN
+   FULL WIDTH / NO OVERFLOW / DESKTOP + MOBILE
+========================================================= */
+
+.featured-marquee-section {
+  position: relative;
+
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  overflow: hidden !important;
+
+  background: #f7f7f7;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.featured-marquee-heading {
+  width: 100%;
+
+  margin: 0;
+  padding: 10px 15px;
+
+  text-align: center;
+
+  background: #bb687a;
+}
+
+
+.featured-marquee-heading h2 {
+  margin: 0;
+  padding: 0;
+
+  color: #ffffff;
+
+  font-size: 34px;
+  line-height: 1.25;
+
+  font-weight: 500;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   VIEWPORT
+========================================================= */
+
+.featured-marquee-window {
+  position: relative;
+
+  width: 100%;
+  max-width: 100%;
+
+  overflow: hidden;
+
+  padding: 18px 0;
+
+  background: #f7f7f7;
+}
+
+
+/* Optional soft edge masking */
+
+.featured-marquee-window::before,
+.featured-marquee-window::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  width: 35px;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+.featured-marquee-window::before {
+  left: 0;
+
+  background: linear-gradient(
+    to right,
+    #f7f7f7,
+    rgba(247, 247, 247, 0)
+  );
+}
+
+
+.featured-marquee-window::after {
+  right: 0;
+
+  background: linear-gradient(
+    to left,
+    #f7f7f7,
+    rgba(247, 247, 247, 0)
+  );
+}
+
+
+/* =========================================================
+   MOVING TRACK
+========================================================= */
+
+.featured-marquee-track {
+  display: flex;
+
+  width: max-content;
+
+  align-items: center;
+
+  will-change: transform;
+
+  animation: featuredMarqueeMove 26s linear infinite;
+}
+
+
+/* one complete logo set */
+
+.featured-marquee-group {
+  display: flex;
+
+  flex-shrink: 0;
+
+  align-items: center;
+
+  gap: 34px;
+
+  padding-right: 34px;
+}
+
+
+/* =========================================================
+   LOGOS
+========================================================= */
+
+.featured-marquee-logo {
+  flex: 0 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 72px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+.featured-marquee-image {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 225px;
+  max-height: 58px;
+
+  object-fit: contain;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes featuredMarqueeMove {
+
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+}
+
+
+/* Pause only when user points at it */
+
+@media (hover: hover) {
+
+  .featured-marquee-window:hover .featured-marquee-track {
+    animation-play-state: paused;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .featured-marquee-heading {
+    padding: 9px 12px;
+  }
+
+  .featured-marquee-heading h2 {
+    font-size: 29px;
+  }
+
+  .featured-marquee-window {
+    padding: 15px 0;
+  }
+
+  .featured-marquee-group {
+    gap: 25px;
+    padding-right: 25px;
+  }
+
+  .featured-marquee-logo {
+    height: 62px;
+  }
+
+  .featured-marquee-image {
+    max-width: 190px;
+    max-height: 50px;
+  }
+
+  .featured-marquee-track {
+    animation-duration: 24s;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .featured-marquee-section {
+    width: 100%;
+
+    max-width: 100vw;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow-x: hidden !important;
+  }
+
+  .featured-marquee-heading {
+    padding: 7px 10px;
+  }
+
+  .featured-marquee-heading h2 {
+    font-size: 23px;
+    line-height: 1.25;
+  }
+
+  .featured-marquee-window {
+    width: 100%;
+
+    max-width: 100vw;
+
+    padding: 10px 0;
+
+    overflow: hidden;
+  }
+
+  .featured-marquee-group {
+    gap: 18px;
+
+    padding-right: 18px;
+  }
+
+  .featured-marquee-logo {
+    height: 48px;
+  }
+
+  .featured-marquee-image {
+    max-width: 145px;
+    max-height: 38px;
+  }
+
+  .featured-marquee-window::before,
+  .featured-marquee-window::after {
+    width: 15px;
+  }
+
+  .featured-marquee-track {
+    animation-duration: 20s;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .featured-marquee-heading {
+    padding: 6px 8px;
+  }
+
+  .featured-marquee-heading h2 {
+    font-size: 20px;
+  }
+
+  .featured-marquee-window {
+    padding: 8px 0;
+  }
+
+  .featured-marquee-group {
+    gap: 14px;
+
+    padding-right: 14px;
+  }
+
+  .featured-marquee-logo {
+    height: 42px;
+  }
+
+  .featured-marquee-image {
+    max-width: 150px;
+    max-height: 50px;
+  }
+
+  .featured-marquee-track {
+    animation-duration: 18s;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .featured-marquee-track {
+    animation-duration: 60s;
+  }
+
+}
+
+
+/* =========================================================
+   PRE WEDDING PHOTOS SECTION - FINAL SPACING
+========================================================= */
+
+.prewedding-photos-section {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0 !important;
+
+  /* compact top + controlled bottom */
+  padding: 26px 20px 42px !important;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADING WRAPPER
+========================================================= */
+
+.prewedding-photos-heading-wrap {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  margin: 0 0 22px 0 !important;
+
+  padding: 0 !important;
+
+  text-align: center;
+}
+
+
+/* REMOVE OLD DECORATIVE LINE */
+
+.prewedding-photos-heading-wrap::before,
+.prewedding-photos-heading-wrap::after {
+  display: none !important;
+  content: none !important;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.prewedding-photos-heading {
+  position: static !important;
+
+  display: block !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+
+  transform: none !important;
+
+  float: none !important;
+
+  text-align: center !important;
+
+  color: #bb687a !important;
+
+  background: transparent !important;
+
+  font-size: 58px !important;
+
+  line-height: 1.05 !important;
+
+  font-weight: 400 !important;
+
+  white-space: nowrap;
+      margin-top: 50px !important;
+    margin-bottom: 70px !important
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.prewedding-gallery-container {
+  width: 100%;
+
+  max-width: 1180px;
+
+  margin: 0 auto !important;
+
+  padding: 0 !important;
+}
+
+
+/* TWO COLUMNS */
+
+.prewedding-gallery-columns {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: start;
+
+  width: 100%;
+
+  gap: 10px;
+}
+
+
+.prewedding-gallery-column {
+  display: flex;
+
+  flex-direction: column;
+
+  width: 100%;
+
+  min-width: 0;
+
+  gap: 10px;
+}
+
+
+/* IMAGE */
+
+.prewedding-gallery-item {
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  overflow: hidden;
+
+  line-height: 0;
+
+  cursor: pointer;
+}
+
+
+.prewedding-gallery-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .prewedding-photos-section {
+    padding:
+      24px 14px
+      36px !important;
+  }
+
+  .prewedding-photos-heading-wrap {
+    margin-bottom: 18px !important;
+  }
+
+  .prewedding-photos-heading {
+    font-size: 48px !important;
+
+    line-height: 1.05 !important;
+  }
+
+  .prewedding-gallery-columns {
+    gap: 8px;
+  }
+
+  .prewedding-gallery-column {
+    gap: 8px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .prewedding-photos-section {
+    /*
+     * Very important:
+     * no huge white area above/below Photos
+     */
+    padding:
+      18px 5px
+      28px !important;
+  }
+
+
+  .prewedding-photos-heading-wrap {
+    margin:
+      0 0 14px 0 !important;
+
+    padding: 0 !important;
+  }
+
+
+  .prewedding-photos-heading {
+    font-size: 38px !important;
+
+    line-height: 1 !important;
+
+    margin: 0 auto !important;
+            margin-top: 25px !important;
+        margin-bottom: 40px !important;
+  }
+
+
+  .prewedding-gallery-container {
+    width: 100%;
+
+    margin: 0 auto !important;
+
+    padding: 0 !important;
+  }
+
+
+  .prewedding-gallery-columns {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 5px;
+  }
+
+
+  .prewedding-gallery-column {
+    gap: 5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .prewedding-photos-section {
+    padding:
+      16px 4px
+      24px !important;
+  }
+
+
+  .prewedding-photos-heading-wrap {
+    margin-bottom: 12px !important;
+  }
+
+
+  .prewedding-photos-heading {
+    font-size: 34px !important;
+
+    line-height: 1 !important;
+            margin-top: 25px !important;
+        margin-bottom: 40px !important;
+  }
+
+
+  .prewedding-gallery-columns {
+    gap: 4px;
+  }
+
+
+  .prewedding-gallery-column {
+    gap: 4px;
+  }
+}
+
+/* =========================================================
+   LOAD MORE BUTTON
+========================================================= */
+
+.prewedding-gallery-loadmore {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+
+
+.prewedding-gallery-loadmore-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 125px;
+
+  padding: 11px 26px;
+
+  border: 0;
+  outline: none;
+
+  border-radius: 50px;
+
+  background: #bb687a;
+
+  color: #ffffff;
+
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 13px;
+  line-height: 1;
+
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 18px rgba(187, 104, 122, 0.18);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.prewedding-gallery-loadmore-btn:hover {
+  background: #a8586b;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(187, 104, 122, 0.24);
+}
+
+
+.prewedding-gallery-loadmore-btn:active {
+  transform: translateY(0);
+}
+
+
+.prewedding-gallery-loadmore-btn:focus-visible {
+  outline: 2px solid #74405b;
+
+  outline-offset: 3px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+
+  .prewedding-gallery-loadmore {
+    margin-top: 20px;
+  }
+
+
+  .prewedding-gallery-loadmore-btn {
+    min-width: 110px;
+
+    padding: 9px 20px;
+
+    font-size: 12px;
+  }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+
+  .prewedding-gallery-loadmore {
+    margin-top: 18px;
+  }
+
+
+  .prewedding-gallery-loadmore-btn {
+    min-width: 105px;
+
+    padding: 9px 18px;
+
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   PRE WEDDING FILMS SECTION
+========================================================= */
+
+.prewedding-films-section {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0 !important;
+
+  padding: 26px 20px 42px !important;
+
+  background: #fdf7f7;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   FILMS HEADING WRAPPER
+========================================================= */
+
+.prewedding-films-heading-wrap {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  margin: 40px auto 50px !important;
+  padding: 0 !important;
+
+  text-align: center;
+}
+
+
+/* Remove any old pseudo decoration */
+
+.prewedding-films-heading-wrap::before,
+.prewedding-films-heading-wrap::after {
+  display: none !important;
+
+  content: none !important;
+}
+
+
+/* =========================================================
+   FILMS HEADING
+========================================================= */
+
+.prewedding-films-heading {
+  position: static !important;
+
+  display: block !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 auto !important;
+
+  padding: 0 !important;
+
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+
+  transform: none !important;
+
+  float: none !important;
+
+  text-align: center !important;
+
+  color: #bb687a !important;
+
+  background: transparent !important;
+
+  font-size: 58px !important;
+
+  line-height: 1.05 !important;
+
+  font-weight: 400 !important;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   FILMS CONTAINER
+========================================================= */
+
+.prewedding-films-container {
+  width: 100%;
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 0;
+}
+
+
+/* =========================================================
+   FEATURED FILM - FULL WIDTH
+========================================================= */
+
+.prewedding-film-featured {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  margin: 0 0 10px 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #000;
+}
+
+
+/* =========================================================
+   TWO COLUMN FILM GRID
+========================================================= */
+
+.prewedding-films-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  width: 100%;
+
+  gap: 10px;
+}
+
+
+/* EACH VIDEO */
+
+.prewedding-film-grid-item {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  padding: 0;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  background: #000;
+}
+
+
+/* =========================================================
+   IFRAME
+========================================================= */
+
+.prewedding-film-frame {
+  position: absolute;
+
+  inset: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 0;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .prewedding-films-section {
+    padding:
+      24px 14px
+      36px !important;
+  }
+
+
+  .prewedding-films-heading-wrap {
+    margin-bottom: 18px !important;
+  }
+
+
+  .prewedding-films-heading {
+    font-size: 48px !important;
+
+    line-height: 1.05 !important;
+  }
+
+
+  .prewedding-film-featured {
+    margin-bottom: 8px;
+  }
+
+
+  .prewedding-films-grid {
+    gap: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .prewedding-films-section {
+    padding:
+      18px 5px
+      28px !important;
+  }
+
+
+  .prewedding-films-heading-wrap {
+    margin:
+      0 0 14px 0 !important;
+  }
+
+
+  .prewedding-films-heading {
+    font-size: 38px !important;
+
+    line-height: 1 !important;
+            margin-top: 25px !important;
+        margin-bottom: 25px !important;
+  }
+
+
+  .prewedding-films-container {
+    width: 100%;
+
+    padding: 0;
+
+    margin: 0 auto;
+  }
+
+
+  /*
+   * First video remains full width
+   */
+
+  .prewedding-film-featured {
+    width: 100%;
+
+    margin-bottom: 5px;
+  }
+
+
+  /*
+   * Keep 2 videos per row on mobile too
+   */
+
+  .prewedding-films-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 5px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .prewedding-films-section {
+    padding:
+      16px 4px
+      24px !important;
+  }
+
+
+  .prewedding-films-heading-wrap {
+    margin-bottom: 12px !important;
+  }
+
+
+  .prewedding-films-heading {
+    font-size: 34px !important;
+            margin-top: 25px !important;
+        margin-bottom: 25px !important;
+
+    line-height: 1 !important;
+  }
+
+
+  .prewedding-film-featured {
+    margin-bottom: 4px;
+  }
+
+
+  .prewedding-films-grid {
+    gap: 4px;
+  }
+
+}
+
+/* =========================================================
+   PRE WEDDING PORTFOLIO SECTION
+========================================================= */
+
+.prewedding-portfolio-section {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0 !important;
+
+  padding: 26px 20px 42px !important;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.prewedding-portfolio-heading-wrap {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  margin: 0 0 22px 0 !important;
+
+  padding: 0 !important;
+
+  text-align: center;
+}
+
+
+.prewedding-portfolio-heading-wrap::before,
+.prewedding-portfolio-heading-wrap::after {
+  display: none !important;
+
+  content: none !important;
+}
+
+
+.prewedding-portfolio-heading {
+  position: static !important;
+
+  display: block !important;
+
+  width: auto !important;
+  height: auto !important;
+
+      margin-top: 40px;
+    margin-bottom: 40px;
+
+  padding: 0 !important;
+
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+
+  transform: none !important;
+
+  float: none !important;
+
+  text-align: center !important;
+
+  color: #bb687a !important;
+
+  background: transparent !important;
+
+  font-size: 58px !important;
+
+  line-height: 1.05 !important;
+
+  font-weight: 400 !important;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.prewedding-portfolio-container {
+  width: 100%;
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 0;
+}
+
+
+/* =========================================================
+   TWO COLUMN GRID
+========================================================= */
+
+.prewedding-portfolio-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  width: 100%;
+
+  gap: 10px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   ITEM
+========================================================= */
+
+.prewedding-portfolio-item {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  background: #f6f1f2;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  line-height: 0;
+}
+
+
+/* =========================================================
+   IMAGE ITEMS
+========================================================= */
+
+.prewedding-portfolio-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+.prewedding-portfolio-image-item:hover
+.prewedding-portfolio-image {
+  transform: scale(1.02);
+}
+
+
+/* =========================================================
+   VIDEO ITEMS
+========================================================= */
+
+.prewedding-portfolio-video-item {
+  aspect-ratio: 16 / 9;
+
+  background: #000;
+}
+
+
+.prewedding-portfolio-preview-video {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   VIDEO PLAY BUTTON
+========================================================= */
+
+.prewedding-portfolio-video-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+
+.prewedding-portfolio-play {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 62px;
+  height: 62px;
+
+  padding-left: 4px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(187, 104, 122, 0.92);
+
+  color: #ffffff;
+
+  font-size: 22px;
+
+  line-height: 1;
+
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.22);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.prewedding-portfolio-video-item:hover
+.prewedding-portfolio-play {
+  transform: scale(1.08);
+
+  background: #bb687a;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.prewedding-portfolio-hover {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 3;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: center;
+
+  padding: 18px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(55, 29, 38, 0.48),
+      transparent 45%
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease;
+
+  pointer-events: none;
+}
+
+
+.prewedding-portfolio-hover span {
+  color: #ffffff;
+
+  font-family:
+    "Quicksand",
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+}
+
+
+.prewedding-portfolio-item:hover
+.prewedding-portfolio-hover {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   POPUP
+========================================================= */
+
+.prewedding-portfolio-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background:
+    rgba(18, 12, 14, 0.92);
+
+  backdrop-filter: blur(5px);
+}
+
+
+/* CONTENT */
+
+.prewedding-portfolio-modal-content {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  max-height: 90vh;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   IMAGE POPUP
+========================================================= */
+
+.prewedding-portfolio-modal-image {
+  height: 90vh;
+}
+
+
+.prewedding-portfolio-popup-image {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 90vh;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   VIDEO POPUP
+========================================================= */
+
+.prewedding-portfolio-modal-video {
+  max-width: 1100px;
+
+  aspect-ratio: 16 / 9;
+
+  background: #000;
+}
+
+
+.prewedding-portfolio-popup-video {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.prewedding-portfolio-close {
+  position: fixed;
+
+  top: 18px;
+  right: 24px;
+
+  z-index: 100001;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.45);
+
+  border-radius: 50%;
+
+  background:
+    rgba(0, 0, 0, 0.3);
+
+  color: #ffffff;
+
+  font-size: 31px;
+
+  font-weight: 300;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.prewedding-portfolio-close:hover {
+  background: #bb687a;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .prewedding-portfolio-section {
+    padding:
+      24px 14px
+      36px !important;
+  }
+
+
+  .prewedding-portfolio-heading-wrap {
+    margin-bottom: 18px !important;
+  }
+
+
+  .prewedding-portfolio-heading {
+    font-size: 48px !important;
+  }
+
+
+  .prewedding-portfolio-grid {
+    gap: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .prewedding-portfolio-section {
+    padding:
+      18px 5px
+      28px !important;
+  }
+
+
+  .prewedding-portfolio-heading-wrap {
+    margin-bottom: 14px !important;
+  }
+
+
+  .prewedding-portfolio-heading {
+    font-size: 38px !important;
+
+    line-height: 1 !important;
+  }
+
+
+  /*
+   * IMPORTANT:
+   * KEEP TWO COLUMNS ON MOBILE
+   */
+
+  .prewedding-portfolio-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 5px;
+  }
+
+
+  .prewedding-portfolio-play {
+    width: 42px;
+    height: 42px;
+
+    font-size: 15px;
+  }
+
+
+  .prewedding-portfolio-hover {
+    display: none;
+  }
+
+
+  /* POPUP */
+
+  .prewedding-portfolio-modal {
+    padding: 12px;
+  }
+
+
+  .prewedding-portfolio-modal-image {
+    height: auto;
+
+    max-height: 88vh;
+  }
+
+
+  .prewedding-portfolio-popup-image {
+    max-height: 88vh;
+  }
+
+
+  .prewedding-portfolio-close {
+    top: 12px;
+    right: 12px;
+
+    width: 38px;
+    height: 38px;
+
+    font-size: 27px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .prewedding-portfolio-section {
+    padding:
+      16px 4px
+      24px !important;
+  }
+
+
+  .prewedding-portfolio-heading-wrap {
+    margin-bottom: 12px !important;
+  }
+
+
+  .prewedding-portfolio-heading {
+    font-size: 34px !important;
+    margin-top: 20px !important;
+    margin-bottom: 25px !important;
+  }
+
+
+  .prewedding-portfolio-grid {
+    gap: 4px;
+  }
+
+
+  .prewedding-portfolio-play {
+    width: 36px;
+    height: 36px;
+
+    font-size: 13px;
+  }
+
+}
+
+/* =========================================================
+   WHY US - PAGE MATCHING DESIGN
+========================================================= */
+
+.prewedding-why3-section {
+  width: 100%;
+
+  margin: 0 !important;
+
+  padding: 28px 20px 42px !important;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.prewedding-why3-heading-wrap {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  margin: 0 0 24px;
+
+  padding: 0;
+}
+
+
+.prewedding-why3-heading {
+ 
+
+  padding: 0 !important;
+  margin-top: 40px !important;
+    margin-bottom: 40px !important;
+
+  color: #bb687a !important;
+
+  font-size: 58px !important;
+
+  line-height: 1.05 !important;
+
+  font-weight: 400 !important;
+
+  text-align: center !important;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.prewedding-why3-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+
+  width: 100%;
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.prewedding-why3-card {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  min-height: 155px;
+
+  padding: 24px 28px 24px 100px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  box-shadow:
+    0 8px 22px rgba(116, 64, 91, 0.10);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.prewedding-why3-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 30px rgba(116, 64, 91, 0.16);
+}
+
+
+/* subtle glass shine */
+
+.prewedding-why3-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      125deg,
+      rgba(255,255,255,.13),
+      transparent 45%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BACKGROUND ICON
+========================================================= */
+
+.prewedding-why3-bg-icon {
+  position: absolute;
+
+  right: 22px;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    rotate(-8deg);
+
+  width: 105px;
+  height: 105px;
+
+  z-index: 0;
+
+  color: rgba(255,255,255,.11);
+
+  pointer-events: none;
+
+  transition:
+    transform 0.45s ease,
+    color 0.45s ease;
+}
+
+
+.prewedding-why3-card:hover
+.prewedding-why3-bg-icon {
+  transform:
+    translateY(-50%)
+    rotate(4deg)
+    scale(1.10);
+
+  color:
+    rgba(255,255,255,.17);
+}
+
+
+/* =========================================================
+   NUMBER BADGE
+========================================================= */
+
+.prewedding-why3-number {
+  position: absolute;
+
+  left: 18px;
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 62px;
+  height: 62px;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-family:
+    "Quicksand",
+    sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  z-index: 3;
+
+  box-shadow:
+    0 7px 18px rgba(73, 39, 55, .20);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.prewedding-why3-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 420px;
+}
+
+
+.prewedding-why3-content h3 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  line-height: 1.25;
+
+  font-weight: 400;
+}
+
+
+.prewedding-why3-content p {
+  margin: 0;
+
+  color:
+    rgba(255,255,255,.93);
+
+  font-family:
+    "Quicksand",
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   PAGE-MATCHED CARD COLORS
+========================================================= */
+
+/* Premium */
+
+.why3-card-1 {
+  background:
+    linear-gradient(
+      135deg,
+      #bb687a 0%,
+      #cf7b8b 100%
+    );
+}
+
+.why3-card-1 .prewedding-why3-number {
+  background:
+    #74405b;
+}
+
+
+/* Indoor */
+
+.why3-card-2 {
+  background:
+    linear-gradient(
+      135deg,
+      #74405b 0%,
+      #92546f 100%
+    );
+}
+
+.why3-card-2 .prewedding-why3-number {
+  background:
+    #bb687a;
+}
+
+
+/* Costume */
+
+.why3-card-3 {
+  background:
+    linear-gradient(
+      135deg,
+      #c67886 0%,
+      #e19a9f 100%
+    );
+}
+
+.why3-card-3 .prewedding-why3-number {
+  background:
+    #74405b;
+}
+
+
+/* Makeup */
+
+.why3-card-4 {
+  background:
+    linear-gradient(
+      135deg,
+      #8b536d 0%,
+      #74405b 100%
+    );
+}
+
+.why3-card-4 .prewedding-why3-number {
+  background:
+    #c67988;
+}
+
+
+/* Props */
+
+.why3-card-5 {
+  background:
+    linear-gradient(
+      135deg,
+      #bb687a 0%,
+      #9e536c 100%
+    );
+
+  grid-column:
+    1 / -1;
+}
+
+
+.why3-card-5
+.prewedding-why3-number {
+  background:
+    #74405b;
+}
+
+
+/* =========================================================
+   ACTION BUTTON
+========================================================= */
+
+.prewedding-why3-action {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  margin-top: 14px;
+
+  padding: 8px 17px;
+
+  border: 0;
+
+  border-radius: 40px;
+
+  background: #ffffff;
+
+  color: #74405b;
+
+  font-family:
+    "Quicksand",
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+
+.prewedding-why3-action:hover {
+  transform:
+    translateY(-2px);
+
+  background:
+    #fdf7f7;
+}
+
+
+/* =========================================================
+   BOOK NOW
+========================================================= */
+
+.prewedding-why3-book-wrap {
+  display: flex;
+
+  justify-content: center;
+
+  width: 100%;
+
+  margin-top: 28px;
+}
+
+
+.prewedding-why3-book-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 30px;
+
+  border-radius: 50px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #bb687a,
+      #d67b87,
+      #ff9b56
+    );
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 9px 22px
+    rgba(187,104,122,.20);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+
+.prewedding-why3-book-btn:hover {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 13px 28px
+    rgba(187,104,122,.27);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .prewedding-why3-section {
+    padding:
+      24px 14px
+      36px !important;
+  }
+
+
+  .prewedding-why3-heading {
+    font-size: 48px !important;
+  }
+
+
+  .prewedding-why3-grid {
+    gap: 12px;
+  }
+
+
+  .prewedding-why3-card {
+    min-height: 145px;
+
+    padding:
+      21px 22px
+      21px 92px;
+  }
+
+
+  .prewedding-why3-content h3 {
+    font-size: 27px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .prewedding-why3-section {
+    padding:
+      18px 10px
+      30px !important;
+  }
+
+
+  .prewedding-why3-heading-wrap {
+    margin-bottom: 16px;
+  }
+
+
+  .prewedding-why3-heading {
+    font-size: 38px !important;
+
+    line-height: 1 !important;
+  }
+
+
+  /*
+   * ONE CARD PER ROW
+   */
+
+  .prewedding-why3-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+
+  .why3-card-5 {
+    grid-column: auto;
+  }
+
+
+  .prewedding-why3-card {
+    min-height: 126px;
+
+    padding:
+      17px 52px
+      17px 72px;
+
+    border-radius: 15px;
+  }
+
+
+  /* Badge */
+
+  .prewedding-why3-number {
+    left: 10px;
+
+    width: 50px;
+    height: 50px;
+
+    font-size: 17px;
+  }
+
+
+  /* background icon */
+
+  .prewedding-why3-bg-icon {
+    right: 8px;
+
+    width: 75px;
+    height: 75px;
+  }
+
+
+  /* Title */
+
+  .prewedding-why3-content h3 {
+    margin-bottom: 7px;
+
+    font-size: 22px;
+
+    line-height: 1.2;
+  }
+
+
+  /* Text */
+
+  .prewedding-why3-content p {
+    font-size: 11px;
+     margin-top: 20px;
+    line-height: 1.45;
+  }
+
+
+  /* button */
+
+  .prewedding-why3-action {
+    margin-top: 10px;
+
+    padding: 7px 13px;
+
+    font-size: 10px;
+  }
+
+
+  .prewedding-why3-book-wrap {
+    margin-top: 22px;
+  }
+
+
+  .prewedding-why3-book-btn {
+    padding: 12px 24px;
+
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .prewedding-why3-section {
+    padding:
+      16px 8px
+      26px !important;
+  }
+
+
+  .prewedding-why3-heading {
+    font-size: 34px !important;
+    margin-top: 20px !important;
+    margin-bottom: 25px !important;
+  }
+
+
+  .prewedding-why3-card {
+    padding:
+      15px 45px
+      15px 68px;
+  }
+
+
+  .prewedding-why3-content h3 {
+    font-size: 20px;
+  }
+
+
+  .prewedding-why3-bg-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+}
+
+/* =========================================================
+   WHAT MAKES US STAND OUT
+========================================================= */
+
+.standout-premium-section {
+  width: 100%;
+
+  margin: 0 !important;
+
+  padding: 28px 20px !important;
+
+  background: #fdf7f7;
+
+  overflow: hidden;
+}
+
+
+/* MAIN SHELL */
+
+.standout-premium-shell {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.92fr)
+    minmax(0, 1.08fr);
+
+  width: 100%;
+  max-width: 1180px;
+
+  min-height: 555px;
+
+  margin: 0 auto;
+
+  background: #fffafa;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 16px 42px rgba(116, 64, 91, 0.08);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.standout-premium-photo {
+  position: relative;
+
+  min-height: 555px;
+
+  overflow: hidden;
+
+  background: #bb687a;
+}
+
+
+.standout-premium-photo-img {
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.8s ease;
+}
+
+
+.standout-premium-shell:hover
+.standout-premium-photo-img {
+  transform: scale(1.025);
+}
+
+
+/* bottom overlay */
+
+.standout-premium-photo-shade {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(116, 64, 91, 0.55) 0%,
+      rgba(116, 64, 91, 0.05) 45%,
+      transparent 68%
+    );
+}
+
+
+/* image caption */
+
+.standout-premium-photo-caption {
+  position: absolute;
+
+  left: 28px;
+  bottom: 28px;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  color: #ffffff;
+
+  font-size: 28px;
+
+  line-height: 1.45;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.standout-premium-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 35px 38px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffafa 0%,
+      #fdf5f5 100%
+    );
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.standout-premium-heading {
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+
+.standout-premium-script {
+  margin-bottom: -5px;
+
+  color: #bb687a;
+
+  font-size: 30px;
+
+  line-height: 1.15;
+
+  font-weight: 400;
+  margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+
+.standout-premium-title {
+  margin: 0;
+
+  color: #74405b;
+
+  font-size: 46px;
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+}
+
+
+/* heart separator */
+
+.standout-premium-heart {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 13px;
+
+  margin: 11px 0 8px;
+}
+
+
+.standout-premium-heart span {
+  display: block;
+
+  width: 46px;
+  height: 1px;
+
+  background: #cf8996;
+}
+
+
+.standout-premium-heart b {
+  color: #bb687a;
+
+  font-size: 12px;
+}
+
+
+/* subtitle */
+
+.standout-premium-subtitle {
+  margin: 0;
+
+  color: #776369;
+
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.3;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.standout-premium-features {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+
+/* last item full width */
+
+.standout-premium-feature:last-child {
+  grid-column: 1 / -1;
+}
+
+
+.standout-premium-feature {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    30px 54px minmax(0, 1fr);
+
+  align-items: center;
+
+  min-height: 88px;
+
+  padding:
+    10px 13px
+    10px 6px;
+
+  border-radius: 16px;
+
+  background:
+    rgba(187, 104, 122, 0.055);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.standout-premium-feature:hover {
+  background:
+    rgba(187, 104, 122, 0.11);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 9px 20px rgba(116, 64, 91, 0.07);
+}
+
+
+/* number */
+
+.standout-premium-number {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #bb687a;
+
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+/* icon */
+
+.standout-premium-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 47px;
+  height: 47px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #c87b88,
+      #a6546d
+    );
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  box-shadow:
+    0 6px 15px rgba(187, 104, 122, 0.18);
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.standout-premium-feature:hover
+.standout-premium-icon {
+  transform: scale(1.07);
+}
+
+
+/* text */
+
+.standout-premium-feature-text {
+  min-width: 0;
+
+  padding-left: 7px;
+}
+
+
+.standout-premium-feature-text h3 {
+  margin: 0 0 4px;
+
+  color: #74405b;
+
+  font-size: 15px;
+
+  line-height: 1.2;
+
+  font-weight: 600;
+}
+
+
+.standout-premium-feature-text p {
+  margin: 0;
+
+  color: #76676b;
+
+  font-family:
+    "Quicksand",
+    sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   BOOK NOW
+========================================================= */
+
+.standout-premium-book {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-top: 20px;
+}
+
+
+.standout-premium-book-line {
+  width: 75px;
+  height: 1px;
+
+  background: #bb687a;
+}
+
+
+.standout-premium-book-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 11px 24px;
+
+  border-radius: 50px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #bb687a,
+      #cb7685
+    );
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 20px rgba(187, 104, 122, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.standout-premium-book-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(187, 104, 122, 0.25);
+}
+
+
+.standout-premium-book-btn span {
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .standout-premium-section {
+    padding: 24px 14px !important;
+  }
+
+
+  .standout-premium-shell {
+    min-height: 500px;
+  }
+
+
+  .standout-premium-photo {
+    min-height: 500px;
+  }
+
+
+  .standout-premium-content {
+    padding: 28px 24px;
+  }
+
+
+  .standout-premium-script {
+    font-size: 39px;
+  }
+
+
+  .standout-premium-title {
+    font-size: 39px;
+  }
+
+
+  .standout-premium-feature {
+    grid-template-columns:
+      26px 47px minmax(0, 1fr);
+  }
+
+
+  .standout-premium-icon {
+    width: 42px;
+    height: 42px;
+
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .standout-premium-section {
+    padding:
+      16px 8px
+      22px !important;
+  }
+
+
+  /*
+   * Mobile becomes stacked,
+   * but kept very compact.
+   */
+
+  .standout-premium-shell {
+    display: block;
+
+    min-height: 0;
+
+    max-width: 440px;
+
+    border-radius: 20px;
+  }
+
+
+  /* IMAGE */
+
+  .standout-premium-photo {
+    width: 100%;
+
+    min-height: 0;
+
+    aspect-ratio: 16 / 9;
+
+    border-radius:
+      20px 20px 0 0;
+  }
+
+
+  .standout-premium-photo-caption {
+    left: 15px;
+
+    bottom: 13px;
+
+    font-size: 18px;
+
+    line-height: 1.3;
+  }
+
+
+  /* CONTENT */
+
+  .standout-premium-content {
+    padding:
+      18px 12px
+      17px;
+  }
+
+
+  /* HEADING */
+
+  .standout-premium-heading {
+    margin-bottom: 13px;
+  }
+
+
+  .standout-premium-script {
+    margin-bottom: -2px;
+
+    font-size: 33px;
+
+    line-height: 1.1;
+  }
+
+
+  .standout-premium-title {
+    font-size: 34px;
+
+    line-height: 1;
+  }
+
+
+  .standout-premium-heart {
+    margin:
+      7px 0
+      6px;
+  }
+
+
+  .standout-premium-heart span {
+    width: 35px;
+  }
+
+
+  .standout-premium-subtitle {
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+
+  /* one feature per row */
+
+  .standout-premium-features {
+    grid-template-columns: 1fr;
+
+    gap: 5px;
+  }
+
+
+  .standout-premium-feature,
+  .standout-premium-feature:last-child {
+    grid-column: auto;
+  }
+
+
+  .standout-premium-feature {
+    grid-template-columns:
+      25px 43px minmax(0, 1fr);
+
+    min-height: 60px;
+
+    padding:
+      6px 10px
+      6px 4px;
+
+    border-radius: 12px;
+  }
+
+
+  .standout-premium-number {
+    font-size: 9px;
+  }
+
+
+  .standout-premium-icon {
+    width: 37px;
+    height: 37px;
+
+    font-size: 15px;
+  }
+
+
+  .standout-premium-feature-text {
+    padding-left: 5px;
+  }
+
+
+  .standout-premium-feature-text h3 {
+    margin-bottom: 2px;
+
+    font-size: 13px;
+  }
+
+
+  .standout-premium-feature-text p {
+    font-size: 9px;
+
+    line-height: 1.3;
+  }
+
+
+  /* BOOK */
+
+  .standout-premium-book {
+    gap: 9px;
+
+    margin-top: 13px;
+  }
+
+
+  .standout-premium-book-line {
+    width: 35px;
+  }
+
+
+  .standout-premium-book-btn {
+    padding: 9px 18px;
+
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .standout-premium-section {
+    padding:
+      12px 5px
+      18px !important;
+  }
+
+
+  .standout-premium-shell {
+    max-width: 100%;
+  }
+
+
+  .standout-premium-content {
+    padding:
+      15px 9px
+      14px;
+  }
+
+
+  .standout-premium-script {
+    font-size: 18px;
+            margin-top: 20px;
+        margin-bottom: 22px;
+  }
+
+
+  .standout-premium-title {
+    font-size: 30px;
+  }
+
+
+  .standout-premium-feature {
+    min-height: 57px;
+  }
+
+
+  .standout-premium-feature-text h3 {
+    font-size: 12px;
+  }
+
+
+  .standout-premium-feature-text p {
+    font-size: 8.5px;
+  }
+
+}

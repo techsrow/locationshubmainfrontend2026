@@ -3,31 +3,33 @@
 import Image from "next/image";
 import { Cinzel } from "next/font/google";
 import localFont from "next/font/local";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
 import "./page.css";
 import VideoSection from "./VideoSection";
-import AboutSection from "./AboutSection";
+import PreWeddingDreamSection from "./PreWeddingDreamSection";
 import PreWeddingGallery from "@/app/components/PreWeddingGallery";
 
 import "swiper/css";
 import "swiper/css/free-mode";
-import OurSetsSection from "../components/sections/OurSetsSection";
 import OurSetsSectionPage from "../components/sections/OurSetsSectionpage";
 import TestimonialsSectionPage from "../components/sections/TestimonialsSectionpage";
-import AboutSectionMobile from "./AboutSectionMobile";
-import PhotoGallery from "../components/PhotoGallery";
-import type { Metadata } from "next";
-import { getSeo } from "@/lib/seo";
 import { useClientMemoryState } from "@/lib/clientMemoryCache";
+import FullWidthVideoSection from "./FullWidthVideoSection";
+import FeaturedInSection from "./FeaturedInSection";
+import PreWeddingFilms from "./PreWeddingFilms";
+import PreWeddingPortfolio from "./PreWeddingPortfolio";
+import StandOutSection from "./StandOutSection";
+import {
+  FaGem,
+  FaSnowflake,
+  FaTshirt,
+  FaMagic,
+  FaPuzzlePiece,
+} from "react-icons/fa";
 
-import { FaCheck } from "react-icons/fa";
 import Link from "next/link";
-
-
-
-
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -38,83 +40,83 @@ const amsterdam = localFont({
   // src: "../../fonts/AmsterdamOneSlant-0WglP.ttf",
   src: "../../fonts/Amsterdam.ttf",
   display: "swap",
-  
 });
 
 export default function PreWeddingShootLocations() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [muted, setMuted] = useState(true);
-  const [activeIndex, setActiveIndex] = useClientMemoryState<number | null>("view:pre-wedding-shoot-locations:faq-active", 0);
+  const [activeIndex, setActiveIndex] = useClientMemoryState<number | null>(
+    "view:pre-wedding-shoot-locations:faq-active",
+    0,
+  );
   const faqData = [
-  {
-    q: "How far in advance should we book the studio?",
-    a: "We recommend booking 1 to 2 months in advance to secure your preferred date, as we don’t overcrowd and take limited bookings per day.",
-  },
-  {
-    q: "How long does a pre wedding shoot typically last?",
-    a: "An ideal pre wedding shoot typically lasts 6 to 12 hours, depending on your requirements, changes and other factors.",
-  },
-  {
-    q: "Can we choose multiple sets for our pre wedding shoot?",
-    a: "Yes, you can choose multiple sets or locations from our available sets.",
-  },
-  {
-    q: "Do you provide location recommendations for pre wedding shoots?",
-    a: "Absolutely! We can recommend sets and locations from our collection that match your style and requirements.",
-  },
-  {
-    q: "Do you offer hair and makeup artists for pre wedding shoot ?",
-    a: "Yes, we have our inhouse makeup artist. Please check our website for the charges.",
-  },
-  {
-    q: "What should we wear for the Pre-Wedding shoot?",
-    a: "Your outfit plays a crucial role. We recommend wearing outfits that complement the theme and song. We would definately advise and help you finalizing the same.",
-  },
-  {
-    q: "How many outfits are we allowed to change into during the shoot?",
-    a: "You can have unlimited outfit changes during the shoot.",
-  },
-  {
-    q: "How many outfits are we allowed to change into during the shoot?",
-    a: "Yes we have a wide range of costumes on rent. We also offer unlimited costumes for bride and groom for Rs 12,000",
-  },
-  {
-    q: "Can we do theme-based shoots?",
-    a: "Yes, theme-based shoots are possible, and our versatile sets can be customized to fit your vision.",
-  },
-  {
-    q: "Can we include our pets in the pre wedding shoot?",
-    a: "Yes, our locations are pet-friendly, and pets are welcome in your shoot.",
-  },
-  {
-    q: "Do you offer a consultation before the shoot to discuss ideas?",
-    a: "Yes, we offer consultations to ensure the shoot reflects your vision perfectly. Please call us on 9920060062 for any custom package or special requirements.",
-  },
-  {
-    q: "Do you recommend outdoor or indoor locations for the best shots?",
-    a: "It depends on your style and requirements. We offer a perfect blend of indoor and outdoor sets.",
-  },
-  {
-    q: "What is the best time of day to shoot?",
-    a: "Early morning or late afternoon provides the best natural lighting for outdoor shoots.",
-  },
-  {
-    q: "How do we book Locations Hub for our Pre wedding shoot ?",
-    a: "Please make the bookings via our website, and pay a booking amount to secure your booking.",
-  },
-  {
-    q: "What payment methods do you accept?",
-    a: "We accept bank transfers, credit cards, online payment and cash.",
-  },
-  {
-    q: "What is your cancellation policy?",
-    a: "Advance paid is non refundable.",
-  },
-  {
-    q: "Can we bring along family members or friends on our shoot and are there any additional charges for the same ?",
-    a: "Yes, you can. Please check extra person additional charges as per your desired package on our website.",
-  },
-];
+    {
+      q: "How far in advance should we book the studio?",
+      a: "We recommend booking 1 to 2 months in advance to secure your preferred date, as we don’t overcrowd and take limited bookings per day.",
+    },
+    {
+      q: "How long does a pre wedding shoot typically last?",
+      a: "An ideal pre wedding shoot typically lasts 6 to 12 hours, depending on your requirements, changes and other factors.",
+    },
+    {
+      q: "Can we choose multiple sets for our pre wedding shoot?",
+      a: "Yes, you can choose multiple sets or locations from our available sets.",
+    },
+    {
+      q: "Do you provide location recommendations for pre wedding shoots?",
+      a: "Absolutely! We can recommend sets and locations from our collection that match your style and requirements.",
+    },
+    {
+      q: "Do you offer hair and makeup artists for pre wedding shoot ?",
+      a: "Yes, we have our inhouse makeup artist. Please check our website for the charges.",
+    },
+    {
+      q: "What should we wear for the Pre-Wedding shoot?",
+      a: "Your outfit plays a crucial role. We recommend wearing outfits that complement the theme and song. We would definately advise and help you finalizing the same.",
+    },
+    {
+      q: "How many outfits are we allowed to change into during the shoot?",
+      a: "You can have unlimited outfit changes during the shoot.",
+    },
+    {
+      q: "How many outfits are we allowed to change into during the shoot?",
+      a: "Yes we have a wide range of costumes on rent. We also offer unlimited costumes for bride and groom for Rs 12,000",
+    },
+    {
+      q: "Can we do theme-based shoots?",
+      a: "Yes, theme-based shoots are possible, and our versatile sets can be customized to fit your vision.",
+    },
+    {
+      q: "Can we include our pets in the pre wedding shoot?",
+      a: "Yes, our locations are pet-friendly, and pets are welcome in your shoot.",
+    },
+    {
+      q: "Do you offer a consultation before the shoot to discuss ideas?",
+      a: "Yes, we offer consultations to ensure the shoot reflects your vision perfectly. Please call us on 9920060062 for any custom package or special requirements.",
+    },
+    {
+      q: "Do you recommend outdoor or indoor locations for the best shots?",
+      a: "It depends on your style and requirements. We offer a perfect blend of indoor and outdoor sets.",
+    },
+    {
+      q: "What is the best time of day to shoot?",
+      a: "Early morning or late afternoon provides the best natural lighting for outdoor shoots.",
+    },
+    {
+      q: "How do we book Locations Hub for our Pre wedding shoot ?",
+      a: "Please make the bookings via our website, and pay a booking amount to secure your booking.",
+    },
+    {
+      q: "What payment methods do you accept?",
+      a: "We accept bank transfers, credit cards, online payment and cash.",
+    },
+    {
+      q: "What is your cancellation policy?",
+      a: "Advance paid is non refundable.",
+    },
+    {
+      q: "Can we bring along family members or friends on our shoot and are there any additional charges for the same ?",
+      a: "Yes, you can. Please check extra person additional charges as per your desired package on our website.",
+    },
+  ];
   //  const faqData = [
   //   {
   //     q: "How far in advance should we book the studio?",
@@ -182,14 +184,6 @@ export default function PreWeddingShootLocations() {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-
-  const toggleMute = () => {
-    if (!videoRef.current) return;
-
-    videoRef.current.muted = !videoRef.current.muted;
-    setMuted(videoRef.current.muted);
-  };
-
   const [showPopup, setShowPopup] = useState(false);
 
   return (
@@ -230,7 +224,7 @@ export default function PreWeddingShootLocations() {
         </div>
       </section> */}
 
-      <section className="relative h-[100vh] flex items-center justify-center text-center text-white">
+      <section className=" hidden relative h-[100vh] flex items-center justify-center text-center text-white">
         <Image
           src="/Film-Shooting-Locations-2.jpg"
           alt="Hero"
@@ -243,35 +237,32 @@ export default function PreWeddingShootLocations() {
         <div className="relative z-10 px-6 content-section">
           {/* Celebrate */}
           <p className={`${cinzel.className} text-celeb tracking-[4px]`}>
-           Pre Wedding premium Location for your
-
+            Pre Wedding premium Location for your
           </p>
 
           {/* Love */}
           <h2
             className={`${amsterdam.className} love text-[80px] text-orange-400`}
           >
-           Love Story
-
+            Love Story
           </h2>
 
           {/* Heading */}
           <h1 className={`${cinzel.className} text-[50px] leading-tight`}>
             Exclusive Pre Wedding <br />
-Shoot Locations
+            Shoot Locations
           </h1>
 
           {/* Sub text */}
-         
 
-         <div className="text-center mt-10">
- <Link
-    href="/pre-wedding-or-maternity"
-    className={`quote-btn inline-flex items-center justify-center ${cinzel.className}`}
-  >
-    BOOK NOW
-  </Link>
-</div>
+          <div className="text-center mt-10">
+            <Link
+              href="/pre-wedding-or-maternity"
+              className={`quote-btn inline-flex items-center justify-center ${cinzel.className}`}
+            >
+              BOOK NOW
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -282,437 +273,262 @@ Shoot Locations
         </div>
       </section> */}
 
-      <VideoSection />
-     
+      {/* DREAM PRE-WEDDING INTRO */}
+      <PreWeddingDreamSection />
+      <FullWidthVideoSection />
+
+      {/* ================================
+    FEATURED IN
+================================ */}
+
+      <FeaturedInSection />
+
+      <section className="prewedding-photos-section">
+        <h2 className={`${amsterdam.className} prewedding-photos-heading`}>
+          Photos
+        </h2>
+
+        <PreWeddingGallery />
+      </section>
+
+      {/* =====================================================
+    PRE WEDDING FILMS
+===================================================== */}
+
+      <section className="prewedding-films-section">
+        <div className="prewedding-films-heading-wrap">
+          <h2 className={`${amsterdam.className} prewedding-films-heading`}>
+            Films
+          </h2>
+        </div>
+
+        <PreWeddingFilms />
+      </section>
+
+      {/* =====================================================
+    PORTFOLIO
+===================================================== */}
+
+      <section className="prewedding-portfolio-section">
+        <div className="prewedding-portfolio-heading-wrap">
+          <h2 className={`${amsterdam.className} prewedding-portfolio-heading`}>
+            Portfolio
+          </h2>
+        </div>
+
+        <PreWeddingPortfolio />
+      </section>
+
+      {/* OUR WORK */}
+      <section className="py-20 work our-set workbg">
+        <h2 className={`why-title work-title ${amsterdam.className}`}>
+          Our Sets
+        </h2>
+        <OurSetsSectionPage />
+      </section>
+
+      {/* EXISTING VIDEO SECTION - UNCHANGED */}
+      {/* <VideoSection /> */}
 
       {/* ABOUT */}
       {/* <AboutSection /> */}
       {/* <AboutSectionMobile /> */}
-
-      <section className="featured-heading">
-        <h2 className={cinzel.className}>Featured In</h2>
-      </section>
-
-      {/* FEATURED IN */}
-      <section className="featured-logos">
-        <Swiper
-          modules={[Autoplay, FreeMode]}
-          slidesPerView={5}
-          spaceBetween={5}
-          loop={true}
-          freeMode={true}
-          speed={3000}
-          autoplay={{
-            delay: 0,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-          }}
-          breakpoints={{
-            320: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            1024: { slidesPerView: 5 },
-          }}
-        >
-         <SwiperSlide>
-  <div className="image-wrapper">
-    <Image
-      src="/1times-of-india.png"
-      alt="Times of India"
-      fill
-      className="img-full"
-    />
-  </div>
-</SwiperSlide>
-
-<SwiperSlide>
-  <div className="image-wrapper">
-    <Image
-      src="/2weddingsutra-1.png"
-      alt="Wedding Sutra"
-      fill
-      className="img-full"
-    />
-  </div>
-</SwiperSlide>
-
-<SwiperSlide>
-  <div className="image-wrapper">
-    <Image
-      src="/4wedmegood-1.png"
-      alt="WedMeGood"
-      fill
-      className="img-full"
-    />
-  </div>
-</SwiperSlide>
-
-<SwiperSlide>
-  <div className="image-wrapper">
-    <Image
-      src="/5thhindustantimes-1.png"
-      alt="Hindustan Times"
-      fill
-      className="img-full"
-    />
-  </div>
-</SwiperSlide>
-
-<SwiperSlide>
-  <div className="image-wrapper">
-    <Image
-      src="/3shaadisaga-1.png"
-      alt="Shaadi Saga"
-      fill
-      className="img-full"
-    />
-  </div>
-</SwiperSlide>
-
-<SwiperSlide>
-  <div className="image-wrapper">
-    <Image
-      src="/6bigfatindianwedding.png"
-      alt="Big Fat Indian Wedding"
-      fill
-      className="img-full"
-    />
-  </div>
-</SwiperSlide>
-        </Swiper>
-      </section>
 
       {/* WHY US */}
       {/* WHY US SECTION */}
 
       {/* WHY US */}
 
-      <section className="why-section wsec-desktop">
-        <h2 className={`why-title ${amsterdam.className}`}>Why Us?</h2>
+     
 
-        <div className="why-wrapper">
-          {/* 1 */}
-          <div className="why-row">
-            <div className="why-img">
-              <Image
-                src="/premium-sets-1.jpg"
-                alt=""
-                width={319}
-                height={237}
-                className="cstonrent"
-              />
-            </div>
+    {/* =====================================================
+    WHY US - FINAL PAGE MATCHING VERSION
+===================================================== */}
 
-            <div className="why-text">
-              <h3 className={amsterdam.className}>Premium Sets</h3>
-              <p>
-                Make your pre wedding film look elegant and grand with our premium and spacious sets
+<section className="prewedding-why3-section">
 
-
-              </p>
-            </div>
-          </div>
-
-          {/* 2 */}
-          <div className="why-row reverse">
-            <div className="why-img">
-              <Image src="/indoor-ac.png" alt="" width={319} height={237} className="cstonrent" />
-            </div>
-
-            <div className="why-text">
-              <h3 className={amsterdam.className}>Indoor AC Sets</h3>
-              <p>
-                Be it summer or monsoon, you cannot always shoot outdoors. Our
-                luxurious air conditioned indoor sets are always savior.
-              </p>
-            </div>
-          </div>
-
-          {/* 3 */}
-          <div className="why-row">
-            <div className="why-img">
-              <Image src="/costumes-on-rent.jpg" className="cstonrent" alt="" width={319} height={237} />
-            </div>
-
-            <div className="why-text">
-              <h3 className={amsterdam.className}>Costumes on rent</h3>
-              <p className="costume-text margintop">
-              Why buy when you can rent? Stand out your pre wedding with our amazing costumes on rent collection with our onsite alteration team.
-
-
-              </p>
-              <button
-  className="btn-costume"
-  onClick={() => setShowPopup(true)}
->
-  Check Our Costume Collection
-</button>
-            
-            </div>
-          </div>
-
-          {/* 4 */}
-          <div className="why-row reverse mt-5">
-            <div className="why-img">
-              <Image
-                src="/inhouse-makeup-artist.jpg"
-                alt=""
-                width={319}
-                height={237}
-              />
-            </div>
-
-            <div className="why-text">
-              <h3 className={amsterdam.className}>Inhouse makeup artist
-</h3>
-              <p className="margintop">
-               Experience the magic of personalized makeup and looks, with our in-house makeup expert.
-
-              </p>
-               <a className="btn-pack mt-4" href="/add-on-services/makeup-artist">Check Packages</a>
-            </div>
-          </div>
-
-          {/* 5 */}
-          <div className="why-row">
-            <div className="why-img">
-              <Image
-                src="/tons-of-props.jpg"
-                alt=""
-                width={319}
-                height={237}
-                className="cstonrent"
-              />
-            </div>
-
-            <div className="why-text">
-              <h3 className={amsterdam.className}>Tons of Props</h3>
-              <p>
-               Get top notch quality and high efficiency shoot with our toons of prop options.
-
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="block md:hidden bg-white">
-<h2 className={`why-title ${amsterdam.className}`}>Why Us?</h2>
-  {/* Premium Sets */}
-  <img src="/premium-sets-1.jpg" alt="" className="w-full" />
-
-  <div className="bg-[#be7186] text-center px-6 py-10">
-    <h3 className={`${amsterdam.className} mobile-why-heading text-white text-5xl`}>
-      Premium Sets
-    </h3>
-
-    <p className="text-white text-sm leading-7 mt-4">
-      Make your pre wedding film look elegant and grand with our premium and
-      spacious sets
-    </p>
-  </div>
-
-  {/* Indoor AC */}
-  <img src="/indoor-ac.png" alt="" className="w-full" />
-
-  <div className="bg-[#f4f4f6] text-center px-6 py-10">
-    <h3
-      className={`${amsterdam.className} mobile-why-heading text-[#be7186] text-5xl leading-tight`}
+  <div className="prewedding-why3-heading-wrap">
+    <h2
+      className={`${amsterdam.className} prewedding-why3-heading`}
     >
-      Indoor AC
-      <br />
-      Sets
-    </h3>
-
-    <p className="text-[#be7186] text-sm leading-7 mt-4">
-      Be it summer or monsoon, you cannot always shoot outdoors. Our luxurious
-      air conditioned indoor sets are always saviors.
-    </p>
+      Why Us?
+    </h2>
   </div>
 
-  {/* Costumes */}
-  <img src="/costumes-on-rent.jpg" alt="" className="w-full" />
 
-  <div className="bg-[#be7186] text-center px-6 py-10">
-    <h3 className={`${amsterdam.className} text-white text-5xl mobile-why-heading`}>
-       Costumes On Rent
-    </h3>
-
-    <p className="text-white text-sm leading-7 mt-4">
-      Why buy when you can rent? Stand out your pre wedding with our amazing
-      costumes on rent collection with our onsite alteration team.
-    </p>
-
-    <button
-      className="bg-white text-[#be7186] px-5 py-2 rounded-full mt-5 text-sm font-semibold"
-      onClick={() => setShowPopup(true)}
-    >
-      Check Our Costume Collection
-    </button>
-  </div>
-
-  {/* Makeup Artist */}
-  <img src="/inhouse-makeup-artist.jpg" alt="" className="w-full" />
-
-  <div className="bg-[#f4f4f6] text-center px-6 py-10">
-    <h3
-      className={`${amsterdam.className} mobile-why-heading text-[#be7186]  leading-tight`}
-    >
-      Inhouse Makeup
-      <br />
-      Artist
-    </h3>
-
-    <p className="text-[#be7186] text-sm leading-7 mt-4">
-      Experience the magic of personalized makeup and looks, with our in-house
-      makeup expert.
-    </p>
-
-    <a
-      href="/add-on-services/makeup-artist"
-      className="inline-block bg-[#be7186] text-white px-5 py-2 rounded-full mt-5 text-sm font-semibold"
-    >
-      Check Packages
-    </a>
-  </div>
-
-  {/* Props */}
-  <img src="/tons-of-props.jpg" alt="" className="w-full" />
-
-  <div className="bg-[#be7186] text-center px-6 py-10">
-    <h3 className={`${amsterdam.className} mobile-why-heading text-white text-5xl`}>
-      Tons of Props
-    </h3>
-
-    <p className="text-white text-sm leading-7 mt-4">
-      Get top notch quality and high efficiency shoot with our tons of prop
-      options.
-    </p>
-
-   
-  </div>
-
-</section>
-<section className="block md:hidden py-14 bg-white">
-  <h2 className={`why-title ${amsterdam.className} text-center mb-10`}>
-    Why Us?
-  </h2>
-
-  <div className="max-w-md mx-auto px-4 space-y-6">
+  <div className="prewedding-why3-grid">
 
     {/* 01 */}
-    <div className="why-card why-card-1">
-      <div className="floating-blob"></div>
-      <div className="why-number">01</div>
+    <article className="prewedding-why3-card why3-card-1">
 
-      <div className="why-content">
-        <h3>Premium Sets</h3>
-        <p>
-          Make your pre wedding film look elegant and grand with our premium
-          and spacious sets.
-        </p>
+      <FaGem className="prewedding-why3-bg-icon" />
+
+      <div className="prewedding-why3-number">
+        01
       </div>
-    </div>
+
+      <div className="prewedding-why3-content">
+
+        <h3 className={amsterdam.className}>
+          Premium Sets
+        </h3>
+
+        <p>
+          Make your pre wedding film look elegant and grand
+          with our premium and spacious sets.
+        </p>
+
+      </div>
+
+    </article>
+
 
     {/* 02 */}
-    <div className="why-card why-card-2">
-      <div className="why-number">02</div>
+    <article className="prewedding-why3-card why3-card-2">
 
-      <div className="why-content">
-        <h3>Indoor AC Sets</h3>
-        <p>
-          Luxurious air conditioned indoor sets perfect for every season.
-        </p>
+      <FaSnowflake className="prewedding-why3-bg-icon" />
+
+      <div className="prewedding-why3-number">
+        02
       </div>
-    </div>
+
+      <div className="prewedding-why3-content">
+
+        <h3 className={amsterdam.className}>
+          Indoor AC Sets
+        </h3>
+
+        <p>
+          Luxurious air conditioned indoor sets perfect
+          for a comfortable shoot in every season.
+        </p>
+
+      </div>
+
+    </article>
+
 
     {/* 03 */}
-    <div className="why-card why-card-3">
-      <div className="why-number">03</div>
+    <article className="prewedding-why3-card why3-card-3">
 
-      <div className="why-content">
-        <h3>Costumes On Rent</h3>
+      <FaTshirt className="prewedding-why3-bg-icon" />
+
+      <div className="prewedding-why3-number">
+        03
+      </div>
+
+      <div className="prewedding-why3-content">
+
+        <h3 className={amsterdam.className}>
+          Costumes On Rent
+        </h3>
+
         <p>
-          Amazing costume collection with onsite alteration support.
+          Explore our beautiful costume collection
+          with onsite alteration support.
         </p>
 
         <button
+          type="button"
+          className="prewedding-why3-action"
           onClick={() => setShowPopup(true)}
-          className="why-btn"
         >
           View Collection
         </button>
+
       </div>
-    </div>
+
+    </article>
+
 
     {/* 04 */}
-    <div className="why-card why-card-4">
-      <div className="why-number">04</div>
+    <article className="prewedding-why3-card why3-card-4">
 
-      <div className="why-content">
-        <h3>Inhouse Makeup Artist</h3>
+      <FaMagic className="prewedding-why3-bg-icon" />
+
+      <div className="prewedding-why3-number">
+        04
+      </div>
+
+      <div className="prewedding-why3-content">
+
+        <h3 className={amsterdam.className}>
+          Inhouse Makeup Artist
+        </h3>
+
         <p>
-          Personalized makeup and styling from our expert artists.
+          Personalized makeup and styling from our
+          experienced in-house makeup experts.
         </p>
 
-        <a
+        <Link
           href="/add-on-services/makeup-artist"
-          className="why-btn"
+          className="prewedding-why3-action"
         >
           Check Packages
-        </a>
+        </Link>
+
       </div>
-    </div>
+
+    </article>
+
 
     {/* 05 */}
-    <div className="why-card why-card-5">
-      <div className="why-number">05</div>
+    <article className="prewedding-why3-card why3-card-5">
 
-      <div className="why-content">
-        <h3>Tons of Props</h3>
-        <p>
-          High quality props to create unique cinematic shots.
-        </p>
+      <FaPuzzlePiece className="prewedding-why3-bg-icon" />
+
+      <div className="prewedding-why3-number">
+        05
       </div>
-    </div>
+
+      <div className="prewedding-why3-content">
+
+        <h3 className={amsterdam.className}>
+          Tons of Props
+        </h3>
+
+        <p>
+          High quality props to add creativity,
+          character and variety to every cinematic shot.
+        </p>
+
+      </div>
+
+    </article>
 
   </div>
+
+
+  {/* BOOK NOW */}
+
+  <div className="prewedding-why3-book-wrap">
+
+    <Link
+      href="/pre-wedding-or-maternity"
+      className={`prewedding-why3-book-btn ${cinzel.className}`}
+    >
+      BOOK NOW
+    </Link>
+
+  </div>
+
 </section>
 
-      <section className="sectionpadding">
-         <div className="text-center mt-10">
-<Link
-    href="/pre-wedding-or-maternity"
-    className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
-  >
-    BOOK NOW
-  </Link>
-</div>
-        </section> 
-  
+      {/* =====================================================
+    PRE WEDDING PHOTOS
+===================================================== */}
 
-       <section className="py-20 work our-set">
-        <h2 className={`why-title work-title ${amsterdam.className}`}>Photos
-</h2>
-        {/* <PhotoGallery /> */}
-        <PreWeddingGallery />
-      </section>
-
-       <section className="sectionpadding">
-         <div className="text-center mb-10">
-<Link
-    href="/pre-wedding-or-maternity/"
-    className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
-  >
-    BOOK NOW
-  </Link>
-</div>
-        </section> 
-
-      {/* OUR WORK */}
-      <section className="py-20 work our-set workbg">
-        <h2 className={`why-title work-title ${amsterdam.className}`}>Our Sets
-</h2>
-        <OurSetsSectionPage  />
-      </section>
+      {/* <section className="sectionpadding">
+        <div className="text-center mb-10">
+          <Link
+            href="/pre-wedding-or-maternity/"
+            className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
+          >
+            BOOK NOW
+          </Link>
+        </div>
+      </section> */}
 
       {/* TESTIMONIALS */}
       <section className="py-20 testimonials">
@@ -721,213 +537,116 @@ Shoot Locations
         <TestimonialsSectionPage />
       </section>
 
-      {/* FEATURE SECTION */}
-      <section className="py-20 feature-sec">
-        <div className="max-w-8xl mx-auto grid md:grid-cols-2  items-center">
-          <Image
-            src="/what-makes-us-stand-out-commercial.jpg"
-            alt=""
-            width={716}
-            height={1024}
-            style={{ width: "100%", height: "auto" }}
-          />
+     <StandOutSection
+  amsterdamClass={amsterdam.className}
+  cinzelClass={cinzel.className}
+/>
+      {/* FAQ */}
+      <section className="hidden md:block bg-primary text-white py-20 faq">
+        <h2 className="text-center text-3xl mb-10 faqheading">Questions</h2>
 
-         <div className="bg-[#74405B] text-white p-10 bgsec flex items-center">
+        <div className="max-w-6xl mx-auto space-y-3 px-6 text-faq">
+          {faqData.map((item, index) => (
+            <div
+              key={index}
+              className="border border-[#e5cfcf] rounded overflow-hidden"
+            >
+              {/* Question */}
+              <div
+                onClick={() => toggle(index)}
+                className="flex justify-between items-center p-4 cursor-pointer bg-[#faebeb] hover:bg-[#faebeb] text-[#7a7a7a] fa-list"
+              >
+                <span>{item.q}</span>
+                <span className="text-xl font-bold">
+                  {activeIndex === index ? "−" : "+"}
+                </span>
+              </div>
 
-  <div className="inner-wrapper">
-    <h3 className="text-2xl mb-6 textstand standout">What Makes Us Stand Out</h3>
-
-    {/* <ul className="space-y-3 text-sm text-left">
-      <li>Plenty of Sets at the Price of One</li>
-      <hr></hr>
-      <li>Air Conditioned Sets</li>
-       <hr></hr>
-      <li>Inhouse Veg Restaurant</li>
-       <hr></hr>
-      <li>Overnight Accommodation</li>
-       <hr></hr>
-      <li>Tons of Props</li>
-       <hr></hr>
-      <li>Premium Sets</li>
-    </ul> */}
-
-   <ul className="bg-[#74405B] text-white">
-  <li className="flex items-center gap-3 text-[14px] border-b border-white/70">
-    <span className="font-bold text-[15px]">✓</span>
-    Premium Sets
-  </li>
-
-  <li className="flex items-center gap-3 text-[14px]  border-b border-white/70">
-    <span className="font-bold text-lg text-[14px]">✓</span>
-    AC Indoor Sets
-  </li>
-
-  <li className="flex items-center gap-3 text-[14px]  border-b border-white/70">
-    <span className="font-bold  text-[14px]">✓</span>
-    Inhouse Makeup Artist
-  </li>
-
-  <li className="flex items-center gap-3  text-[14px] border-b border-white/70">
-    <span className="font-bold text-lg text-[14px]" >✓</span>
-    Inhouse Costumes on Rent
-  </li>
-
-  <li className="flex items-center gap-3 text-[14px] border-b border-white/70">
-    <span className="font-bold text-lg text-[14px]">✓</span>
-    Inhouse Veg Restaurant
-  </li>
-
-  <li className="flex items-center text-[14px] gap-3 ">
-    <span className="font-bold text-lg text-[14px]">✓</span>
-    Tons of Props
-  </li>
-</ul>
-
-   
-  </div>
-
-</div>
+              {/* Answer */}
+              {activeIndex === index && (
+                <div className="p-4 bg-white text-gray-700 text-sm">
+                  {item.a}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
 
         <div className="text-center mt-10">
-<Link
-    href="/pre-wedding-or-maternity"
-    className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
-  >
-    BOOK NOW
-  </Link>
-</div>
+          <Link
+            href="/pre-wedding-or-maternity"
+            className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
+          >
+            BOOK NOW
+          </Link>
+        </div>
       </section>
 
-      {/* FAQ */}
-      <section className="hidden md:block bg-primary text-white py-20 faq">
+      {/* Mobile FAQ */}
+      <section className="block md:hidden bg-[#f3f0f2] py-10">
+        <h2 className="text-center text-2xl font-semibold text-[#74405B] mb-6">
+          Questions
+        </h2>
 
-      <h2 className="text-center text-3xl mb-10 faqheading">
-        Questions
-      </h2>
+        <div className="px-5">
+          {faqData.map((item, index) => (
+            <div key={index} className="border-b border-[#e5cfcf]">
+              <button
+                onClick={() => toggle(index)}
+                className="w-full flex justify-between items-center py-5 text-left"
+              >
+                <span className="text-[#74405B] text-[15px] pr-4 font-bold">
+                  {item.q}
+                </span>
 
-      <div className="max-w-6xl mx-auto space-y-3 px-6 text-faq">
+                <span className="text-[#74405B] text-xl shrink-0">▶</span>
+              </button>
 
-        {faqData.map((item, index) => (
-          <div key={index} className="border border-[#e5cfcf] rounded overflow-hidden">
+              {activeIndex === index && (
+                <div className="pb-5 text-[#74405B] text-[15px] ">{item.a}</div>
+              )}
+            </div>
+          ))}
+        </div>
 
-            {/* Question */}
-            <div
-              onClick={() => toggle(index)}
-              className="flex justify-between items-center p-4 cursor-pointer bg-[#faebeb] hover:bg-[#faebeb] text-[#7a7a7a] fa-list"
-            >
-              <span>{item.q}</span>
-              <span className="text-xl font-bold">
-                {activeIndex === index ? "−" : "+"}
-              </span>
+        <div className="text-center mt-8 px-5">
+          <Link
+            href="/pre-wedding-or-maternity"
+            className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
+          >
+            BOOK NOW
+          </Link>
+        </div>
+      </section>
+
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-box">
+            <div className="popup-buttons">
+              <a href="/add-on-services/bride" className="popup-btn">
+                Bride
+              </a>
+              <a href="/add-on-services/groom" className="popup-btn">
+                Groom
+              </a>
             </div>
 
-            {/* Answer */}
-            {activeIndex === index && (
-              <div className="p-4 bg-white text-gray-700 text-sm">
-                {item.a}
-              </div>
-            )}
-
+            <button className="close-btn" onClick={() => setShowPopup(false)}>
+              ✕
+            </button>
           </div>
-        ))}
-
-      </div>
-
-      <div className="text-center mt-10">
-        <Link
-    href="/pre-wedding-or-maternity"
-    className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
-  >
-    BOOK NOW
-  </Link>
-      </div>
-
-    </section>
-
-    {/* Mobile FAQ */}
-<section className="block md:hidden bg-[#f3f0f2] py-10">
-
-  <h2 className="text-center text-2xl font-semibold text-[#74405B] mb-6">
-    Questions
-  </h2>
-
-  <div className="px-5">
-
-    {faqData.map((item, index) => (
-      <div
-        key={index}
-        className="border-b border-[#e5cfcf]"
-      >
-        <button
-          onClick={() => toggle(index)}
-          className="w-full flex justify-between items-center py-5 text-left"
-        >
-          <span className="text-[#74405B] text-[15px] pr-4 font-bold">
-            {item.q}
-          </span>
-
-          <span className="text-[#74405B] text-xl shrink-0">
-            ▶
-          </span>
-        </button>
-
-        {activeIndex === index && (
-          <div className="pb-5 text-[#74405B] text-[15px] ">
-            {item.a}
-          </div>
-        )}
-      </div>
-    ))}
-
-  </div>
-
-  <div className="text-center mt-8 px-5">
-    <Link
-      href="/pre-wedding-or-maternity"
-      className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
-    >
-      BOOK NOW
-    </Link>
-  </div>
-
-</section>
-
-{showPopup && (
-  <div className="popup-overlay">
-    <div className="popup-box">
-     
-      <div className="popup-buttons">
-        <a href="/add-on-services/bride" className="popup-btn">Bride</a>
-        <a href="/add-on-services/groom" className="popup-btn">Groom</a>
-      </div>
-
-      <button
-        className="close-btn"
-        onClick={() => setShowPopup(false)}
-      >
-        ✕
-      </button>
-    </div>
-  </div>
-)}
+        </div>
+      )}
     </main>
   );
 }
 
-
-
-
 function Faq({ q, a }: { q: string; a: React.ReactNode }) {
   return (
     <details className="border border-white/40 p-4 rounded">
-      <summary className="cursor-pointer font-semibold">
-        {q}
-      </summary>
+      <summary className="cursor-pointer font-semibold">{q}</summary>
 
-      <div className="mt-3 text-sm text-gray-200 space-y-2">
-        {a}
-      </div>
+      <div className="mt-3 text-sm text-gray-200 space-y-2">{a}</div>
     </details>
   );
 }
