@@ -366,7 +366,7 @@ export default function PreWeddingShootLocations({cinzelClass,
   </div>
 
 
-  <div className="prewedding-why3-grid">
+  <div className="hidden prewedding-why3-grid">
 
     {/* 01 */}
     <article className="prewedding-why3-card why3-card-1">

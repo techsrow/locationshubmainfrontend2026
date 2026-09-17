@@ -33,7 +33,7 @@ const items: StandoutItem[] = [
   },
   {
     number: "03",
-    title: "Inhouse Costumes on Rent",
+    title: "Costumes on Rent",
     text: "Wide collection with onsite alteration support.",
     icon: <FaTshirt />,
   },
@@ -111,48 +111,68 @@ export default function StandOutSection({
               <span />
             </div>
 
-            <p className="standout-premium-subtitle">
-              DETAILS THAT MAKE YOUR STORY SPECIAL
-            </p>
+           
 
           </div>
 
 
-          {/* ==================================================
-              FEATURES
-          ================================================== */}
 
-          <div className="standout-premium-features">
+<div className="standout-premium-compare-header">
+  <div></div>
+  <div className="compare-header-item">Features</div>
+  
 
-            {items.map((item) => (
-              <article
-                key={item.number}
-                className="standout-premium-feature"
-              >
+  <div className="compare-header-item">
+    Locations Hub
+  </div>
 
-                <div className="standout-premium-number">
-                  {item.number}
-                </div>
+  <div className="compare-header-item">
+    Others
+  </div>
+</div>
+         {items.map((item) => (
+  <article
+    key={item.number}
+    className="standout-premium-feature"
+  >
+    {/* Number */}
+   
 
-                <div className="standout-premium-icon">
-                  {item.icon}
-                </div>
+    {/* Icon */}
+    <div className="standout-premium-icon">
+      {item.icon}
+    </div>
 
-                <div className="standout-premium-feature-text">
+    {/* Content */}
+    <div className="standout-premium-info">
+      <h3 className={cinzelClass}>
+        {item.title}
+      </h3>
 
-                  <h3 className={cinzelClass}>
-                    {item.title}
-                  </h3>
+      <p>{item.text}</p>
+    </div>
 
-                  <p>{item.text}</p>
+    {/* Locations Hub */}
+    <div className="standout-premium-status">
+      
 
-                </div>
+      <div className="status-circle success">
+        ✓
+      </div>
+    </div>
 
-              </article>
-            ))}
+    {/* Others */}
+    <div className="standout-premium-status">
+      
 
-          </div>
+      <div className="status-circle danger">
+        ✕
+      </div>
+    </div>
+  </article>
+))}
 
+         
 
           {/* ==================================================
               BOOK NOW
