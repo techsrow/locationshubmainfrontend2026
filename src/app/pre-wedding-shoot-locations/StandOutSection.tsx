@@ -33,7 +33,7 @@ const items: StandoutItem[] = [
   },
   {
     number: "03",
-    title: "Costumes On Rent",
+    title: "Inhouse Costumes on Rent",
     text: "Wide collection with onsite alteration support.",
     icon: <FaTshirt />,
   },

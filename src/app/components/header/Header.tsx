@@ -13,7 +13,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full bg-primary text-white">
+    <header className="w-full bg-primary text-white header-web">
 
       {/* Top Bar */}
      <div className="hidden md:block border-b-2 border-white bg-[#3b1429]">

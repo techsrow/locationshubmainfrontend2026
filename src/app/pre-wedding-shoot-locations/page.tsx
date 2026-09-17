@@ -36,13 +36,20 @@ const cinzel = Cinzel({
   weight: ["400", "500", "600"],
 });
 
+
+
 const amsterdam = localFont({
   // src: "../../fonts/AmsterdamOneSlant-0WglP.ttf",
   src: "../../fonts/Amsterdam.ttf",
   display: "swap",
 });
 
-export default function PreWeddingShootLocations() {
+export default function PreWeddingShootLocations({cinzelClass,
+}: {
+  amsterdamClass: string;
+  cinzelClass: string;
+}) {
+  
   const [activeIndex, setActiveIndex] = useClientMemoryState<number | null>(
     "view:pre-wedding-shoot-locations:faq-active",
     0,
@@ -372,7 +379,7 @@ export default function PreWeddingShootLocations() {
 
       <div className="prewedding-why3-content">
 
-        <h3 className={amsterdam.className}>
+        <h3 className={cinzelClass}>
           Premium Sets
         </h3>
 
@@ -397,7 +404,7 @@ export default function PreWeddingShootLocations() {
 
       <div className="prewedding-why3-content">
 
-        <h3 className={amsterdam.className}>
+       <h3 className={cinzelClass}>
           Indoor AC Sets
         </h3>
 
@@ -422,16 +429,16 @@ export default function PreWeddingShootLocations() {
 
       <div className="prewedding-why3-content">
 
-        <h3 className={amsterdam.className}>
+       <h3 className={cinzelClass}>
           Costumes On Rent
         </h3>
-        <button
+        {/* <button
     type="button"
     onClick={() => setShowPopup(true)}
     className="block md:hidden inline text-primary underline cursor-pointer bg-transparent border-0 p-0 ml-2 mt-2 text-white"
   >
     View Collection
-  </button>
+  </button> */}
 
        <p>
   Explore our beautiful costume collection with onsite alteration support.{" "}
@@ -468,15 +475,15 @@ export default function PreWeddingShootLocations() {
 
       <div className="prewedding-why3-content">
 
-        <h3 className={amsterdam.className}>
+        <h3 className={cinzelClass}>
           Inhouse Makeup Artist
         </h3>
-        <Link
+        {/* <Link
           href="/add-on-services/makeup-artist"
           className="block md:hidden text-white mt-2"
         >
           <u>Check Packages</u>
-        </Link>
+        </Link> */}
 
         <p>
           Personalized makeup and styling from our
@@ -512,7 +519,7 @@ export default function PreWeddingShootLocations() {
 
       <div className="prewedding-why3-content">
 
-        <h3 className={amsterdam.className}>
+        <h3 className={cinzelClass}>
           Tons of Props
         </h3>
 

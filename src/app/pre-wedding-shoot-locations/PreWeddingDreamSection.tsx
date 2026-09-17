@@ -23,21 +23,21 @@ export default function PreWeddingDreamSection() {
 
         {/* TOP LABEL */}
         <div className={`prewedding-dream-label ${cinzel.className}`}>
-          <span>Your Dream Pre-Wedding</span>
-          <strong>Starts Here</strong>
+          <span>Your Dreamy </span>
+          <strong>Pre-Wedding Starts Here</strong>
         </div>
 
         {/* MAIN CONTENT */}
         <div className="prewedding-dream-content">
 
-          <p className={`prewedding-dream-small ${cinzel.className}`}>
+          {/* <p className={`prewedding-dream-small ${cinzel.className}`}>
             EVERYTHING FOR YOUR PERFECT PRE-WEDDING
-          </p>
+          </p> */}
 
           <h2 className={`prewedding-dream-heading ${cinzel.className}`}>
             Luxury Sets, Multiple Themes
             <br />
-            and Everything You Need for an
+            and Everything You Need for an 
           </h2>
 
           <div
