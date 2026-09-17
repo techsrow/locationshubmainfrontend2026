@@ -303,13 +303,14 @@ export default function PreWeddingShootLocations() {
         </div>
 
         <PreWeddingFilms />
+        <PreWeddingPortfolio />
       </section>
 
       {/* =====================================================
     PORTFOLIO
 ===================================================== */}
 
-      <section className="prewedding-portfolio-section">
+      {/* <section className="prewedding-portfolio-section">
         <div className="prewedding-portfolio-heading-wrap">
           <h2 className={`${amsterdam.className} prewedding-portfolio-heading`}>
             Portfolio
@@ -317,14 +318,16 @@ export default function PreWeddingShootLocations() {
         </div>
 
         <PreWeddingPortfolio />
-      </section>
+      </section> */}
 
       {/* OUR WORK */}
       <section className="py-20 work our-set workbg">
         <h2 className={`why-title work-title ${amsterdam.className}`}>
           Our Sets
         </h2>
-        <OurSetsSectionPage />
+        <OurSetsSectionPage
+  loadMoreButtonClass="prewedding-gallery-loadmore-btn"
+/>
       </section>
 
       {/* EXISTING VIDEO SECTION - UNCHANGED */}
@@ -422,19 +425,32 @@ export default function PreWeddingShootLocations() {
         <h3 className={amsterdam.className}>
           Costumes On Rent
         </h3>
-
-        <p>
-          Explore our beautiful costume collection
-          with onsite alteration support.
-        </p>
-
         <button
+    type="button"
+    onClick={() => setShowPopup(true)}
+    className="block md:hidden inline text-primary underline cursor-pointer bg-transparent border-0 p-0 ml-2 mt-2 text-white"
+  >
+    View Collection
+  </button>
+
+       <p>
+  Explore our beautiful costume collection with onsite alteration support.{" "}
+  <button
+    type="button"
+    onClick={() => setShowPopup(true)}
+    className="inline text-white underline cursor-pointer bg-transparent border-0 p-0 ml-2 mt-2 text-white"
+  >
+    View Collection
+  </button>
+</p>
+
+        {/* <button
           type="button"
           className="prewedding-why3-action"
           onClick={() => setShowPopup(true)}
         >
           View Collection
-        </button>
+        </button> */}
 
       </div>
 
@@ -455,18 +471,30 @@ export default function PreWeddingShootLocations() {
         <h3 className={amsterdam.className}>
           Inhouse Makeup Artist
         </h3>
+        <Link
+          href="/add-on-services/makeup-artist"
+          className="block md:hidden text-white mt-2"
+        >
+          <u>Check Packages</u>
+        </Link>
 
         <p>
           Personalized makeup and styling from our
           experienced in-house makeup experts.
+
+          <span className="ml-2"
+    
+  >
+   <Link
+          href="/add-on-services/makeup-artist"
+          className=""
+        >
+          <u>Check Packages</u>
+        </Link>
+  </span>
         </p>
 
-        <Link
-          href="/add-on-services/makeup-artist"
-          className="prewedding-why3-action"
-        >
-          Check Packages
-        </Link>
+        
 
       </div>
 
@@ -575,7 +603,7 @@ export default function PreWeddingShootLocations() {
         <div className="text-center mt-10">
           <Link
             href="/pre-wedding-or-maternity"
-            className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
+            className={`prewedding-why3-book-btn ${cinzel.className}`}
           >
             BOOK NOW
           </Link>
@@ -612,7 +640,7 @@ export default function PreWeddingShootLocations() {
         <div className="text-center mt-8 px-5">
           <Link
             href="/pre-wedding-or-maternity"
-            className={`quote-btn text-white inline-flex items-center justify-center ${cinzel.className}`}
+            className={`prewedding-why3-book-btn ${cinzel.className}`}
           >
             BOOK NOW
           </Link>

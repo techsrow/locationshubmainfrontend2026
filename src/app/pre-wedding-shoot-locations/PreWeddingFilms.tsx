@@ -35,7 +35,7 @@ export default function PreWeddingFilms() {
       {/* =============================================
           REMAINING VIDEOS - TWO COLUMN GRID
       ============================================= */}
-
+{/* 
       {gridFilms.length > 0 && (
         <div className="prewedding-films-grid">
 
@@ -55,7 +55,7 @@ export default function PreWeddingFilms() {
           ))}
 
         </div>
-      )}
+      )} */}
 
     </div>
   );

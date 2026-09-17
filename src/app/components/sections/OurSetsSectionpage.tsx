@@ -14,12 +14,26 @@ interface SetItem {
   content: string;
   createdAt: string;
   displayorder?: number;
-  pageUrl : string;
+  pageUrl: string;
 }
 
-export default function OurSetsSectionPage() {
-  const [sets, setSets] = useClientMemoryState<SetItem[]>("view:sets-page:data", []);
-  const [showAll, setShowAll] = useClientMemoryState("view:sets-page:show-all", false);
+interface OurSetsSectionPageProps {
+  loadMoreButtonClass?: string;
+}
+
+export default function OurSetsSectionPage({
+  loadMoreButtonClass = "bg-[#ff8c1a] text-white px-8 py-3 font-semibold hover:bg-[#e57c14] transition rounded",
+}: OurSetsSectionPageProps) {
+  const [sets, setSets] = useClientMemoryState<SetItem[]>(
+    "view:sets-page:data",
+    []
+  );
+
+  const [showAll, setShowAll] = useClientMemoryState(
+    "view:sets-page:show-all",
+    false
+  );
+
   const [loading, setLoading] = useState(sets.length === 0);
 
   useEffect(() => {
@@ -27,10 +41,8 @@ export default function OurSetsSectionPage() {
       try {
         const res = await api.get<SetItem[]>("/set");
 
-        // 🔥 Ensure admin order respected
         const sorted = [...res.data].sort(
-          (a, b) =>
-            (a.displayorder ?? 0) - (b.displayorder ?? 0)
+          (a, b) => (a.displayorder ?? 0) - (b.displayorder ?? 0)
         );
 
         setSets(sorted);
@@ -42,15 +54,12 @@ export default function OurSetsSectionPage() {
     };
 
     fetchSets();
-  }, []);
+  }, [setSets]);
 
   const visibleSets = showAll ? sets : sets.slice(0, 6);
 
   return (
-    <section className="px-0 md:px-[110px] py-20 setgrid ">
-      {/* Heading */}
-     
-
+    <section className="px-0 md:px-[110px] py-20 setgrid">
       {/* Loading */}
       {loading && (
         <div className="text-center py-10 text-gray-500">
@@ -65,31 +74,25 @@ export default function OurSetsSectionPage() {
             <Link
               key={set.id}
               href={set.pageUrl}
-              className="relative group overflow-hidden  shadow-sm hover:shadow-md "
+              className="relative group overflow-hidden shadow-sm hover:shadow-md"
             >
-             <div className="w-full bg-gray-100 flex items-center justify-center">
-  <Image
-    src={getFileUrl(set.mainImage)}
-    alt={set.title}
-    width={800}
-    height={600}
-    sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
-    className="w-full h-auto object-contain "
-  />
-</div>
+              <div className="w-full bg-gray-100 flex items-center justify-center">
+                <Image
+                  src={getFileUrl(set.mainImage)}
+                  alt={set.title}
+                  width={800}
+                  height={600}
+                  sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
 
-
-              {/* Gradient Overlay */}
-              
-
-              {/* Title */}
-             {/* Title Strip */}
-<div className="absolute bottom-0 left-0 w-full bg-black/10  py-[10px] text-center">
-  <span className="text-white text-sm md:text-base font-semibold tracking-wide">
-    {set.title}
-  </span>
-</div>
-
+              {/* Title Strip */}
+              <div className="absolute bottom-0 left-0 w-full bg-black/10 py-[10px] text-center">
+                <span className="text-white text-sm md:text-base font-semibold tracking-wide">
+                  {set.title}
+                </span>
+              </div>
             </Link>
           ))}
         </div>
@@ -100,7 +103,7 @@ export default function OurSetsSectionPage() {
         <div className="text-center mt-10">
           <button
             onClick={() => setShowAll(true)}
-            className="bg-[#ff8c1a] text-white px-8 py-3 font-semibold hover:bg-[#e57c14] transition rounded"
+            className={loadMoreButtonClass}
           >
             Load More
           </button>
