@@ -287,8 +287,8 @@ font-family: "Cinzel", Sans-serif;
 
 .testimonials{
  
-  background:#FDF7F7;
-  margin-top: 50px;
+  background:#FFF;
+  /* margin-top: 50px; */
 }
 
 @media(max-width:480){
@@ -867,7 +867,7 @@ line-height:1.7;
 }
 .our-set{
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
 }
 
 .setgrid{
@@ -960,7 +960,7 @@ line-height:1.7;
 }
 
 .workbg{
-  background-color: #FDF7F7 !important;
+  background-color: #fff !important;
 }
 
 .standout{
@@ -985,8 +985,8 @@ line-height:1.7;
   font-size: 15px;
 }
 .work-title{
-  margin-bottom: 70px;
-        margin-top: 20px;
+  margin-bottom: 65px;
+        margin-top: 10px;
 }
 
 
@@ -2472,7 +2472,7 @@ line-height:1.7;
     font-size: 34px !important;
 
     line-height: 1 !important;
-            margin-top: 25px !important;
+            margin-top: 38px !important;
         margin-bottom: 40px !important;
   }
 
@@ -2526,7 +2526,7 @@ line-height:1.7;
 
   font-family: "Quicksand", sans-serif;
 
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1;
 
   font-weight: 600;
@@ -2600,9 +2600,9 @@ line-height:1.7;
   .prewedding-gallery-loadmore-btn {
     min-width: 105px;
 
-    padding: 9px 18px;
+    padding: 9px 0px;
 
-    font-size: 11px;
+    font-size: 14px;
   }
 
 }
@@ -2908,6 +2908,7 @@ line-height:1.7;
 
   .prewedding-films-section{
     padding: 0px !important;
+    padding-bottom: 30px !important;
   }
 
   .prewedding-films-heading-wrap {
@@ -2917,8 +2918,8 @@ line-height:1.7;
 
   .prewedding-films-heading {
     font-size: 34px !important;
-            margin-top: 25px !important;
-        margin-bottom: 25px !important;
+            margin-top: 42px !important;
+        margin-bottom: 23px !important;
 
     line-height: 1 !important;
   }
@@ -3551,9 +3552,11 @@ line-height:1.7;
 
   padding: 28px 20px 42px !important;
 
-  background: #ffffff;
+  background: #FDF7F7;
 
   overflow: hidden;
+
+  margin-top: -30px !important;
 }
 
 
@@ -3973,13 +3976,8 @@ line-height:1.7;
 
   border-radius: 50px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #3B1429,
-      #d67b87,
-      #ff9b56
-    );
+  background: #ff9b56; 
+   
 
   color: #ffffff;
 
@@ -4137,10 +4135,12 @@ line-height:1.7;
 
   .prewedding-why3-content p {
     font-size: 11px;
-     margin-top: 20px;
+     margin-top: -5px;
     line-height: 1.45;
     /* display: none; */
   }
+
+
 
 
   /* button */
@@ -4183,8 +4183,8 @@ line-height:1.7;
 
   .prewedding-why3-heading {
     font-size: 34px !important;
-    margin-top: 20px !important;
-    margin-bottom: 25px !important;
+    margin-top: 35px !important;
+    margin-bottom: 35px !important;
   }
 
   .why-title{
@@ -4357,7 +4357,7 @@ line-height:1.7;
 .standout-premium-heading {
   text-align: center;
 
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 
@@ -4491,7 +4491,7 @@ line-height:1.7;
 }
 
 
-.standout-premium-feature:hover {
+/* .standout-premium-feature:hover {
   background:
     rgba(187, 104, 122, 0.11);
 
@@ -4499,7 +4499,7 @@ line-height:1.7;
 
   box-shadow:
     0 9px 20px rgba(116, 64, 91, 0.07);
-}
+} */
 
 
 /* number */
@@ -4619,7 +4619,7 @@ line-height:1.7;
 .standout-premium-book-line {
   width: 75px;
   height: 1px;
-
+  display: none;
   background: #3B1429;
 }
 
@@ -4637,12 +4637,8 @@ line-height:1.7;
 
   border-radius: 50px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #3B1429,
-      #cb7685
-    );
+  background:#FF9B56;
+   
 
   color: #ffffff;
 
@@ -4922,12 +4918,16 @@ line-height:1.7;
    SMALL MOBILE
 ========================================================= */
 
+
+
 @media (max-width: 480px) {
 
   .standout-premium-section {
     padding:
       12px 5px
       18px !important;
+
+      
   }
 
 
@@ -4944,9 +4944,9 @@ line-height:1.7;
 
 
   .standout-premium-script {
-    font-size: 18px;
+    font-size: 25px;
             margin-top: 20px;
-        margin-bottom: 22px;
+        margin-bottom: 30px;
   }
 
 
@@ -5084,6 +5084,12 @@ line-height:1.7;
   background:#fdf6f7;
 }
 
+@media only screen and (max-width: 768px) {}
+.standout-premium-feature{
+
+        margin-bottom:0px !important;
+}
+
 /* NUMBER */
 
 .standout-premium-number{
@@ -5189,6 +5195,8 @@ line-height:1.7;
     gap:10px;
 
     padding:14px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .standout-premium-icon{
@@ -5268,4 +5276,179 @@ line-height:1.7;
     font-size:15px;
   }
 
+}
+
+/* =====================================================
+   DESKTOP COMPARISON TABLE
+===================================================== */
+
+.desktop-standout-table{
+  display:none;
+}
+
+@media (min-width:768px){
+
+  .desktop-standout-table{
+    display:block;
+    margin-top:10px;
+  }
+
+  .standout-table{
+    width:100%;
+  }
+
+  /* =========================
+     HEADER
+  ========================= */
+
+  .standout-table-header{
+    display:grid;
+    grid-template-columns: 1.8fr 1fr 1fr;
+    background:linear-gradient(
+      90deg,
+      #c58ca2 0%,
+      #b87492 100%
+    );
+    border-radius:20px 20px 0 0;
+    overflow:hidden;
+  }
+
+  .header-feature,
+  .header-lh,
+  .header-other{
+    height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+  }
+
+  .header-lh,
+  .header-other{
+    border-left:1px solid rgba(255,255,255,.25);
+  }
+
+  /* =========================
+     ROW
+  ========================= */
+
+  .standout-table-row{
+    display:grid;
+    /* grid-template-columns: 1.8fr 1fr 1fr; */
+            grid-template-columns: 10.8fr 1fr 1fr;
+    background:#f8f2f3;
+    min-height:60px;
+    border-bottom:1px solid #ece1e3;
+  }
+
+  .standout-table-row:last-child{
+    border-radius:0 0 20px 20px;
+    overflow:hidden;
+    border-bottom:none;
+  }
+
+  /* =========================
+     FEATURE COLUMN
+  ========================= */
+
+  .table-feature{
+    display:flex;
+    align-items:center;
+           gap: 18px;
+        padding: 7px 7px;
+  }
+
+  .feature-number{
+    width:25px;
+    height:25px;
+    min-width:25px;
+    border-radius:50%;
+    background:#f1dfe4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#7a2849;
+    font-size:15px;
+    font-weight:700;
+  }
+
+  .feature-content h3{
+    margin:0 0 6px;
+    color:#7a2849;
+    font-size:15px;
+    font-weight:600;
+    text-transform:uppercase;
+    line-height:1.2;
+  }
+
+  .feature-content p{
+    margin:0;
+    color:#6f6668;
+    font-size:15px;
+    line-height:1.5;
+    max-width:320px;
+  }
+
+  /* =========================
+     STATUS COLUMN
+  ========================= */
+
+  .table-status{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-left:1px solid #ece1e3;
+  }
+
+  /* CHECK */
+
+  .table-check{
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background:#b85d7e;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:17px;
+    font-weight:700;
+  }
+
+  /* CROSS */
+
+  .table-cross{
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background:#f0e4e7;
+    color:#6d2642;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:17px;
+    font-weight:700;
+  }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .title-landing-page{
+        margin-top: -20px;
+        margin-bottom: 30px !important;
+}
+.testimonials{
+  padding-bottom: 0px;
+}
+
+.mobile-faq-section{
+  padding-top: 25px !important;
+  padding-bottom: 35px !important;
+}
 }

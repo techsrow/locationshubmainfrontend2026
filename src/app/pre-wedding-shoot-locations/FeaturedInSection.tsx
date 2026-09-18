@@ -21,24 +21,24 @@ const logos = [
     width: 245,
     height: 70,
   },
-  {
-    src: "/4wedmegood-1.png",
-    alt: "WedMeGood",
-    width: 225,
-    height: 70,
-  },
+  // {
+  //   src: "/4wedmegood-1.png",
+  //   alt: "WedMeGood",
+  //   width: 225,
+  //   height: 70,
+  // },
   {
     src: "/5thhindustantimes-1.png",
     alt: "Hindustan Times",
     width: 235,
     height: 70,
   },
-  {
-    src: "/3shaadisaga-1.png",
-    alt: "Shaadi Saga",
-    width: 145,
-    height: 70,
-  },
+  // {
+  //   src: "/3shaadisaga-1.png",
+  //   alt: "Shaadi Saga",
+  //   width: 145,
+  //   height: 70,
+  // },
   {
     src: "/6bigfatindianwedding.png",
     alt: "The Big Fat Indian Wedding",

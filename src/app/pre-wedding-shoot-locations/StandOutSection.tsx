@@ -59,7 +59,7 @@ export default function StandOutSection({
   cinzelClass: string;
 }) {
   return (
-    <section className="standout-premium-section">
+    <section className="standout-premium-section  pre-wed-stand-mobile">
 
       <div className="standout-premium-shell">
 
@@ -69,14 +69,27 @@ export default function StandOutSection({
 
         <div className="standout-premium-photo">
 
-          <Image
-            src="/what-makes-us-stand-out-commercial.jpg"
-            alt="Premium pre wedding shoot location"
-            fill
-            priority={false}
-            sizes="(max-width: 767px) 100vw, 48vw"
-            className="standout-premium-photo-img"
-          />
+         {/* Mobile Vimeo Video */}
+<div className="block md:hidden absolute inset-0">
+  <iframe
+    src="https://player.vimeo.com/video/952343036?autoplay=1&muted=1&loop=1&background=1"
+    className="w-full h-full"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+{/* Desktop Image */}
+<div className="hidden md:block absolute inset-0">
+  <Image
+    src="/Film-Shooting-Locations-2.jpg"
+    alt="Premium pre wedding shoot location"
+    fill
+    priority={false}
+    sizes="48vw"
+    className="standout-premium-photo-img"
+  />
+</div>
 
           <div className="standout-premium-photo-shade" />
 
@@ -116,8 +129,55 @@ export default function StandOutSection({
           </div>
 
 
+<div className="desktop-standout-table">
 
-<div className="standout-premium-compare-header">
+  <div className="standout-table">
+
+    <div className="standout-table-header">
+      <div className="header-feature">FEATURES</div>
+      <div className="header-lh">LOCATIONS HUB</div>
+      <div className="header-other">OTHERS</div>
+    </div>
+
+    {items.map((item) => (
+      <div
+        key={item.number}
+        className="standout-table-row"
+      >
+        <div className="table-feature">
+
+          <div className="feature-number">
+            {item.number}
+          </div>
+
+          <div className="feature-content">
+            <h3 className={cinzelClass}>
+              {item.title}
+            </h3>
+
+            <p>{item.text}</p>
+          </div>
+
+        </div>
+
+        <div className="table-status">
+          <div className="table-check">✓</div>
+        </div>
+
+        <div className="table-status">
+          <div className="table-cross">✕</div>
+        </div>
+
+      </div>
+    ))}
+
+  </div>
+
+</div>
+
+
+<div className="mobile-section-stand block md:hidden">
+  <div className="standout-premium-compare-header">
   <div></div>
   <div className="compare-header-item">Features</div>
   
@@ -171,6 +231,7 @@ export default function StandOutSection({
     </div>
   </article>
 ))}
+</div>
 
          
 

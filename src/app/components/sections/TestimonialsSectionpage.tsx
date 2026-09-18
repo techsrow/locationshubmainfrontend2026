@@ -49,7 +49,7 @@ const { openModal } = useModal();
   if (loading) return null;
 
   return (
-    <section className="px-1 md:px-[20px] py-10 testimonial-slide">
+    <section className="px-1 md:px-[20px] py-10 testimonial-slide landing-page-testimonail">
       {/* Heading */}
     
 

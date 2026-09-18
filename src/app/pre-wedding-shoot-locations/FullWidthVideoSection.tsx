@@ -6,7 +6,7 @@ import Player from "@vimeo/player";
 import { FaPlay, FaPause } from "react-icons/fa";
 
 export default function FullWidthVideoSection() {
-  const videoId = "1046724941";
+  const videoId = "1227853012";
 
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const playerRef = useRef<Player | null>(null);

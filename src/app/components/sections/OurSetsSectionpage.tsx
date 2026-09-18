@@ -100,7 +100,7 @@ export default function OurSetsSectionPage({
 
       {/* Load More */}
       {!showAll && sets.length > 6 && (
-        <div className="text-center mt-10">
+        <div className="text-center mt-5">
           <button
             onClick={() => setShowAll(true)}
             className={loadMoreButtonClass}

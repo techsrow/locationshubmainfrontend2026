@@ -50,10 +50,13 @@ export default function PreWeddingShootLocations({cinzelClass,
   cinzelClass: string;
 }) {
   
-  const [activeIndex, setActiveIndex] = useClientMemoryState<number | null>(
-    "view:pre-wedding-shoot-locations:faq-active",
-    0,
-  );
+  // const [activeIndex, setActiveIndex] = useClientMemoryState<number | null>(
+  //   "view:pre-wedding-shoot-locations:faq-active",
+  //   0,
+  // );
+
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
   const faqData = [
     {
       q: "How far in advance should we book the studio?",
@@ -187,10 +190,12 @@ export default function PreWeddingShootLocations({cinzelClass,
   //   },
   // ];
 
+  // const toggle = (index: number) => {
+  //   setActiveIndex(activeIndex === index ? null : index);
+  // };
   const toggle = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
+  setActiveIndex(activeIndex === index ? null : index);
+};
   const [showPopup, setShowPopup] = useState(false);
 
   return (
@@ -333,7 +338,7 @@ export default function PreWeddingShootLocations({cinzelClass,
           Our Sets
         </h2>
         <OurSetsSectionPage
-  loadMoreButtonClass="prewedding-gallery-loadmore-btn"
+  loadMoreButtonClass="prewedding-gallery-loadmore-btn mt-2"
 />
       </section>
 
@@ -445,7 +450,7 @@ export default function PreWeddingShootLocations({cinzelClass,
   <button
     type="button"
     onClick={() => setShowPopup(true)}
-    className="inline text-white underline cursor-pointer bg-transparent border-0 p-0 ml-2 mt-2 text-white"
+    className="inline text-white underline cursor-pointer bg-transparent border-0 p-0 ml-2 mt-0 text-white"
   >
     View Collection
   </button>
@@ -567,7 +572,7 @@ export default function PreWeddingShootLocations({cinzelClass,
 
       {/* TESTIMONIALS */}
       <section className="py-20 testimonials">
-        <h2 className={`why-title ${amsterdam.className}`}> Testimonials</h2>
+        <h2 className={`why-title title-landing-page ${amsterdam.className}`}> Testimonials</h2>
 
         <TestimonialsSectionPage />
       </section>
@@ -618,8 +623,8 @@ export default function PreWeddingShootLocations({cinzelClass,
       </section>
 
       {/* Mobile FAQ */}
-      <section className="block md:hidden bg-[#f3f0f2] py-10">
-        <h2 className="text-center text-2xl font-semibold text-[#74405B] mb-6">
+      <section className="block md:hidden bg-[#fff] mobile-faq-section">
+        <h2 className="text-center text-2xl font-semibold text-[#74405B]">
           Questions
         </h2>
 
@@ -634,7 +639,14 @@ export default function PreWeddingShootLocations({cinzelClass,
                   {item.q}
                 </span>
 
-                <span className="text-[#74405B] text-xl shrink-0">▶</span>
+                {/* <span className="text-[#74405B] text-xl shrink-0">▶</span> */}
+                <span
+  className={`text-[#74405B] text-sm shrink-0 transition-transform duration-300 ${
+    activeIndex === index ? "rotate-90" : ""
+  }`}
+>
+  ▶
+</span>
               </button>
 
               {activeIndex === index && (
