@@ -248,7 +248,7 @@ export default function StandOutSection({
               className={`${cinzelClass} standout-premium-book-btn`}
             >
               BOOK NOW
-              <span>→</span>
+             
             </Link>
 
             <span className="standout-premium-book-line" />

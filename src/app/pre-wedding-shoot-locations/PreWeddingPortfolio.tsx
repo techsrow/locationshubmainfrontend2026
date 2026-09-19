@@ -26,63 +26,73 @@ type PortfolioItem = PortfolioImage | PortfolioVideo;
  */
 
 const portfolioItems: PortfolioItem[] = [
-  {
-    id: "portfolio-1",
-    type: "image",
-    src: "/premium-sets-1.jpg",
-    alt: "Pre wedding portfolio",
-  },
+ 
 
   {
-    id: "portfolio-2",
+    id: "portfolio-1",
     type: "video",
     videoId: "1227839198",
   
 
     title: "Pre Wedding Film",
   },
+  {
+    id: "portfolio-2",
+    type: "video",
+    videoId: "1227853419",
+  
 
+    title: "Pre Wedding Film",
+  },
   {
     id: "portfolio-3",
-    type: "image",
-    src: "/indoor-ac.png",
-    alt: "Indoor pre wedding set",
-  },
+    type: "video",
+    videoId: "1227851118",
+  
 
+    title: "Pre Wedding Film",
+  },
   {
     id: "portfolio-4",
-    type: "image",
-    src: "/costumes-on-rent.jpg",
-    alt: "Pre wedding shoot",
+    type: "video",
+    videoId: "1227851115",
+  
+
+    title: "Pre Wedding Film",
   },
+
+
 
   {
     id: "portfolio-5",
     type: "video",
-    videoId: "1227853419",
+    videoId: "1227851117",
     title: "Pre Wedding Film",
   },
 
+ 
+
   {
     id: "portfolio-6",
-    type: "image",
-    src: "/tons-of-props.jpg",
-    alt: "Pre wedding portfolio",
+    type: "video",
+    videoId: "1227853831",
+    title: "Pre Wedding Film",
   },
 
   {
     id: "portfolio-7",
     type: "video",
-    videoId: "1227851118",
+    videoId: "1227851116",
     title: "Pre Wedding Film",
   },
 
-  {
-    id: "portfolio-8",
-    type: "image",
-    src: "/inhouse-makeup-artist.jpg",
-    alt: "Pre wedding portfolio",
-  },
+
+  // {
+  //   id: "portfolio-8",
+  //   type: "image",
+  //   src: "/inhouse-makeup-artist.jpg",
+  //   alt: "Pre wedding portfolio",
+  // },
 ];
 
 
@@ -135,6 +145,14 @@ export default function PreWeddingPortfolio() {
     };
 
   }, [activeItem]);
+
+
+
+  
+  useEffect(() => {
+  console.log("Vimeo Player Created");
+}, []);
+
 
 
   return (

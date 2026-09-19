@@ -1,62 +1,129 @@
 /* eslint-disable react-hooks/set-state-in-effect */
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
 import Player from "@vimeo/player";
-import { FaPlay, FaPause } from "react-icons/fa";
+import {
+  FaPlay,
+  FaPause,
+  FaVolumeUp,
+  FaVolumeMute,
+} from "react-icons/fa";
 
 export default function FullWidthVideoSection() {
   const videoId = "1227853012";
 
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const playerRef = useRef<Player | null>(null);
-  const hideTimer = useRef<NodeJS.Timeout | null>(null);
 
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [showControls, setShowControls] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const [showControls, setShowControls] = useState(false);
 
-  const showControlsTemporarily = () => {
-    if (window.innerWidth < 768) return; // Mobile always visible
+  const [progress, setProgress] = useState(0);
+  const [duration, setDuration] = useState(0);
 
-    setShowControls(true);
-
-    if (hideTimer.current) {
-      clearTimeout(hideTimer.current);
-    }
-
-    hideTimer.current = setTimeout(() => {
-      setShowControls(false);
-    }, 3000);
-  };
+  
 
   useEffect(() => {
     if (!iframeRef.current) return;
 
-    playerRef.current = new Player(iframeRef.current);
+    const player = new Player(iframeRef.current);
 
-    if (window.innerWidth >= 768) {
-      showControlsTemporarily();
-    }
+    playerRef.current = player;
+
+   player.ready().then(async () => {
+  try {
+    const videoDuration = await player.getDuration();
+
+    setDuration(videoDuration);
+
+    // Start muted autoplay
+    await player.setVolume(0);
+    await player.setMuted(true);
+    await player.play();
+
+    setIsMuted(true);
+    setIsPlaying(true);
+  } catch (error) {
+    console.error(error);
+  }
+});
+    player.on("play", () => {
+      setIsPlaying(true);
+    });
+
+    player.on("pause", () => {
+      setIsPlaying(false);
+    });
+
+    player.on("timeupdate", (data) => {
+      setProgress(data.seconds);
+    });
 
     return () => {
-      if (hideTimer.current) {
-        clearTimeout(hideTimer.current);
-      }
+      player.destroy();
     };
   }, []);
 
-  const toggleVideo = async () => {
-    if (!playerRef.current) return;
+const toggleVideo = async () => {
+  if (!playerRef.current) return;
 
+  try {
     if (isPlaying) {
       await playerRef.current.pause();
-      setIsPlaying(false);
     } else {
-      await playerRef.current.setCurrentTime(0);
-      await playerRef.current.setMuted(false);
-      await playerRef.current.setVolume(1);
       await playerRef.current.play();
-      setIsPlaying(true);
+    }
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const toggleMute = async () => {
+  if (!playerRef.current) return;
+
+  try {
+    if (isMuted) {
+      // User wants sound ON
+      await playerRef.current.pause();
+
+      await playerRef.current.setCurrentTime(0);
+
+      await playerRef.current.setMuted(false);
+
+      await playerRef.current.setVolume(1);
+
+      await playerRef.current.play();
+
+      setIsMuted(false);
+    } else {
+      // User wants sound OFF
+      await playerRef.current.setVolume(0);
+
+      await playerRef.current.setMuted(true);
+
+      setIsMuted(true);
+    }
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+  const handleSeek = async (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const newTime = Number(e.target.value);
+
+    setProgress(newTime);
+
+    if (!playerRef.current) return;
+
+    try {
+      await playerRef.current.setCurrentTime(newTime);
+    } catch (error) {
+      console.error(error);
     }
   };
 
@@ -64,26 +131,56 @@ export default function FullWidthVideoSection() {
     <section className="prewedding-full-video-section">
       <div
         className="prewedding-full-video-wrapper"
-        onMouseMove={showControlsTemporarily}
+        onMouseEnter={() => setShowControls(true)}
+        onMouseLeave={() => setShowControls(false)}
       >
         <iframe
-          ref={iframeRef}
-          src={`https://player.vimeo.com/video/${videoId}?autoplay=1&muted=1&loop=1&background=1`}
-          className="prewedding-full-video-frame"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
-          title="Pre Wedding Video"
-        />
+  ref={iframeRef}
+  src={`https://player.vimeo.com/video/${videoId}?background=1&autoplay=1&muted=1&loop=0&playsinline=1&controls=0&title=0&byline=0&portrait=0&badge=0&dnt=1`}
+  className="prewedding-full-video-frame"
+  allow="autoplay; fullscreen; picture-in-picture"
+  allowFullScreen
+  title="Pre Wedding Video"
+/>
 
-        <button
-          className={`watch-sound-btn ${
+        <div
+          className={`video-floating-controls ${
             showControls ? "visible" : "hidden"
           }`}
-          onClick={toggleVideo}
-          aria-label={isPlaying ? "Pause Video" : "Play Video"}
         >
-          {isPlaying ? <FaPause /> : <FaPlay />}
-        </button>
+          <button
+            className="video-control-btn"
+            onClick={toggleVideo}
+            aria-label={
+              isPlaying ? "Pause Video" : "Play Video"
+            }
+          >
+            {isPlaying ? <FaPause /> : <FaPlay />}
+          </button>
+
+        <button
+  className="video-control-btn"
+  onClick={toggleMute}
+  aria-label={isMuted ? "Unmute" : "Mute"}
+>
+  {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
+</button>
+        </div>
+
+        <div
+          className={`custom-progress-wrapper ${
+            showControls ? "visible" : "hidden"
+          }`}
+        >
+          <input
+            type="range"
+            min={0}
+            max={duration || 0}
+            value={progress}
+            onChange={handleSeek}
+            className="custom-progress-bar"
+          />
+        </div>
       </div>
     </section>
   );

@@ -30,12 +30,27 @@ import {
 } from "react-icons/fa";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
 });
 
+
+const cardVariants = {
+  hidden: {
+    opacity: 0,
+    x: -80,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.7,
+    },
+  },
+};
 
 
 const amsterdam = localFont({
@@ -374,7 +389,13 @@ export default function PreWeddingShootLocations({cinzelClass,
   <div className="hidden prewedding-why3-grid">
 
     {/* 01 */}
-    <article className="prewedding-why3-card why3-card-1">
+    <motion.article
+  className="prewedding-why3-card why3-card-1"
+  variants={cardVariants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.3 }}
+>
 
       <FaGem className="prewedding-why3-bg-icon" />
 
@@ -395,11 +416,17 @@ export default function PreWeddingShootLocations({cinzelClass,
 
       </div>
 
-    </article>
+    </motion.article>
 
 
     {/* 02 */}
-    <article className="prewedding-why3-card why3-card-2">
+    <motion.article
+  className="prewedding-why3-card why3-card-2"
+  initial={{ opacity: 0, x: 80 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.7 }}
+  viewport={{ once: true, amount: 0.3 }}
+>
 
       <FaSnowflake className="prewedding-why3-bg-icon" />
 
@@ -420,11 +447,17 @@ export default function PreWeddingShootLocations({cinzelClass,
 
       </div>
 
-    </article>
+  </motion.article>
 
 
     {/* 03 */}
-    <article className="prewedding-why3-card why3-card-3">
+      <motion.article
+  className="prewedding-why3-card why3-card-1"
+  variants={cardVariants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.3 }}
+>
 
       <FaTshirt className="prewedding-why3-bg-icon" />
 
@@ -466,11 +499,17 @@ export default function PreWeddingShootLocations({cinzelClass,
 
       </div>
 
-    </article>
+     </motion.article>
 
 
     {/* 04 */}
-    <article className="prewedding-why3-card why3-card-4">
+   <motion.article
+  className="prewedding-why3-card why3-card-2"
+  initial={{ opacity: 0, x: 80 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.7 }}
+  viewport={{ once: true, amount: 0.3 }}
+>
 
       <FaMagic className="prewedding-why3-bg-icon" />
 
@@ -510,11 +549,17 @@ export default function PreWeddingShootLocations({cinzelClass,
 
       </div>
 
-    </article>
+   </motion.article>
 
 
     {/* 05 */}
-    <article className="prewedding-why3-card why3-card-5">
+    <motion.article
+  className="prewedding-why3-card why3-card-1"
+  variants={cardVariants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.3 }}
+>
 
       <FaPuzzlePiece className="prewedding-why3-bg-icon" />
 
@@ -535,7 +580,7 @@ export default function PreWeddingShootLocations({cinzelClass,
 
       </div>
 
-    </article>
+   </motion.article>
 
   </div>
 

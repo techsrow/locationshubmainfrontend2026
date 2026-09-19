@@ -75,6 +75,11 @@ experimental: {
   pathname: "/uploads/**",
 },
 
+{
+  protocol: "https",
+        hostname: "vumbnail.com",
+},
+
        {
         protocol: "https",
         hostname: "api.ettire.in",
