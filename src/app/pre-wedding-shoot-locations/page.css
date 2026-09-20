@@ -6011,8 +6011,8 @@ font-family: quicksand, quicksand Fallback;
 }
 
 .for-landing-page{
-  display: block;
+  display: block !important;
   text-align: center;
-      margin-top: 1px;
+      margin-top: 10px;
     padding-bottom: 19px;
 }

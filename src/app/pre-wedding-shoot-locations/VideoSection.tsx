@@ -43,7 +43,7 @@ export default function VideoSection() {
       {videos.map((id, index) => (
         <div className="video-wrapper" key={index}>
           <iframe
-            src={`https://player.vimeo.com/video/${id}?autoplay=1&loop=1&muted=1&background=1`}
+            src={`https://player.vimeo.com/video/${id}?autoplay=1&loop=1&muted=1&background=1&unmute_button=0`}
             className="video-frame"
             allow="autoplay; fullscreen"
           ></iframe>
