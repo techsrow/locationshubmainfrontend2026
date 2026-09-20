@@ -21,8 +21,8 @@ export default function FullWidthVideoSection() {
   const [isMuted, setIsMuted] = useState(true);
   const [showControls, setShowControls] = useState(false);
 
-  const [progress, setProgress] = useState(0);
-  const [duration, setDuration] = useState(0);
+  // const [progress, setProgress] = useState(0);
+  
 
   
 
@@ -35,10 +35,8 @@ export default function FullWidthVideoSection() {
 
    player.ready().then(async () => {
   try {
-    const videoDuration = await player.getDuration();
-
-    setDuration(videoDuration);
-
+   
+await player.setLoop(true);
     // Start muted autoplay
     await player.setVolume(0);
     await player.setMuted(true);
@@ -58,9 +56,9 @@ export default function FullWidthVideoSection() {
       setIsPlaying(false);
     });
 
-    player.on("timeupdate", (data) => {
-      setProgress(data.seconds);
-    });
+    // player.on("timeupdate", (data) => {
+    //   setProgress(data.seconds);
+    // });
 
     return () => {
       player.destroy();
@@ -111,21 +109,7 @@ const toggleMute = async () => {
   }
 };
 
-  const handleSeek = async (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const newTime = Number(e.target.value);
-
-    setProgress(newTime);
-
-    if (!playerRef.current) return;
-
-    try {
-      await playerRef.current.setCurrentTime(newTime);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+ 
 
   return (
     <section className="prewedding-full-video-section">
@@ -136,7 +120,7 @@ const toggleMute = async () => {
       >
         <iframe
   ref={iframeRef}
-  src={`https://player.vimeo.com/video/${videoId}?background=1&autoplay=1&muted=1&loop=0&playsinline=1&controls=0&title=0&byline=0&portrait=0&badge=0&dnt=1`}
+  src={`https://player.vimeo.com/video/${videoId}?autoplay=1&muted=1&loop=1&playsinline=1&controls=1&title=0&byline=0&portrait=0&dnt=1`}
   className="prewedding-full-video-frame"
   allow="autoplay; fullscreen; picture-in-picture"
   allowFullScreen
@@ -148,7 +132,7 @@ const toggleMute = async () => {
             showControls ? "visible" : "hidden"
           }`}
         >
-          <button
+          {/* <button
             className="video-control-btn"
             onClick={toggleVideo}
             aria-label={
@@ -156,7 +140,7 @@ const toggleMute = async () => {
             }
           >
             {isPlaying ? <FaPause /> : <FaPlay />}
-          </button>
+          </button> */}
 
         <button
   className="video-control-btn"
@@ -167,20 +151,7 @@ const toggleMute = async () => {
 </button>
         </div>
 
-        <div
-          className={`custom-progress-wrapper ${
-            showControls ? "visible" : "hidden"
-          }`}
-        >
-          <input
-            type="range"
-            min={0}
-            max={duration || 0}
-            value={progress}
-            onChange={handleSeek}
-            className="custom-progress-bar"
-          />
-        </div>
+        
       </div>
     </section>
   );

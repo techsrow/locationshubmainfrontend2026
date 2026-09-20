@@ -5569,8 +5569,8 @@ line-height:1.7;
 }
 
 .video-control-btn {
-  width: 42px;
-  height: 42px;
+  width: 55px;
+  height: 55px;
 
   display: flex;
   align-items: center;
@@ -5579,7 +5579,7 @@ line-height:1.7;
   border: none;
   border-radius: 50%;
 
-  background: rgba(0, 0, 0, 0.7);
+  background: #3B1429;
   color: #fff;
 
   cursor: pointer;
@@ -5588,7 +5588,7 @@ line-height:1.7;
 }
 
 .video-control-btn svg {
-  font-size: 14px;
+  font-size: 30px;
 }
 
 
@@ -5742,6 +5742,9 @@ line-height:1.7;
 
 }
 
+
+
+
 /* =========================================
    PROGRESS BAR
 ========================================= */
@@ -5850,3 +5853,30 @@ line-height:1.7;
   }
 }
 
+
+
+
+
+
+@media (max-width: 768px) {
+  .video-control-btn{
+    width: 40px;
+    height: 40px;
+  }
+
+  .video-control-btn svg{
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+
+   .video-control-btn{
+    width: 40px;
+    height: 40px;
+  }
+
+  .video-control-btn svg{
+    font-size: 20px;
+  }
+}

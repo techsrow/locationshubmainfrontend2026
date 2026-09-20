@@ -80,6 +80,11 @@ experimental: {
         hostname: "vumbnail.com",
 },
 
+{
+  protocol: "https",
+        hostname: "youtube.com",
+},
+
        {
         protocol: "https",
         hostname: "api.ettire.in",
@@ -117,12 +122,20 @@ experimental: {
             "script-src 'self' 'unsafe-inline' 'unsafe-eval' " +
             "https://www.google.com " +
             "https://www.gstatic.com " +
+            "https://www.youtube.com " +
+"https://www.youtube-nocookie.com " +
+"https://s.ytimg.com " +
+
             "https://checkout.razorpay.com " +
             "https://api.razorpay.com " +
             "https://cdn.razorpay.com; " +
 
             "frame-src 'self' " +
             "https://player.vimeo.com " +
+            "https://www.youtube.com " +
+"https://youtube.com " +
+"https://i.ytimg.com " +
+"https://s.ytimg.com " +
             "https://www.youtube.com " +
             "https://www.youtube-nocookie.com " +
             "https://www.google.com " +
@@ -142,6 +155,10 @@ experimental: {
             "connect-src 'self' " +
             "https://www.google.com " +
             "https://www.gstatic.com " +
+            "https://www.youtube.com " +
+"https://youtube.com " +
+"https://i.ytimg.com " +
+"https://s.ytimg.com " +
             "https://api.locationshub.in " +
             "https://checkout.razorpay.com " +
             "https://api.razorpay.com " +
