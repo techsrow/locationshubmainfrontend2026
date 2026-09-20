@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import Player from "@vimeo/player";
+import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 
 import {
   FaGem,
@@ -10,6 +13,8 @@ import {
   FaMagic,
   FaCameraRetro,
 } from "react-icons/fa";
+
+
 
 type StandoutItem = {
   number: string;
@@ -51,6 +56,8 @@ const items: StandoutItem[] = [
   },
 ];
 
+
+
 export default function StandOutSection({
   amsterdamClass,
   cinzelClass,
@@ -58,6 +65,57 @@ export default function StandOutSection({
   amsterdamClass: string;
   cinzelClass: string;
 }) {
+const iframeRef = useRef<HTMLIFrameElement>(null);
+const playerRef = useRef<Player | null>(null);
+
+const [isMuted, setIsMuted] = useState(true);
+
+useEffect(() => {
+  if (!iframeRef.current) return;
+
+  const player = new Player(iframeRef.current);
+
+  playerRef.current = player;
+
+  player.ready().then(async () => {
+    try {
+      await player.setMuted(true);
+      await player.setVolume(0);
+      await player.play();
+    } catch (err) {
+      console.error(err);
+    }
+  });
+
+  return () => {
+    player.destroy();
+  };
+}, []);
+
+
+const toggleMute = async () => {
+  if (!playerRef.current) return;
+
+  try {
+    if (isMuted) {
+      await playerRef.current.setCurrentTime(0);
+      await playerRef.current.setMuted(false);
+      await playerRef.current.setVolume(1);
+      await playerRef.current.play();
+
+      setIsMuted(false);
+    } else {
+      await playerRef.current.setMuted(true);
+      await playerRef.current.setVolume(0);
+
+      setIsMuted(true);
+    }
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+
   return (
     <section className="standout-premium-section  pre-wed-stand-mobile">
 
@@ -70,14 +128,40 @@ export default function StandOutSection({
         <div className="standout-premium-photo">
 
          {/* Mobile Vimeo Video */}
+{/* <div className="block md:hidden absolute inset-0">
+ 
+   <iframe
+  
+  src={`https://player.vimeo.com/video/952343036?autoplay=1&muted=1&loop=1&playsinline=1&controls=1&title=0&byline=0&portrait=0&dnt=1`}
+  className="prewedding-full-video-frame"
+  allow="autoplay; fullscreen; picture-in-picture"
+  allowFullScreen
+  title="Pre Wedding Video"
+/>
+</div> */}
+
+{/* Mobile Vimeo Video */}
 <div className="block md:hidden absolute inset-0">
+
   <iframe
-    src="https://player.vimeo.com/video/952343036?autoplay=1&muted=1&loop=1&background=1"
-    className="w-full h-full"
+    ref={iframeRef}
+   src="https://player.vimeo.com/video/952343036?autoplay=1&muted=1&loop=1&playsinline=1&controls=1&title=0&byline=0&portrait=0&dnt=1"
+    className="absolute inset-0 w-full h-full object-cover"
     allow="autoplay; fullscreen; picture-in-picture"
     allowFullScreen
+    title="Pre Wedding Video"
   />
+
+  <button
+    onClick={toggleMute}
+    className="mobile-video-sound-btn mobile-button-standout"
+  >
+    {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
+  </button>
+
 </div>
+
+
 
 {/* Desktop Image */}
 <div className="hidden md:block absolute inset-0">

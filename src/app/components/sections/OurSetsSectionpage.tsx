@@ -22,6 +22,7 @@ interface OurSetsSectionPageProps {
 }
 
 export default function OurSetsSectionPage({
+  
   loadMoreButtonClass = "bg-[#ff8c1a] text-white px-8 py-3 font-semibold hover:bg-[#e57c14] transition rounded",
 }: OurSetsSectionPageProps) {
   const [sets, setSets] = useClientMemoryState<SetItem[]>(
@@ -109,6 +110,23 @@ export default function OurSetsSectionPage({
           </button>
         </div>
       )}
+
+
+       <div className="standout-premium-book for-location-page for-landing-page">
+      
+                  <span className="standout-premium-book-line" />
+      
+                  <Link
+                    href="/pre-wedding-or-maternity"
+                    className={` standout-premium-book-btn`}
+                  >
+                    BOOK NOW
+                   
+                  </Link>
+      
+                  <span className="standout-premium-book-line" />
+      
+                </div>
     </section>
   );
 }

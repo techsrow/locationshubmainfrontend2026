@@ -33,6 +33,13 @@ const logos = [
     width: 235,
     height: 70,
   },
+
+  {
+    src: "/mid-day.png",
+    alt: "Mid Day",
+    width: 235,
+    height: 70,
+  },
   // {
   //   src: "/3shaadisaga-1.png",
   //   alt: "Shaadi Saga",

@@ -630,3 +630,8 @@ color: #74405b !important;
   margin-bottom: 6px;
       font-size: 14px;
 }
+
+
+.for-location-page {
+  display: none !important;
+}

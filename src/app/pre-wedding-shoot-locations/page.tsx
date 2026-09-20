@@ -355,6 +355,8 @@ export default function PreWeddingShootLocations({cinzelClass,
         <OurSetsSectionPage
   loadMoreButtonClass="prewedding-gallery-loadmore-btn mt-2"
 />
+
+
       </section>
 
       {/* EXISTING VIDEO SECTION - UNCHANGED */}
@@ -587,7 +589,7 @@ export default function PreWeddingShootLocations({cinzelClass,
 
   {/* BOOK NOW */}
 
-  <div className="prewedding-why3-book-wrap">
+  {/* <div className="prewedding-why3-book-wrap">
 
     <Link
       href="/pre-wedding-or-maternity"
@@ -596,7 +598,7 @@ export default function PreWeddingShootLocations({cinzelClass,
       BOOK NOW
     </Link>
 
-  </div>
+  </div> */}
 
 </section>
 
