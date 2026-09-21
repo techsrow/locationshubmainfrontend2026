@@ -145,7 +145,8 @@ const toggleMute = async () => {
 
   <iframe
     ref={iframeRef}
-   src="https://player.vimeo.com/video/952343036?autoplay=1&muted=1&loop=1&playsinline=1&controls=1&title=0&byline=0&portrait=0&dnt=1"
+  //  src="https://player.vimeo.com/video/952343036?autoplay=1&muted=0&loop=1&playsinline=1&controls=1&title=0&byline=0&portrait=0&dnt=1&background=1"
+   src={`https://player.vimeo.com/video/952343036?autoplay=1&muted=1&loop=1&playsinline=1&background=1`}
     className="absolute inset-0 w-full h-full object-cover"
     allow="autoplay; fullscreen; picture-in-picture"
     allowFullScreen
@@ -329,7 +330,7 @@ const toggleMute = async () => {
 
             <Link
               href="/pre-wedding-or-maternity"
-              className={`${cinzelClass} standout-premium-book-btn`}
+              className={` standout-premium-book-btn`}
             >
               BOOK NOW
              

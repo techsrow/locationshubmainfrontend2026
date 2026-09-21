@@ -163,7 +163,7 @@ import { useEffect, useRef, useState } from "react";
 import Player from "@vimeo/player";
 import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 
-export default function FullWidthVideoSection() {
+export default function FullWidthVideoSectionNew() {
   const videoId = "1227853012";
 
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -230,11 +230,12 @@ export default function FullWidthVideoSection() {
 
 
 
-        
+       
 
 <iframe
   ref={iframeRef}
-  src={`https://player.vimeo.com/video/${videoId}?autoplay=1&muted=1&loop=1&playsinline=1&title=0&byline=0&portrait=0&dnt=1`}
+    src={`https://player.vimeo.com/video/${videoId}?autoplay=1&muted=1&loop=1&playsinline=1&background=1`}
+
   className="prewedding-full-video-frame"
   allow="autoplay; fullscreen; picture-in-picture"
   allowFullScreen

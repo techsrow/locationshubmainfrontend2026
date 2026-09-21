@@ -31,6 +31,7 @@ import {
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import FullWidthVideoSectionNew from "./FullWidthVideoSectionNew";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -47,7 +48,8 @@ const cardVariants = {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.7,
+      duration: 0.9,
+      ease: [0.22, 1, 0.36, 1], // smoother easing
     },
   },
 };
@@ -302,7 +304,9 @@ export default function PreWeddingShootLocations({cinzelClass,
 
       {/* DREAM PRE-WEDDING INTRO */}
       <PreWeddingDreamSection />
+      <FullWidthVideoSectionNew />
       <FullWidthVideoSection />
+
 
       {/* ================================
     FEATURED IN
@@ -396,7 +400,8 @@ export default function PreWeddingShootLocations({cinzelClass,
   variants={cardVariants}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: true, amount: 0.3 }}
+  viewport={{ once: true, amount: 0.15 }}
+  whileHover={{ y: -3 }}
 >
 
       <FaGem className="prewedding-why3-bg-icon" />
@@ -427,7 +432,7 @@ export default function PreWeddingShootLocations({cinzelClass,
   initial={{ opacity: 0, x: 80 }}
   whileInView={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.7 }}
-  viewport={{ once: true, amount: 0.3 }}
+  viewport={{ once: true, amount: 0.15 }}
 >
 
       <FaSnowflake className="prewedding-why3-bg-icon" />
@@ -458,7 +463,7 @@ export default function PreWeddingShootLocations({cinzelClass,
   variants={cardVariants}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: true, amount: 0.3 }}
+  viewport={{ once: true, amount: 0.15 }}
 >
 
       <FaTshirt className="prewedding-why3-bg-icon" />
@@ -510,7 +515,7 @@ export default function PreWeddingShootLocations({cinzelClass,
   initial={{ opacity: 0, x: 80 }}
   whileInView={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.7 }}
-  viewport={{ once: true, amount: 0.3 }}
+  viewport={{ once: true, amount: 0.15 }}
 >
 
       <FaMagic className="prewedding-why3-bg-icon" />
@@ -560,7 +565,7 @@ export default function PreWeddingShootLocations({cinzelClass,
   variants={cardVariants}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: true, amount: 0.3 }}
+  viewport={{ once: true, amount: 0.15 }}
 >
 
       <FaPuzzlePiece className="prewedding-why3-bg-icon" />
@@ -662,7 +667,7 @@ export default function PreWeddingShootLocations({cinzelClass,
         <div className="text-center mt-10">
           <Link
             href="/pre-wedding-or-maternity"
-            className={`prewedding-why3-book-btn ${cinzel.className}`}
+            className={` standout-premium-book-btn`}
           >
             BOOK NOW
           </Link>
@@ -671,7 +676,7 @@ export default function PreWeddingShootLocations({cinzelClass,
 
       {/* Mobile FAQ */}
       <section className="block md:hidden bg-[#fff] mobile-faq-section">
-        <h2 className="text-center text-2xl font-semibold text-[#74405B]">
+        <h2 className="text-center mobile-faq-heading  font-semibold text-[#74405B]">
           Questions
         </h2>
 
@@ -703,14 +708,21 @@ export default function PreWeddingShootLocations({cinzelClass,
           ))}
         </div>
 
-        <div className="text-center mt-8 px-5">
-          <Link
-            href="/pre-wedding-or-maternity"
-            className={`prewedding-why3-book-btn ${cinzel.className}`}
-          >
-            BOOK NOW
-          </Link>
-        </div>
+       <div className="standout-premium-book">
+       
+                   <span className="standout-premium-book-line" />
+       
+                   <Link
+                     href="/pre-wedding-or-maternity"
+                     className={` standout-premium-book-btn`}
+                   >
+                     BOOK NOW
+                    
+                   </Link>
+       
+                   <span className="standout-premium-book-line" />
+       
+                 </div>
       </section>
 
       {showPopup && (

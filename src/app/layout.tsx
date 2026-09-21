@@ -211,7 +211,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-
+<head>
+  <link rel="preconnect" href="https://player.vimeo.com" />
+  <link rel="preconnect" href="https://i.vimeocdn.com" />
+  <link rel="preconnect" href="https://f.vimeocdn.com" />
+  <link rel="dns-prefetch" href="https://player.vimeo.com" />
+  <link rel="dns-prefetch" href="https://i.vimeocdn.com" />
+</head>
       <body
         className={`${quicksand.variable} ${roboto.variable} ${quicksand.className} min-h-screen flex flex-col`}
       >

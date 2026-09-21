@@ -635,3 +635,14 @@ color: #74405b !important;
 .for-location-page {
   display: none !important;
 }
+
+
+/* Hide Vimeo Unmute Toast */
+div[class*="ToastBase_module_toast"]{
+  display:none !important;
+}
+
+div[class*="TopCenterActionItems_module_topCenterActionItems"]{
+  display:none !important;
+}
+

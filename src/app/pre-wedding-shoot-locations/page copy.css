@@ -59,7 +59,7 @@
 .hero-btn{
   margin-top:30px;
   padding:12px 28px;
-  background:#BB687A;
+  background:#3B1429;
   border:none;
   color:white;
   cursor:pointer;
@@ -89,7 +89,7 @@
 
 .about-title{
  font-size:80px;
-  color:#BB687A;
+  color:#3B1429;
   margin-bottom:60px;
   text-align:center;
   font-weight:400;
@@ -185,7 +185,7 @@ padding-bottom: 0px;
 .why-title{
 text-align:center;
 font-size:50px;
-color:#BB687A;
+color:#3B1429;
 margin-bottom:80px;
 }
 
@@ -198,7 +198,7 @@ margin:auto;
 display:flex;
 align-items:center;
 justify-content:space-between;
-background:#BB687A;
+background:#3B1429;
 padding:50px 80px;
 margin:80px 0;
 position:relative;
@@ -237,7 +237,7 @@ margin-left:600px;
 .why-row.reverse .why-text{
 margin-left:0;
 margin-right:490px;
-color: #BB687A;
+color: #3B1429;
 }
 
 .why-text h3{
@@ -277,7 +277,7 @@ font-family: "Cinzel", Sans-serif;
 .work-btn{
   margin-top:40px;
   padding:12px 25px;
-  background:#BB687A;
+  background:#3B1429;
   color:white;
   border:none;
 }
@@ -343,7 +343,7 @@ font-family: "Cinzel", Sans-serif;
 }
 
 .highlight-box{
-  background:#BB687A;
+  background:#3B1429;
   color:white;
   padding:40px;
 }
@@ -441,7 +441,7 @@ font-family: "Cinzel", Sans-serif;
 }
 
 .featured-heading{
-  background:#BB687A;
+  background:#3B1429;
   padding:2px 0;
   text-align:center;
 }
@@ -791,7 +791,7 @@ line-height:1.7;
     background-image: none;
     font-family: "Quicksand", Sans-serif;
     font-weight: 600;
-    fill: #BB687A;
+    fill: #3B1429;
     color: #fff;
     border-radius: 50px 50px 50px 50px;
         padding: 12px 24px;
@@ -803,8 +803,8 @@ line-height:1.7;
     background-image: none;
     font-family: "Quicksand", Sans-serif;
     font-weight: 600;
-    fill: #BB687A;
-    color: #BB687A;
+    fill: #3B1429;
+    color: #3B1429;
     border-radius: 50px 50px 50px 50px;
         padding: 12px 24px;
         font-size: 13px;
@@ -1000,8 +1000,8 @@ line-height:1.7;
 .mobile-why-text {
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
-  color: #BB687A;
-  --textColor: #BB687A;
+  color: #3B1429;
+  --textColor: #3B1429;
   text-align: center;
 }
 .wsec-desktop{
@@ -1443,7 +1443,7 @@ line-height:1.7;
 
   padding: 15px 45px 17px;
 
-  background: #BB687A;
+  background: #3B1429;
 
   border-radius: 0 0 25px 25px;
 
@@ -1496,7 +1496,7 @@ line-height:1.7;
 .prewedding-dream-small {
   margin: 0 0 15px;
 
-  color: #BB687A;
+  color: #3B1429;
 
   font-size: 13px;
   font-weight: 600;
@@ -1526,7 +1526,7 @@ line-height:1.7;
 .prewedding-dream-highlight {
   margin-top: 20px;
 
-  color: #BB687A;
+  color: #3B1429;
 
   font-size: 50px;
   line-height: 1.5;
@@ -1860,7 +1860,7 @@ line-height:1.7;
 
   text-align: center;
 
-  background: #BB687A;
+  background: #3B1429;
 }
 
 
@@ -2262,7 +2262,7 @@ line-height:1.7;
 
   text-align: center !important;
 
-  color: #BB687A !important;
+  color: #3B1429 !important;
 
   background: transparent !important;
 
@@ -2523,7 +2523,7 @@ line-height:1.7;
 
   border-radius: 50px;
 
-  background: #BB687A;
+  background: #3B1429;
 
   color: #ffffff;
 
@@ -2538,7 +2538,8 @@ line-height:1.7;
 
   cursor: pointer;
 
- box-shadow: 0 4px 12px rgba(116,64,91,.08);
+  box-shadow:
+    0 8px 18px rgba(187, 104, 122, 0.18);
 
   transition:
     background 0.25s ease,
@@ -2686,7 +2687,7 @@ line-height:1.7;
 
   text-align: center !important;
 
-  color: #BB687A !important;
+  color: #3B1429 !important;
 
   background: transparent !important;
 
@@ -3009,7 +3010,7 @@ line-height:1.7;
 
   text-align: center !important;
 
-  color: #BB687A !important;
+  color: #3B1429 !important;
 
   background: transparent !important;
 
@@ -3188,7 +3189,7 @@ line-height:1.7;
 .prewedding-portfolio-play {
   transform: scale(1.08);
 
-  background: #BB687A;
+  background: #3B1429;
 }
 
 
@@ -3386,7 +3387,7 @@ line-height:1.7;
 
 
 .prewedding-portfolio-close:hover {
-  background: #BB687A;
+  background: #3B1429;
 
   transform: rotate(90deg);
 }
@@ -3588,7 +3589,7 @@ line-height:1.7;
   margin-top: 40px !important;
     margin-bottom: 40px !important;
 
-  color: #BB687A !important;
+  color: #3B1429 !important;
 
   font-size: 58px !important;
 
@@ -3645,16 +3646,17 @@ line-height:1.7;
     0 8px 22px rgba(116, 64, 91, 0.10);
 
   transition:
+    transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
 
-/* .prewedding-why3-card:hover {
+.prewedding-why3-card:hover {
   transform: translateY(-3px);
 
   box-shadow:
     0 14px 30px rgba(116, 64, 91, 0.16);
-} */
+}
 
 
 /* subtle glass shine */
@@ -3818,7 +3820,7 @@ line-height:1.7;
   background:
     linear-gradient(
       135deg,
-      #BB687A 0%,
+      #3B1429 0%,
       #cf7b8b 100%
     );
 }
@@ -3842,7 +3844,7 @@ line-height:1.7;
 
 .why3-card-2 .prewedding-why3-number {
   background:
-    #BB687A;
+    #3B1429;
 }
 
 
@@ -3886,7 +3888,7 @@ line-height:1.7;
   background:
     linear-gradient(
       135deg,
-      #BB687A 0%,
+      #3B1429 0%,
       #9e536c 100%
     );
 
@@ -3953,6 +3955,60 @@ line-height:1.7;
 }
 
 
+/* =========================================================
+   BOOK NOW
+========================================================= */
+
+.prewedding-why3-book-wrap {
+  display: flex;
+
+  justify-content: center;
+
+  width: 100%;
+
+  margin-top: 28px;
+}
+
+
+.prewedding-why3-book-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 30px;
+
+  border-radius: 50px;
+
+  background: #ff9b56; 
+   
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 9px 22px
+    rgba(187,104,122,.20);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+
+.prewedding-why3-book-btn:hover {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 13px 28px
+    rgba(187,104,122,.27);
+}
 
 
 /* =========================================================
@@ -4215,7 +4271,7 @@ line-height:1.7;
 
   overflow: hidden;
 
-  background: #BB687A;
+  background: #3B1429;
 }
 
 
@@ -4313,7 +4369,7 @@ pointer-events: none;
 .standout-premium-script {
   margin-bottom: -5px;
 
-  color: #BB687A;
+  color: #3B1429;
 
   font-size: 30px;
 
@@ -4366,7 +4422,7 @@ pointer-events: none;
 
 
 .standout-premium-heart b {
-  color: #BB687A;
+  color: #3B1429;
 
   font-size: 12px;
 }
@@ -4460,7 +4516,7 @@ pointer-events: none;
 
   justify-content: center;
 
-  color: #BB687A;
+  color: #3B1429;
 
   font-family: "Quicksand", sans-serif;
 
@@ -4569,10 +4625,10 @@ pointer-events: none;
   width: 75px;
   height: 1px;
   display: none;
-  background: #BB687A;
+  background: #3B1429;
 }
 
-/* 
+
 .standout-premium-book-btn {
   display: inline-flex;
 
@@ -4618,7 +4674,7 @@ pointer-events: none;
 
 .standout-premium-book-btn span {
   font-size: 17px;
-} */
+}
 
 
 /* =========================================================
@@ -4890,8 +4946,6 @@ pointer-events: none;
     padding:
       15px 9px
       14px;
-
-      padding-bottom: 30px;
   }
 
 
@@ -5161,7 +5215,6 @@ pointer-events: none;
     font-size:13px;
     line-height:1.2;
     margin-bottom:3px;
-    font-weight: 600;
   }
 
   .standout-premium-info p{
@@ -5533,7 +5586,7 @@ pointer-events: none;
   border: none;
   border-radius: 50%;
 
-  background: #BB687A;
+  background: #3B1429;
   color: #fff;
 
   cursor: pointer;
@@ -5564,9 +5617,6 @@ pointer-events: none;
     border-radius: 16px;
   }
 }
-
-
-
 
 .prewedding-featured-film-frame {
   width: 100%;
@@ -5797,9 +5847,7 @@ pointer-events: none;
     width: 30px;
     height: 30px;
     margin-bottom: -30px;
-     /* background: rgba(187, 104, 122, 0.8);  */
-      background: #BB687A;
-  color: #fff;
+     opacity: 0.6;
   }
 
   .video-control-btn svg{
@@ -5813,10 +5861,7 @@ pointer-events: none;
     width: 30px;
     height: 30px;
     margin-bottom: -30px;
-    /* background: rgba(187, 104, 122, 0.8);  */
-    /* #BB687A at 60% opacity */
-       background: #BB687A;
-  color: #fff;
+    opacity: 0.6;
   }
 
   .video-control-btn svg{
@@ -5831,26 +5876,28 @@ pointer-events: none;
   align-items: center;
   justify-content: center;
 
-  padding: 14px 34px;
+  padding: 7px 15px;
+
+  border: none;
   border-radius: 999px;
 
-  background: #FDF7F7;
-  color: #BB687A;
+font-family: quicksand, quicksand Fallback;
+    background: #ed9d0c;
 
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-
+  color: #fff;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 
+  cursor: pointer;
   overflow: hidden;
-  z-index: 1;
 
-  transition: all .35s ease;
+  transition: all 0.4s ease;
 
   box-shadow:
-    0 10px 30px rgba(187,104,122,.18);
+    0 10px 30px rgba(59, 20, 41, 0.35),
+    inset 0 1px 1px rgba(255,255,255,0.15);
 }
 
 /* Animated Border */
@@ -5891,7 +5938,7 @@ pointer-events: none;
 
   background: linear-gradient(
     135deg,
-    #BB687A,
+    #3b1429,
     #4a1934
   );
 
@@ -5920,7 +5967,7 @@ pointer-events: none;
   background: linear-gradient(
     135deg,
     #4a1934,
-    #BB687A
+    #3b1429
   );
 }
 
@@ -5968,136 +6015,4 @@ pointer-events: none;
   text-align: center;
       margin-top: 10px;
     padding-bottom: 19px;
-}
-
-
-.ToastBase_module_toast__0abea48f{
-  display: none !important;
-}
-
-.mobile-faq-heading{
-  font-size: 32px;
-  font-family: amsterdam, amsterdam Fallback;
-      color: #bb687a
-      ;
-      font-weight: 500;
-      padding-top: 10px;
-      padding-bottom: 10px;
-}
-
-.standout-premium-book-btn,.prewedding-why3-book-btn{
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-padding: 11px 24px;
-  border-radius: 999px;
-
-  background: #FDF7F7;
-  color: #000000;
-
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-
-   font-size: 12px;
-  font-weight: 500;
-
-  overflow: hidden;
-  z-index: 1;
-
-  transition: all .35s ease;
-
-  box-shadow:
-    0 10px 30px rgba(187,104,122,.18);
-}
-
-/* Animated Border */
-.standout-premium-book-btn::before{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  border-radius:inherit;
-
-  background: conic-gradient(
-    from 0deg,
-    #BB687A,
-    #D98D9E,
-    #FDF7F7,
-    #D98D9E,
-    #BB687A
-  );
-
-  animation: rotateBorder 4s linear infinite;
-
-  z-index:-2;
-}
-
-/* Inner Background */
-.standout-premium-book-btn::after{
-  content:"";
-  position:absolute;
-  inset:2px;
-  border-radius:inherit;
-
-  background:#e0c6c6;
-
-  z-index:-1;
-}
-
-/* Border Animation */
-@keyframes rotateBorder{
-  from{
-    transform:rotate(0deg);
-  }
-  to{
-    transform:rotate(360deg);
-  }
-}
-
-/* Hover */
-.standout-premium-book-btn:hover{
-  color:#fff;
-  transform:translateY(-3px);
-
-  box-shadow:
-    0 15px 40px rgba(187,104,122,.35);
-}
-
-.standout-premium-book-btn:hover::after{
-  background:#BB687A;
-}
-
-.standout-premium-book-btn span{
-  position:relative;
-  z-index:2;
-}
-
-.standout-premium-book-btn .shine{
-  position:absolute;
-  top:-100%;
-  left:-50%;
-  width:40%;
-  height:300%;
-
-  background:linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,.7),
-    transparent
-  );
-
-  transform:rotate(25deg);
-
-  animation:shineMove 4s infinite;
-}
-
-@keyframes shineMove{
-  0%{
-    left:-60%;
-  }
-  100%{
-    left:160%;
-  }
 }
