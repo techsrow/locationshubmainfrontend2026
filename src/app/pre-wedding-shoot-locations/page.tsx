@@ -718,7 +718,7 @@ export default function PreWeddingShootLocations({cinzelClass,
        
                    <Link
                      href="/pre-wedding-or-maternity"
-                     className={` standout-premium-book-btn`}
+                     className={` standout-premium-book-btn mt-3`}
                    >
                      BOOK NOW
                     

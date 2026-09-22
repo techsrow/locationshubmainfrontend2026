@@ -69,7 +69,6 @@ const iframeRef = useRef<HTMLIFrameElement>(null);
 const playerRef = useRef<Player | null>(null);
 
 const [isMuted, setIsMuted] = useState(true);
-
 useEffect(() => {
   if (!iframeRef.current) return;
 
@@ -78,13 +77,16 @@ useEffect(() => {
   playerRef.current = player;
 
   player.ready().then(async () => {
-    try {
-      await player.setMuted(true);
-      await player.setVolume(0);
-      await player.play();
-    } catch (err) {
-      console.error(err);
-    }
+    await player.setMuted(true);
+    await player.setVolume(0);
+    await player.play();
+
+    setIsMuted(true);
+  });
+
+  player.on("volumechange", async () => {
+    const muted = await player.getMuted();
+    setIsMuted(muted);
   });
 
   return () => {
@@ -98,7 +100,6 @@ const toggleMute = async () => {
 
   try {
     if (isMuted) {
-      await playerRef.current.setCurrentTime(0);
       await playerRef.current.setMuted(false);
       await playerRef.current.setVolume(1);
       await playerRef.current.play();
@@ -114,6 +115,28 @@ const toggleMute = async () => {
     console.error(err);
   }
 };
+
+// const toggleMute = async () => {
+//   if (!playerRef.current) return;
+
+//   try {
+//     if (isMuted) {
+//       await playerRef.current.setCurrentTime(0);
+//       await playerRef.current.setMuted(false);
+//       await playerRef.current.setVolume(1);
+//       await playerRef.current.play();
+
+//       setIsMuted(false);
+//     } else {
+//       await playerRef.current.setMuted(true);
+//       await playerRef.current.setVolume(0);
+
+//       setIsMuted(true);
+//     }
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
 
 
   return (
@@ -144,9 +167,11 @@ const toggleMute = async () => {
 <div className="block md:hidden absolute inset-0">
 
   <iframe
+  fetchPriority="high"
+  loading="eager"
     ref={iframeRef}
   //  src="https://player.vimeo.com/video/952343036?autoplay=1&muted=0&loop=1&playsinline=1&controls=1&title=0&byline=0&portrait=0&dnt=1&background=1"
-   src={`https://player.vimeo.com/video/952343036?autoplay=1&muted=1&loop=1&playsinline=1&background=1`}
+   src="https://player.vimeo.com/video/952343036?autoplay=1&loop=1&playsinline=1&unmute_button=0"
     className="absolute inset-0 w-full h-full object-cover"
     allow="autoplay; fullscreen; picture-in-picture"
     allowFullScreen
@@ -330,7 +355,7 @@ const toggleMute = async () => {
 
             <Link
               href="/pre-wedding-or-maternity"
-              className={` standout-premium-book-btn`}
+              className={` standout-premium-book-btn mt-2`}
             >
               BOOK NOW
              
