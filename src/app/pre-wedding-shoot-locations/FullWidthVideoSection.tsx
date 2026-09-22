@@ -233,8 +233,10 @@ export default function FullWidthVideoSection() {
         
 
 <iframe
+  fetchPriority="high"
+  loading="eager"
   ref={iframeRef}
-  src={`https://player.vimeo.com/video/${videoId}?autoplay=1&muted=1&loop=1&playsinline=1&title=0&byline=0&portrait=0&dnt=1`}
+  src={`https://player.vimeo.com/video/${videoId}?autoplay=1&muted=1&unmute_button=0&loop=1&playsinline=1&title=0&byline=0&portrait=0&dnt=1`}
   className="prewedding-full-video-frame"
   allow="autoplay; fullscreen; picture-in-picture"
   allowFullScreen

@@ -302,9 +302,13 @@ export default function PreWeddingShootLocations({cinzelClass,
         </div>
       </section> */}
 
+
+
+
       {/* DREAM PRE-WEDDING INTRO */}
       <PreWeddingDreamSection />
-      <FullWidthVideoSectionNew />
+   
+      {/* <FullWidthVideoSectionNew /> */}
       <FullWidthVideoSection />
 
 

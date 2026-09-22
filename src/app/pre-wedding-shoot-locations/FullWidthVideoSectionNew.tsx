@@ -1,261 +1,56 @@
-// /* eslint-disable react-hooks/set-state-in-effect */
 
-// "use client";
 
-// import { useEffect, useRef, useState } from "react";
-// import Player from "@vimeo/player";
-// import {
-//   FaPlay,
-//   FaPause,
-//   FaVolumeUp,
-//   FaVolumeMute,
-// } from "react-icons/fa";
 
-// export default function FullWidthVideoSection() {
-//   const videoId = "1227853012";
+// components/LazyVimeo.tsx
+'use client';
 
-//   const iframeRef = useRef<HTMLIFrameElement>(null);
-//   const playerRef = useRef<Player | null>(null);
+import { useEffect, useRef, useState } from 'react';
 
-//   const [isPlaying, setIsPlaying] = useState(false);
-//   const [isMuted, setIsMuted] = useState(true);
-//   const [showControls, setShowControls] = useState(false);
+interface LazyVimeoProps {
+  videoId: string;
+  hash: string;
+  title: string;
+}
 
-//   // const [progress, setProgress] = useState(0);
-  
-
-  
-
-//   useEffect(() => {
-//     if (!iframeRef.current) return;
-
-//     const player = new Player(iframeRef.current);
-
-//     playerRef.current = player;
-
-//    player.ready().then(async () => {
-//   try {
-   
-// await player.setLoop(true);
-//     // Start muted autoplay
-//     await player.setVolume(0);
-//     await player.setMuted(true);
-//     await player.play();
-
-//     setIsMuted(true);
-//     setIsPlaying(true);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// });
-//     player.on("play", () => {
-//       setIsPlaying(true);
-//     });
-
-//     player.on("pause", () => {
-//       setIsPlaying(false);
-//     });
-
-//     // player.on("timeupdate", (data) => {
-//     //   setProgress(data.seconds);
-//     // });
-
-//     return () => {
-//       player.destroy();
-//     };
-//   }, []);
-
-// const toggleVideo = async () => {
-//   if (!playerRef.current) return;
-
-//   try {
-//     if (isPlaying) {
-//       await playerRef.current.pause();
-//     } else {
-//       await playerRef.current.play();
-//     }
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };
-
-// const toggleMute = async () => {
-//   if (!playerRef.current) return;
-
-//   try {
-//     if (isMuted) {
-//       // User wants sound ON
-//       await playerRef.current.pause();
-
-//       await playerRef.current.setCurrentTime(0);
-
-//       await playerRef.current.setMuted(false);
-
-//       await playerRef.current.setVolume(1);
-
-//       await playerRef.current.play();
-
-//       setIsMuted(false);
-//     } else {
-//       // User wants sound OFF
-//       await playerRef.current.setVolume(0);
-
-//       await playerRef.current.setMuted(true);
-
-//       setIsMuted(true);
-//     }
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };
-
- 
-
-//   return (
-//     <section className="prewedding-full-video-section">
-//       <div
-//         className="prewedding-full-video-wrapper"
-//         onMouseEnter={() => setShowControls(true)}
-//         onMouseLeave={() => setShowControls(false)}
-//       >
-//         <iframe
-//   ref={iframeRef}
-//   src={`https://player.vimeo.com/video/${videoId}?autoplay=1&muted=1&loop=1&playsinline=1&controls=1&unmute_button=0&title=0&byline=0&portrait=0&dnt=1`}
-//   className="prewedding-full-video-frame"
-//   allow="autoplay; fullscreen; picture-in-picture"
-//   allowFullScreen
-//   title="Pre Wedding Video"
-// />
-
-//         <div
-//           className={`video-floating-controls ${
-//             showControls ? "visible" : "hidden"
-//           }`}
-//         >
-//           {/* <button
-//             className="video-control-btn"
-//             onClick={toggleVideo}
-//             aria-label={
-//               isPlaying ? "Pause Video" : "Play Video"
-//             }
-//           >
-//             {isPlaying ? <FaPause /> : <FaPlay />}
-//           </button> */}
-
-//         <button
-//   className="video-control-btn"
-//   onClick={toggleMute}
-//   aria-label={isMuted ? "Unmute" : "Mute"}
-// >
-//   {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
-// </button>
-//         </div>
-
-        
-//       </div>
-//     </section>
-//   );
-// }
-
-"use client";
-
-import { useEffect, useRef, useState } from "react";
-import Player from "@vimeo/player";
-import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
-
-export default function FullWidthVideoSectionNew() {
-  const videoId = "1227853012";
-
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-  const playerRef = useRef<Player | null>(null);
-
-  const [isMuted, setIsMuted] = useState(true);
-  const [showControls, setShowControls] = useState(false);
+export default function FullWidthVideoSectionNew({ videoId, hash, title }: LazyVimeoProps) {
+  const [loaded, setLoaded] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!iframeRef.current) return;
+    const el = containerRef.current;
+    if (!el) return;
 
-    const player = new Player(iframeRef.current);
-    playerRef.current = player;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setLoaded(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { rootMargin: '200px' }
+    );
 
-    // Don't re-trigger play/mute/loop here — the iframe URL params
-    // already configure autoplay+muted+loop on first load.
-    // Re-calling them via the JS API right as the player becomes
-    // ready is what was causing the flicker/restart on mount.
-
-    return () => {
-      player.destroy();
-    };
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
-  const toggleMute = async () => {
-    if (!playerRef.current) return;
-
-    try {
-      if (isMuted) {
-        // Turning sound ON: restart from 0 with audio, per requirement
-        await playerRef.current.pause();
-        await playerRef.current.setCurrentTime(0);
-        await playerRef.current.setMuted(false);
-        await playerRef.current.setVolume(1);
-        await playerRef.current.play();
-        setIsMuted(false);
-      } else {
-        // Turning sound OFF
-        await playerRef.current.setMuted(true);
-        await playerRef.current.setVolume(0);
-        setIsMuted(true);
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   return (
-    <section className="prewedding-full-video-section">
-      <div
-        className="prewedding-full-video-wrapper"
-        onMouseEnter={() => setShowControls(true)}
-        onMouseLeave={() => setShowControls(false)}
-      >
-        {/* <iframe
-          ref={iframeRef}
-          // src={`https://player.vimeo.com/video/${videoId}?autoplay=1&muted=0&loop=1&playsinline=1&controls=1&title=0&byline=0&portrait=0&dnt=1`}
-          src={`https://player.vimeo.com/video/${videoId}?background=1&autoplay=1&muted=1&loop=1&playsinline=1&dnt=1`}
-          className="prewedding-full-video-frame"
-          allow="autoplay; fullscreen; picture-in-picture"
+    <div
+      ref={containerRef}
+      style={{ position: 'relative', aspectRatio: '16/9', background: '#000' }}
+    >
+      {loaded && (
+        <iframe
+          src={`https://player.vimeo.com/video/1227853012?h=${hash}&autoplay=1&muted=1`}
+          title={title}
+          allow="autoplay; fullscreen"
           allowFullScreen
-          title="Pre Wedding Video"
-        /> */}
-
-
-
-       
-
-<iframe
-  ref={iframeRef}
-    src={`https://player.vimeo.com/video/${videoId}?autoplay=1&muted=1&loop=1&playsinline=1&background=1`}
-
-  className="prewedding-full-video-frame"
-  allow="autoplay; fullscreen; picture-in-picture"
-  allowFullScreen
-  title="Pre Wedding Video"
-/>
-
-        <div
-          className={`video-floating-controls ${
-            showControls ? "visible" : "hidden"
-          }`}
-        >
-          <button
-            className="video-control-btn"
-            onClick={toggleMute}
-            aria-label={isMuted ? "Unmute" : "Mute"}
-          >
-            {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
-          </button>
-        </div>
-      </div>
-    </section>
+          style={{ width: '100%', height: '100%', border: 0, position: 'absolute', inset: 0 }}
+        />
+      )}
+    </div>
   );
 }
+

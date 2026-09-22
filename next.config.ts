@@ -113,30 +113,33 @@ experimental: {
   return [
     {
       source: "/(.*)",
-      headers: [
+     headers: [
         {
           key: "Content-Security-Policy",
           value:
             "default-src 'self'; " +
 
+            // ===== SCRIPTS =====
             "script-src 'self' 'unsafe-inline' 'unsafe-eval' " +
             "https://www.google.com " +
             "https://www.gstatic.com " +
             "https://www.youtube.com " +
-"https://www.youtube-nocookie.com " +
-"https://s.ytimg.com " +
-
+            "https://www.youtube-nocookie.com " +
+            "https://s.ytimg.com " +
             "https://checkout.razorpay.com " +
             "https://api.razorpay.com " +
-            "https://cdn.razorpay.com; " +
+            "https://cdn.razorpay.com " +
+            "https://player.vimeo.com " +          // ← ADDED
+            "https://*.vimeo.com; " +              // ← ADDED
 
+            // ===== FRAMES (already had player.vimeo.com) =====
             "frame-src 'self' " +
             "https://player.vimeo.com " +
+            "https://*.vimeo.com " +               // ← safer
             "https://www.youtube.com " +
-"https://youtube.com " +
-"https://i.ytimg.com " +
-"https://s.ytimg.com " +
-            "https://www.youtube.com " +
+            "https://youtube.com " +
+            "https://i.ytimg.com " +
+            "https://s.ytimg.com " +
             "https://www.youtube-nocookie.com " +
             "https://www.google.com " +
             "https://checkout.razorpay.com " +
@@ -146,19 +149,23 @@ experimental: {
             "https://ettire.in " +
             "https://api.ettire.in; " +
 
-            "img-src 'self' data: https: http: blob:; " +
+            // ===== IMAGES =====
+            "img-src 'self' data: https: http: blob: " +
+            "https://*.vimeocdn.com " +            // ← ADDED (thumbnails)
+            "https://i.vimeocdn.com; " +
 
+            // ===== STYLES & FONTS =====
             "style-src 'self' 'unsafe-inline'; " +
-
             "font-src 'self' data: https:; " +
 
+            // ===== CONNECT (API calls from player) =====
             "connect-src 'self' " +
             "https://www.google.com " +
             "https://www.gstatic.com " +
             "https://www.youtube.com " +
-"https://youtube.com " +
-"https://i.ytimg.com " +
-"https://s.ytimg.com " +
+            "https://youtube.com " +
+            "https://i.ytimg.com " +
+            "https://s.ytimg.com " +
             "https://api.locationshub.in " +
             "https://checkout.razorpay.com " +
             "https://api.razorpay.com " +
@@ -167,7 +174,15 @@ experimental: {
             "http://localhost:3000 " +
             "http://localhost:5000 " +
             "https://ettire.in " +
-            "https://api.ettire.in;",
+            "https://api.ettire.in " +
+            "https://player.vimeo.com " +          // ← ADDED
+            "https://*.vimeo.com " +               // ← ADDED
+            "https://*.vimeocdn.com; " +           // ← ADDED
+
+            // ===== MEDIA =====
+            "media-src 'self' blob: " +
+            "https://*.vimeo.com " +
+            "https://*.vimeocdn.com;",
         },
       ],
     },
@@ -176,3 +191,5 @@ experimental: {
 };
 
 export default nextConfig;
+
+

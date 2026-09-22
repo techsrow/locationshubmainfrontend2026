@@ -5841,7 +5841,7 @@ pointer-events: none;
   text-transform: uppercase;
   letter-spacing: 2px;
 
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
 
   overflow: hidden;
@@ -5947,7 +5947,7 @@ pointer-events: none;
   border:none;
   border-radius:50%;
 
-  background:rgba(59,20,41,.9);
+  background:#BB687A;
   color:#fff;
 
   display:flex;
@@ -5994,15 +5994,15 @@ pointer-events: none;
 padding: 11px 24px;
   border-radius: 999px;
 
-  background: #FDF7F7;
-  color: #000000;
+  background: orange;
+  color: white;
 
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
 
    font-size: 12px;
-  font-weight: 500;
+  font-weight: 900;
 
   overflow: hidden;
   z-index: 1;
@@ -6020,14 +6020,16 @@ padding: 11px 24px;
   inset:-2px;
   border-radius:inherit;
 
-  background: conic-gradient(
+  /* background: conic-gradient(
     from 0deg,
     #BB687A,
     #D98D9E,
     #FDF7F7,
     #D98D9E,
     #BB687A
-  );
+  ); */
+
+  background: conic-gradient(#bb687a, #bb687a, #fdf7f7, #bb687a, #bb687a);
 
   animation: rotateBorder 4s linear infinite;
 
@@ -6041,7 +6043,7 @@ padding: 11px 24px;
   inset:2px;
   border-radius:inherit;
 
-  background:#e0c6c6;
+  background:orange;
 
   z-index:-1;
 }
@@ -6101,3 +6103,4 @@ padding: 11px 24px;
     left:160%;
   }
 }
+
